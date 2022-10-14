@@ -6,18 +6,33 @@ using UnityEngine;
 public abstract class Property : MonoBehaviour
 {
     private static readonly int MAX_LEVEL = 10;
+    
+    [SerializeField]
+    private new string name;
     public string Name
     { get; } = "Property";
+
+    [SerializeField]
+    private int cost;
     public int Cost
     { get; } = 0;
+
+    [SerializeField]
+    private int level;
     public int Level
     { get; private set; } = 0;
+
+    [SerializeField]
+    private bool owned;
     public bool Owned
     { get; private set; } = false;
 
-    private readonly string[] upgradeNameByLevel = new string[MAX_LEVEL + 1];
-    private readonly int[] upgradeCostByLevel = new int[MAX_LEVEL + 1];
-    private readonly string[] descriptionByLevel = new string[MAX_LEVEL + 1];
+    [SerializeField]
+    private string[] upgradeNameByLevel = new string[MAX_LEVEL + 1];
+    [SerializeField]
+    private int[] upgradeCostByLevel = new int[MAX_LEVEL + 1];
+    [SerializeField]
+    private string[] descriptionByLevel = new string[MAX_LEVEL + 1];
     
     public void Buy()
     {

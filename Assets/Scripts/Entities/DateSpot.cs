@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DateSpot : Property
 {
-    private readonly string[] genericDialogues;
-    private readonly Dictionary<string, string[]> uniqueDialogues;
+    [SerializeField]
+    private string[] genericDialogues;
+    [SerializeField]
+    private Dictionary<string, string[]> uniqueDialogues;
 
     public string GetRandomDialogue()
     {
