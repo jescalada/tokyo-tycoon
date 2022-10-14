@@ -11,4 +11,8 @@ public class Player : MonoBehaviour
     public List<Property> OwnedProperties
     { get; }
 
+    public void BuyProperty(Property property)
+    {
+        OwnedProperties.Add(property);
+    }
 }
