@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class Property : MonoBehaviour
+public abstract class Property : MonoBehaviour, IClickable
 {
     private static readonly int MAX_LEVEL = 10;
     
@@ -33,7 +33,10 @@ public abstract class Property : MonoBehaviour
     private int[] upgradeCostByLevel = new int[MAX_LEVEL + 1];
     [SerializeField]
     private string[] descriptionByLevel = new string[MAX_LEVEL + 1];
-    
+
+    [SerializeField]
+    private GameObject detailsCanvas;
+
     public void Buy()
     {
         Owned = true;
@@ -52,6 +55,12 @@ public abstract class Property : MonoBehaviour
             // Todo add visual confirmation if upgrade failed
             Debug.Log(string.Format("Upgrade failed for {0}. Current level: {1}.", Name, Level));
         }
+    }
+
+    public virtual void Click()
+    {
+        // Set and update the details of this Property
+        detailsCanvas.SetActive(true);
     }
     public string GetUpgradeNameByLevel()
     {
