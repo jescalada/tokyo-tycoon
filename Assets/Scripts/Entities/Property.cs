@@ -5,13 +5,10 @@ using UnityEngine;
 
 public abstract class Property : MonoBehaviour, IClickable
 {
-    private static readonly int MAX_LEVEL = 10;
+    public static readonly int MAX_LEVEL = 10;
     
-    [SerializeField]
-    private new string name;
-    public string Name
-    { get; } = "Property";
-
+    public string PropertyName;
+    
     [SerializeField]
     private int cost;
     public int Cost
@@ -28,11 +25,11 @@ public abstract class Property : MonoBehaviour, IClickable
     { get; private set; } = false;
 
     [SerializeField]
-    private string[] upgradeNameByLevel = new string[MAX_LEVEL + 1];
+    private string[] upgradeNameByLevel = new string[MAX_LEVEL];
     [SerializeField]
-    private int[] upgradeCostByLevel = new int[MAX_LEVEL + 1];
+    private int[] upgradeCostByLevel = new int[MAX_LEVEL];
     [SerializeField]
-    private string[] descriptionByLevel = new string[MAX_LEVEL + 1];
+    private string[] descriptionByLevel = new string[MAX_LEVEL];
 
     [SerializeField]
     private GameObject detailsCanvas;
@@ -48,12 +45,12 @@ public abstract class Property : MonoBehaviour, IClickable
         {
             Level++;
             // Todo add visual confirmation if successfully upgraded
-            Debug.Log(string.Format("Upgraded {0} to level {1}.", Name, Level));
+            Debug.Log(string.Format("Upgraded {0} to level {1}.", PropertyName, Level));
         }
         else
         {
             // Todo add visual confirmation if upgrade failed
-            Debug.Log(string.Format("Upgrade failed for {0}. Current level: {1}.", Name, Level));
+            Debug.Log(string.Format("Upgrade failed for {0}. Current level: {1}.", PropertyName, Level));
         }
     }
 
