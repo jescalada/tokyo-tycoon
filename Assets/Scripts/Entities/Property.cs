@@ -31,9 +31,6 @@ public abstract class Property : MonoBehaviour, IClickable
     [SerializeField]
     private string[] descriptionByLevel = new string[MAX_LEVEL];
 
-    [SerializeField]
-    private GameObject detailsCanvas;
-
     public void Buy()
     {
         Owned = true;
@@ -54,11 +51,7 @@ public abstract class Property : MonoBehaviour, IClickable
         }
     }
 
-    public virtual void Click()
-    {
-        // Set and update the details of this Property
-        detailsCanvas.SetActive(true);
-    }
+    public abstract void Click();
     public string GetUpgradeNameByLevel()
     {
         return upgradeNameByLevel[Level];

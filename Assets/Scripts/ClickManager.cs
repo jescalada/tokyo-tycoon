@@ -7,6 +7,9 @@ public class ClickManager : MonoBehaviour
     [SerializeField]
     private Camera cam;
 
+    [SerializeField]
+    private GameManager gameManager;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -17,6 +20,8 @@ public class ClickManager : MonoBehaviour
             {
                 IClickable clickable = hit.collider.GetComponent<IClickable>();
                 clickable?.Click();
+                Debug.Log(string.Format("Clickable is of type {0}", clickable.GetType()));
+                gameManager.activeProperty = (Property) clickable; // Todo make this more OOP-ish
             }
         }
     }

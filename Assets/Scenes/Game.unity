@@ -409,7 +409,6 @@ MonoBehaviour:
     but the view is impressive.
   - A large apartment complex near the shopping district. The suites are rather cramped
     but the view is impressive.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: de03000064050000f8070000400b0000640f00005a140000541a000034210000e6280000b4320000483f0000204e0000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -418,6 +417,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &181885639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -561,7 +561,6 @@ MonoBehaviour:
   - A student dormitory. It's quite noisy and not spacious at all.
   - A student dormitory. It's quite noisy and not spacious at all.
   - A student dormitory. It's quite noisy and not spacious at all.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 00000000fa000000680100001c020000340300007e040000fa050000c6070000ec0900009e0c0000dc0f0000ec130000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -570,6 +569,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &195640775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1086,7 +1086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270460507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7, z: -10}
+  m_LocalPosition: {x: 6, y: -7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1164,7 +1164,6 @@ MonoBehaviour:
     building as a whole is poorly maintained.
   - The tallest building in the city centre. The amazing view is amazing, but the
     building as a whole is poorly maintained.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 00000000b80600001e0a0000420e000038130000e619000034210000262a00008a34000030430000f0550000546f0000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -1173,6 +1172,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &412484466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1388,8 +1388,10 @@ GameObject:
   m_Component:
   - component: {fileID: 482373333}
   - component: {fileID: 482373332}
+  - component: {fileID: 482373334}
+  - component: {fileID: 482373335}
   m_Layer: 0
-  m_Name: ClickManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1408,6 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 270460509}
+  gameManager: {fileID: 482373335}
 --- !u!4 &482373333
 Transform:
   m_ObjectHideFlags: 0
@@ -1423,6 +1426,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482373334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482373331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e82cd580bbd954694943ebfdc6c996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Maxwell
+  money: 10000
+--- !u!114 &482373335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482373331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201d92a9dbaf334d9b0eb0b5a36a942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 482373334}
+  activeProperty: {fileID: 0}
+  upgradeButton: {fileID: 1560399086}
+  buyButton: {fileID: 1836993098}
 --- !u!1 &576710550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1467,7 @@ GameObject:
   - component: {fileID: 576710551}
   - component: {fileID: 576710553}
   - component: {fileID: 576710552}
+  - component: {fileID: 576710554}
   m_Layer: 5
   m_Name: DetailsPanel
   m_TagString: Untagged
@@ -1505,6 +1539,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576710550}
   m_CullTransparentMesh: 1
+--- !u!114 &576710554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576710550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1bccdcfd2176040bb4b87c9f16d01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyButton: {fileID: 0}
+  upgradeButton: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &596390467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,7 +1625,6 @@ MonoBehaviour:
     and the veranda is broken.
   - A small apartment complex with a few apartments. The wood looks old and moldy
     and the veranda is broken.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 000000006400000096000000dc0000002c010000a40100004402000002030000e803000046050000d606000098080000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -1585,6 +1633,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &596390469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1966,7 +2015,6 @@ MonoBehaviour:
   - A mansion.
   - A mansion.
   - A mansion.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 000000007a0d0000cc150000c6200000da2f00000447000016670000c08a0000a4b5000040e700003e250100306f0100
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -1975,6 +2023,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &719981194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2129,8 +2178,14 @@ MonoBehaviour:
     and benches.
   - A simple park in the suburbs. There isn't a lot to see except for a few trees
     and benches.
-  detailsCanvas: {fileID: 576710550}
   genericDialogues: []
+  detailsCanvas: {fileID: 576710550}
+  chatCanvas: {fileID: 0}
+  rentValueText: {fileID: 1052533892}
+  propertyNameText: {fileID: 216262414}
+  upgradeCostText: {fileID: 0}
+  propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &745384990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2285,7 +2340,6 @@ MonoBehaviour:
     windows are broken.
   - A small house in a suburban district. The garden is covered in weeds and the
     windows are broken.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 8a020000ca03000078050000440700001e0a00007a0d00006211000094160000ac1c0000b8240000a02d0000dc370000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -2294,6 +2348,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &999835907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2718,7 +2773,6 @@ MonoBehaviour:
     and there's graffiti on the walls.
   - A home in a neighborhood where all houses look the same. The fence is missing
     and there's graffiti on the walls.
-  detailsCanvas: {fileID: 576710550}
   rentValueByLevel: 40010000cc0100009402000098030000f6040000a4060000c0080000680b0000b00e000084120000c6160000581b0000
   tenant: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
@@ -2727,6 +2781,7 @@ MonoBehaviour:
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &1096594922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2822,7 +2877,7 @@ GameObject:
   - component: {fileID: 1140292399}
   - component: {fileID: 1140292398}
   m_Layer: 5
-  m_Name: UpgradeDescription
+  m_Name: PropertyDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3174,8 +3229,14 @@ MonoBehaviour:
     around the flickering machines.
   - A stylish arcade in the city centre. A few regular customers can be seen gathering
     around the flickering machines.
-  detailsCanvas: {fileID: 576710550}
   genericDialogues: []
+  detailsCanvas: {fileID: 576710550}
+  chatCanvas: {fileID: 0}
+  rentValueText: {fileID: 1052533892}
+  propertyNameText: {fileID: 216262414}
+  upgradeCostText: {fileID: 0}
+  propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &1393048438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4082,8 +4143,14 @@ MonoBehaviour:
     the sea.
   - A beach on the outskirts of the city. There's a few people enjoying the sun and
     the sea.
-  detailsCanvas: {fileID: 576710550}
   genericDialogues: []
+  detailsCanvas: {fileID: 576710550}
+  chatCanvas: {fileID: 0}
+  rentValueText: {fileID: 1052533892}
+  propertyNameText: {fileID: 216262414}
+  upgradeCostText: {fileID: 0}
+  propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &1806059182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4385,7 +4452,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836993099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 482373334}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: BuyProperty
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Property, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1836993099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5155,8 +5234,14 @@ MonoBehaviour:
     bags of merchandise.
   - A mall in one of the busy districts of town. A few people come out with various
     bags of merchandise.
-  detailsCanvas: {fileID: 576710550}
   genericDialogues: []
+  detailsCanvas: {fileID: 576710550}
+  chatCanvas: {fileID: 0}
+  rentValueText: {fileID: 1052533892}
+  propertyNameText: {fileID: 216262414}
+  upgradeCostText: {fileID: 0}
+  propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &2027620570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5300,8 +5385,14 @@ MonoBehaviour:
   - A little library near Downtown. It's a cozy place with a small variety of books.
   - A little library near Downtown. It's a cozy place with a small variety of books.
   - A little library near Downtown. It's a cozy place with a small variety of books.
-  detailsCanvas: {fileID: 576710550}
   genericDialogues: []
+  detailsCanvas: {fileID: 576710550}
+  chatCanvas: {fileID: 0}
+  rentValueText: {fileID: 1052533892}
+  propertyNameText: {fileID: 216262414}
+  upgradeCostText: {fileID: 0}
+  propertyLevelText: {fileID: 39196527}
+  propertyDescriptionText: {fileID: 1140292398}
 --- !u!212 &2040017354
 SpriteRenderer:
   m_ObjectHideFlags: 0

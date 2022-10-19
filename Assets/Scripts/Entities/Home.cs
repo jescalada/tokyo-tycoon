@@ -8,7 +8,7 @@ public class Home : Property
 {
     [SerializeField]
     private int[] rentValueByLevel = new int[MAX_LEVEL];
-    public int RentValueByLevel
+    public int[] RentValueByLevel
     { get; }
 
     [SerializeField]
@@ -28,21 +28,24 @@ public class Home : Property
     private TextMeshProUGUI upgradeCostText;
     [SerializeField]
     private TextMeshProUGUI propertyLevelText;
+    [SerializeField]
+    private TextMeshProUGUI propertyDescriptionText;
 
 
     override
     public void Click()
     {
         detailsCanvas.SetActive(true);
-        rentValueText.text = string.Format("${0} per day", rentValueByLevel);
+        rentValueText.text = string.Format("${0} per day", rentValueByLevel[Level]);
         propertyNameText.text = PropertyName;
         propertyLevelText.text = string.Format("Level {0}", Level);
-        // upgradeCostText.text = GetUpgradeCostByLevel(Level);
+        // upgradeCostText.text = GetUpgradeCostByLevel();
+        propertyDescriptionText.text = GetDescriptionByLevel();
         // Todo set Tenant picture to UI
         chatCanvas.SetActive(true);
     }
     public int CollectRent()
     {
-        return RentValueByLevel;
+        return RentValueByLevel[Level];
     }
 }
