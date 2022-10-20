@@ -22,6 +22,19 @@ public class ClickManager : MonoBehaviour
                 clickable?.Click();
                 Debug.Log(string.Format("Clickable is of type {0}", clickable.GetType()));
                 gameManager.activeProperty = (Property) clickable; // Todo make this more OOP-ish
+                if (clickable.GetType().Equals("Home"))
+                {
+                    Debug.Log("It is a Home...");
+                    Home home = (Home) clickable;
+                    if (home.CollectedDailyRent)
+                    {
+                        gameManager.disableRentButton();
+                    }
+                    else
+                    {
+                        gameManager.enableRentButton();
+                    }
+                }
             }
         }
     }

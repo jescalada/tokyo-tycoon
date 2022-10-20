@@ -16,6 +16,12 @@ public class Home : Property
     public Character Tenant
     { get; }
 
+
+    [SerializeField]
+    private bool collectedDailyRent;
+    public bool CollectedDailyRent
+    { get; private set; }
+
     [SerializeField]
     private GameObject detailsCanvas;
     [SerializeField]
@@ -46,6 +52,14 @@ public class Home : Property
     }
     public int CollectRent()
     {
-        return RentValueByLevel[Level];
+        if (collectedDailyRent) Debug.Log("You already collected rent for the day!");
+        collectedDailyRent = true;
+        return rentValueByLevel[Level];
+    }
+    override
+    public void AdvanceDay()
+    {
+        // Enable Collect button for this instance (will be done with collectedDailyRent)
+        collectedDailyRent = false;
     }
 }

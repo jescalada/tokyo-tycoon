@@ -52,6 +52,9 @@ public abstract class Property : MonoBehaviour, IClickable
     }
 
     public abstract void Click();
+
+    public abstract void AdvanceDay();
+
     public string GetUpgradeNameByLevel()
     {
         return upgradeNameByLevel[Level];

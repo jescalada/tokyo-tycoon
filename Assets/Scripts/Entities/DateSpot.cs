@@ -47,4 +47,9 @@ public class DateSpot : Property
         propertyDescriptionText.text = GetDescriptionByLevel();
         // Todo: Add date button for locations
     }
+    override
+    public void AdvanceDay()
+    {
+
+    }
 }
