@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     private List<Character> characters;
     private List<Property> properties;
+
+    [SerializeField]
     private TimeController timeController;
 
     public Property activeProperty;
@@ -18,18 +21,27 @@ public class GameManager : MonoBehaviour
     private Button upgradeButton;
     [SerializeField]
     private Button buyButton;
+    [SerializeField]
+    private Button advanceDayButton;
+
+    [SerializeField]
+    private TextMeshProUGUI moneyTextTop;
+    [SerializeField]
+    private TextMeshProUGUI dateTextTop;
 
     // Start is called before the first frame update
     void Start()
     {
         upgradeButton.onClick.AddListener(UpgradeActiveProperty);
         buyButton.onClick.AddListener(BuyActiveProperty);
+        advanceDayButton.onClick.AddListener(AdvanceDay);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        moneyTextTop.text = player.Money.ToString();
+        dateTextTop.text = timeController.ToString();
     }
 
     public void UpgradeActiveProperty()
@@ -63,6 +75,6 @@ public class GameManager : MonoBehaviour
 
     public void AdvanceDay()
     {
-
+        timeController.AdvanceDay();
     }
 }

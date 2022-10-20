@@ -10,7 +10,7 @@ public class TimeController : MonoBehaviour
     public string Season
     { get; private set; } = "Spring";
     public int Year
-    { get; private set; } = 1;
+    { get; private set; } = 2021;
 
     public void AdvanceDay()
     {
@@ -38,6 +38,12 @@ public class TimeController : MonoBehaviour
             "Winter" => "Spring",
             _ => "Invalid Season",
         };
+    }
+
+    override
+    public string ToString()
+    {
+        return string.Format("{0} {1}, {2}", Season.ToUpper(), Day, Year);
     }
 
 }
