@@ -1390,6 +1390,7 @@ GameObject:
   - component: {fileID: 482373332}
   - component: {fileID: 482373334}
   - component: {fileID: 482373335}
+  - component: {fileID: 482373336}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1453,9 +1454,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 482373334}
+  timeController: {fileID: 482373336}
   activeProperty: {fileID: 0}
   upgradeButton: {fileID: 1560399086}
   buyButton: {fileID: 1836993098}
+  advanceDayButton: {fileID: 1950146857}
+  moneyTextTop: {fileID: 1904372599}
+  dateTextTop: {fileID: 619758893}
+--- !u!114 &482373336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482373331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d63bf13d974bd428481030f6929d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576710550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 0}
-  m_SizeDelta: {x: 400, y: 64}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 420, y: 64}
   m_Pivot: {x: 0.00000016950071, y: 0.5}
 --- !u!114 &619758893
 MonoBehaviour:
