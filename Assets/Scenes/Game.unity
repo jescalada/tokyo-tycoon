@@ -409,7 +409,7 @@ MonoBehaviour:
     but the view is impressive.
   - A large apartment complex near the shopping district. The suites are rather cramped
     but the view is impressive.
-  rentValueByLevel: de03000064050000f8070000400b0000640f00005a140000541a000034210000e6280000b4320000483f0000204e0000
+  rentValueByLevel: 00000000de03000064050000f8070000400b0000640f00005a140000541a000034210000e6280000b4320000483f0000
   tenant: {fileID: 0}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
@@ -419,6 +419,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &181885639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -572,6 +574,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &195640775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1176,6 +1180,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &412484466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1443,7 +1449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Maxwell
-  money: 10000
+  money: 100000
+  ownedProperties: []
 --- !u!114 &482373335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,6 +1472,8 @@ MonoBehaviour:
   collectRentButton: {fileID: 1637478323}
   moneyTextTop: {fileID: 1904372599}
   dateTextTop: {fileID: 619758893}
+  detailsPanel: {fileID: 576710550}
+  dialoguePanel: {fileID: 1219274751}
 --- !u!114 &482373336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1497,6 @@ GameObject:
   - component: {fileID: 576710551}
   - component: {fileID: 576710553}
   - component: {fileID: 576710552}
-  - component: {fileID: 576710554}
   m_Layer: 5
   m_Name: DetailsPanel
   m_TagString: Untagged
@@ -1560,21 +1568,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576710550}
   m_CullTransparentMesh: 1
---- !u!114 &576710554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576710550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af1bccdcfd2176040bb4b87c9f16d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyButton: {fileID: 0}
-  upgradeButton: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &596390467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1649,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &596390469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2047,6 +2042,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &719981194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2203,12 +2200,14 @@ MonoBehaviour:
     and benches.
   genericDialogues: []
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
+  chatCanvas: {fileID: 1219274751}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &745384990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2363,7 +2362,7 @@ MonoBehaviour:
     windows are broken.
   - A small house in a suburban district. The garden is covered in weeds and the
     windows are broken.
-  rentValueByLevel: 8a020000ca03000078050000440700001e0a00007a0d00006211000094160000ac1c0000b8240000a02d0000dc370000
+  rentValueByLevel: 000000008a020000ca03000078050000440700001e0a00007a0d00006211000094160000ac1c0000b824000070300000
   tenant: {fileID: 0}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
@@ -2373,6 +2372,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &999835907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2797,7 +2798,7 @@ MonoBehaviour:
     and there's graffiti on the walls.
   - A home in a neighborhood where all houses look the same. The fence is missing
     and there's graffiti on the walls.
-  rentValueByLevel: 40010000cc0100009402000098030000f6040000a4060000c0080000680b0000b00e000084120000c6160000581b0000
+  rentValueByLevel: 0000000040010000cc0100009402000098030000f6040000a4060000c0080000680b0000b00e00008412000070170000
   tenant: {fileID: 0}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
@@ -2807,6 +2808,8 @@ MonoBehaviour:
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &1096594922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3257,12 +3260,14 @@ MonoBehaviour:
     around the flickering machines.
   genericDialogues: []
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
+  chatCanvas: {fileID: 1219274751}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &1393048438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3681,7 +3686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1560399085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3700,8 +3705,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 48}
-  m_SizeDelta: {x: 180, y: 48}
+  m_AnchoredPosition: {x: 0, y: 72}
+  m_SizeDelta: {x: 210, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560399086
 MonoBehaviour:
@@ -4143,7 +4148,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade
+  m_text: 'Add more lorem ipsums yadda yadda
+
+    $1000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4170,8 +4177,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4293,12 +4300,14 @@ MonoBehaviour:
     the sea.
   genericDialogues: []
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
+  chatCanvas: {fileID: 1219274751}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &1806059182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4575,7 +4584,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy
+  m_text: 'Buy
+
+    $500'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4689,8 +4700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 112}
-  m_SizeDelta: {x: 180, y: 48}
+  m_AnchoredPosition: {x: 0, y: 72}
+  m_SizeDelta: {x: 210, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836993098
 MonoBehaviour:
@@ -4735,19 +4746,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836993099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 482373334}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: BuyProperty
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Property, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1836993099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,12 +5518,14 @@ MonoBehaviour:
     bags of merchandise.
   genericDialogues: []
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
+  chatCanvas: {fileID: 1219274751}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &2027620570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5670,12 +5671,14 @@ MonoBehaviour:
   - A little library near Downtown. It's a cozy place with a small variety of books.
   genericDialogues: []
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
+  chatCanvas: {fileID: 1219274751}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
   propertyLevelText: {fileID: 39196527}
   propertyDescriptionText: {fileID: 1140292398}
+  buyButtonText: {fileID: 1831239006}
+  upgradeButtonText: {fileID: 1693129049}
 --- !u!212 &2040017354
 SpriteRenderer:
   m_ObjectHideFlags: 0
