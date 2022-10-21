@@ -23,6 +23,10 @@ public class DateSpot : Property
     private TextMeshProUGUI propertyLevelText;
     [SerializeField]
     private TextMeshProUGUI propertyDescriptionText;
+    [SerializeField]
+    private TextMeshProUGUI buyButtonText;
+    [SerializeField]
+    private TextMeshProUGUI upgradeButtonText;
 
 
     public string GetRandomDialogue()
@@ -40,13 +44,23 @@ public class DateSpot : Property
     public void Click()
     {
         detailsCanvas.SetActive(true);
+        chatCanvas.SetActive(false);
+        UpdateUI();
+    }
+
+    override
+    public void UpdateUI()
+    {
         rentValueText.text = "";
         propertyNameText.text = PropertyName;
-        propertyLevelText.text = string.Format("Level {0}", Level);
+        propertyLevelText.text = string.Format("Level {0}", GetLevel());
         // upgradeCostText.text = GetUpgradeCostByLevel();
         propertyDescriptionText.text = GetDescriptionByLevel();
         // Todo: Add date button for locations
+        buyButtonText.text = GetBuyCostString();
+        upgradeButtonText.text = GetUpgradeCostString();
     }
+
     override
     public void AdvanceDay()
     {

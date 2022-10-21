@@ -12,28 +12,37 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private int money;
-    public int Money
-    { get; private set; }
-    public List<Property> OwnedProperties
-    { get; }
+
+    [SerializeField]
+    private List<Property> ownedProperties;
 
     public void BuyProperty(Property property)
     {
-        OwnedProperties.Add(property);
+        ownedProperties.Add(property);
     }
 
     public void AddMoney(int money)
     {
-        Money += money;
+        this.money += money;
     }
     public void SpendMoney(int cost)
     {
-        if (Money < cost) throw new Exception(); // Todo create custom exceptions
-        Money -= cost;
+        if (money < cost) throw new Exception(); // Todo create custom exceptions
+        money -= cost;
     }
 
     public bool CheckMoney(int cost)
     {
-        return Money >= cost;
+        return money >= cost;
+    }
+
+    public int GetMoney()
+    {
+        return money;
+    }
+
+    public List<Property> GetOwnedProperties()
+    {
+        return ownedProperties;
     }
 }

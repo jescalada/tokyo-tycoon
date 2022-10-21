@@ -20,21 +20,39 @@ public class ClickManager : MonoBehaviour
             {
                 IClickable clickable = hit.collider.GetComponent<IClickable>();
                 clickable?.Click();
-                Debug.Log(string.Format("Clickable is of type {0}", clickable.GetType()));
-                gameManager.activeProperty = (Property) clickable; // Todo make this more OOP-ish
-                if (clickable.GetType().Equals("Home"))
+                Property property = (Property) clickable;
+                gameManager.activeProperty = property; // Todo make this more OOP-ish
+                
+                string clickableType = property.GetType().ToString();
+                if (clickableType.Equals("Home"))
                 {
-                    Debug.Log("It is a Home...");
                     Home home = (Home) clickable;
-                    if (home.CollectedDailyRent)
+                    if (home.CollectedDailyRent())
                     {
-                        gameManager.disableRentButton();
+                        gameManager.DisableRentButton();
                     }
                     else
                     {
-                        gameManager.enableRentButton();
+                        gameManager.EnableRentButton();
                     }
                 }
+
+                if (property.Owned())
+                {
+                    gameManager.DisableBuyButton();
+                    gameManager.EnableUpgradeButton();
+                    if (property.GetLevel() >= Property.MAX_LEVEL)
+                    {
+                        gameManager.SetMaxedUpgradeButton();
+                    }
+                } else
+                {
+                    gameManager.ResetMaxedUpgradeButton();
+                    gameManager.EnableBuyButton();
+                    gameManager.DisableUpgradeButton();
+                }
+
+                
             }
         }
     }

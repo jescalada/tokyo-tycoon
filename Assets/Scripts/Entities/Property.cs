@@ -11,18 +11,12 @@ public abstract class Property : MonoBehaviour, IClickable
     
     [SerializeField]
     private int cost;
-    public int Cost
-    { get; } = 0;
 
     [SerializeField]
     private int level;
-    public int Level
-    { get; private set; } = 0;
 
     [SerializeField]
     private bool owned;
-    public bool Owned
-    { get; private set; } = false;
 
     [SerializeField]
     private string[] upgradeNameByLevel = new string[MAX_LEVEL];
@@ -33,21 +27,21 @@ public abstract class Property : MonoBehaviour, IClickable
 
     public void Buy()
     {
-        Owned = true;
-        Level = 1;
+        owned = true;
+        level = 1;
     }
     public void Upgrade()
     {
-        if (Level <= MAX_LEVEL)
+        if (level <= MAX_LEVEL)
         {
-            Level++;
+            level++;
             // Todo add visual confirmation if successfully upgraded
-            Debug.Log(string.Format("Upgraded {0} to level {1}.", PropertyName, Level));
+            Debug.Log(string.Format("Upgraded {0} to level {1}.", PropertyName, level));
         }
         else
         {
             // Todo add visual confirmation if upgrade failed
-            Debug.Log(string.Format("Upgrade failed for {0}. Current level: {1}.", PropertyName, Level));
+            Debug.Log(string.Format("Upgrade failed for {0}. Current level: {1}.", PropertyName, level));
         }
     }
 
@@ -55,17 +49,43 @@ public abstract class Property : MonoBehaviour, IClickable
 
     public abstract void AdvanceDay();
 
+    public abstract void UpdateUI();
+
     public string GetUpgradeNameByLevel()
     {
-        return upgradeNameByLevel[Level];
+        return upgradeNameByLevel[level];
     }
     public string GetDescriptionByLevel()
     {
-        return descriptionByLevel[Level];
+        return descriptionByLevel[level];
     }
     public int GetUpgradeCostByLevel()
     {
-        return upgradeCostByLevel[Level];
+        return upgradeCostByLevel[level];
     }
 
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public int GetCost()
+    {
+        return cost;
+    }
+
+    public bool Owned()
+    {
+        return owned;
+    }
+
+    public string GetBuyCostString()
+    {
+        return string.Format("Buy\n${0}", cost);
+    }
+
+    public string GetUpgradeCostString()
+    {
+        return string.Format("{0}\n${1}", GetUpgradeNameByLevel(), GetUpgradeCostByLevel());
+    }
 }
