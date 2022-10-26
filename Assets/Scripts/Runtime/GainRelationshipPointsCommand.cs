@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using Naninovel;
+using Naninovel.Commands;
 using UnityEngine;
 
-public class GainRelationshipPointsCommand : MonoBehaviour
+[CommandAlias("gainrelationship")]
+public class GainRelationshipPointsCommand : Command
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [ParameterAlias("points")]
+    public IntegerParameter relationshipPoints = 0;
 
-    // Update is called once per frame
-    void Update()
+    public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
     {
-        
+        GameObject.Find("GameManager").GetComponent<GameManager>().IncreaseRelationshipActiveCharacter(relationshipPoints);
+        return UniTask.CompletedTask;
     }
 }

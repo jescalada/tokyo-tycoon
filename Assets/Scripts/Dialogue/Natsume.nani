@@ -6,8 +6,10 @@ na: Yeees, I'm coming![i] Hello?
 na: Oh, the new landlord guy![i] Pleased to meet you, {PlayerName}![i] I'm Natsume! 
 {PlayerName}: Yeah, nice to meet you.
 na: Here's your rent for today.
+@showUI RelationshipBar wait:false
 @collectrent
 na: Don't forget to come by every day!
+@hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2

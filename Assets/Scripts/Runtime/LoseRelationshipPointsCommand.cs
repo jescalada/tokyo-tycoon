@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using Naninovel;
+using Naninovel.Commands;
 using UnityEngine;
 
-public class LoseRelationshipPointsCommand : MonoBehaviour
+[CommandAlias("loserelationship")]
+public class LoseRelationshipPointsCommand : Command
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [ParameterAlias("points")]
+    public IntegerParameter relationshipPoints = 0;
 
-    // Update is called once per frame
-    void Update()
+    public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
     {
-        
+        GameObject.Find("GameManager").GetComponent<GameManager>().DecreaseRelationshipActiveCharacter(relationshipPoints);
+        return UniTask.CompletedTask;
     }
 }

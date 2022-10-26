@@ -105,13 +105,13 @@ public class GameManager : MonoBehaviour
     public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
     {
         // Todo: Add animation
-        ((Home)activeProperty).Tenant.RelationshipPoints += relationshipPoints;
+        ((Home)activeProperty).Tenant.GainRelationshipPoints(relationshipPoints);
     }
 
     public void DecreaseRelationshipActiveCharacter(int relationshipPoints)
     {
         // Todo: Add animation
-        ((Home)activeProperty).Tenant.RelationshipPoints -= relationshipPoints;
+        ((Home)activeProperty).Tenant.LoseRelationshipPoints(relationshipPoints);
     }
 
     public void AdvanceDay()
