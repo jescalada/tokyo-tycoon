@@ -1,0 +1,36 @@
+# Intro001
+@set PlayerName="Maxwell"
+*knock knock*
+n: Yeees, I'm coming![i]Hello?
+p: Nice to meet you. I'm {PlayerName}, your new landlord.
+n: Oh, the new landlord guy! I'm Natsume! Pleased to meet you, {PlayerName}![i]
+p: Yeah, nice to meet you.
+n: By the way, here's your rent for the day. Don't forget to come by every day
+@stop
+
+# Intro002
+*knock knock*
+n: Just a mooooment![i]Oh, hi {PlayerName}![i]What brings you here today?[skipInput]
+@choice "Just passing by." goto:.Intro002a
+@choice "Tell me about yourself." goto:.Intro002b
+@choice "I just came here to get my rent!" goto:.Intro002c
+@stop
+
+# Intro002a
+p: No reason. Just passing by.
+n: Oh, I see! I was about to go to class. I have a big test today and I haven't studied at all!
+p: What's your major?
+n: Psychology! I've always loved knowing more about people's minds and helping them sort out their issues!
+n: Before I forget, here's your rent for today.[i]Have a nice day, {PlayerName}!
+@stop
+
+# Intro002b
+p: Why don't you tell me more about yourself?
+n: Sure! Ummm... So, I'm a Psychology student at Tokyo University, I like to hang out with my friends and play basketball.[i]Oh! And I love kittens more than anything in this world!
+n: And before I forget, here's your rent for today.[i]Have a nice day, {PlayerName}!
+@stop
+
+# Intro002c
+p: Don't be silly, I just came here to get my rent!
+n: Oh... Well, here's your rent for the day, sir.[i]Have a nice day!
+@stop
