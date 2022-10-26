@@ -162,10 +162,13 @@ MonoBehaviour:
       guid: bb95f484e341dcd4391a572f22b7d067
     - name: PauseUI
       pathPrefix: UI
-      guid: 480f5db62ea305c46b89a86496d2a0c9
+      guid: 0207fc7c4c8ebe6488d26b8cc12ed21d
     - name: ToastUI
       pathPrefix: UI
       guid: dd85ce99288c2f8488447fa511b1c0d6
+    - name: RelationshipBar
+      pathPrefix: UI
+      guid: 0207fc7c4c8ebe6488d26b8cc12ed21d
   - Id: Scripts
     Resources:
     - name: 001 Intro
