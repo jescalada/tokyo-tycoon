@@ -98,7 +98,20 @@ public class GameManager : MonoBehaviour
         // Prevent the rent collection from showing up when clicking a DateSpot
         int moneyObtained = ((Home)activeProperty).CollectRent();
         DisableRentButton();
+        // Todo: Add animation
         player.AddMoney(moneyObtained);
+    }
+
+    public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
+    {
+        // Todo: Add animation
+        ((Home)activeProperty).Tenant.RelationshipPoints += relationshipPoints;
+    }
+
+    public void DecreaseRelationshipActiveCharacter(int relationshipPoints)
+    {
+        // Todo: Add animation
+        ((Home)activeProperty).Tenant.RelationshipPoints -= relationshipPoints;
     }
 
     public void AdvanceDay()
