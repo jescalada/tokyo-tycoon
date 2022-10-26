@@ -176,9 +176,27 @@ MonoBehaviour:
       guid: 1ac9cf63fc8ba8d4eb89bad4d7aabe1d
   - Id: CharacterAvatars
     Resources:
-    - name: m/Default
+    - name: na/Default
       pathPrefix: CharacterAvatars
       guid: 60cae438c703f8f4da14ae33cd80ad01
+    - name: ha/Default
+      pathPrefix: CharacterAvatars
+      guid: 2d09894013a76ac41a2c59ced6a53494
+    - name: ky/Default
+      pathPrefix: CharacterAvatars
+      guid: 49cd1a1ed979c154c86f4f1e35ee085d
+    - name: ko/Default
+      pathPrefix: CharacterAvatars
+      guid: c2f501eb8e071464d944f08142fa66f9
+    - name: ai/Default
+      pathPrefix: CharacterAvatars
+      guid: 877568075dc626342b3d6289c1ccdfd8
+    - name: ri/Default
+      pathPrefix: CharacterAvatars
+      guid: ebaa9d4a286c2544ebcbef87472bebc4
+    - name: sa/Default
+      pathPrefix: CharacterAvatars
+      guid: c5a5d471d1e07b847b4ae5f8759fd27d
   - Id: Characters/60c94285-7091-4826-9a5e-25618df1a5de
     Resources:
     - name: Default
