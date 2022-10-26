@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6685029884837214277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6685029884837214278}
+  - component: {fileID: 5391181795250736642}
+  m_Layer: 0
+  m_Name: Sayuri
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6685029884837214278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685029884837214277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5391181795250736642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685029884837214277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bbc279539c8164ba9c0cb12de5a4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Riko
+  Age: 20
+  Description: The daughter of a prominent politician in town. Cultured and well-mannered,
+    she dazzles those around her with her regal grace.
+  CurrentRelationshipLevel: 0
+  RelationshipPoints: 0
+  Likes:
+  - Sewing
+  - Horse-riding
+  - Mall
+  - Park
+  - Autumn
+  - Serious (Trait)
+  Dislikes:
+  - Winter
+  - Beach
+  - Caring (Trait)
+  IdleDialogues: []
+  RentPayDialogues: []
+  DateInvitationDialogues: []
