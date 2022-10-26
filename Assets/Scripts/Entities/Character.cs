@@ -8,28 +8,18 @@ public class Character : MonoBehaviour
     private static readonly int FRIEND_THRESHOLD = 500;
     private static readonly int CLOSE_FRIEND_THRESHOLD = 2000;
     private static readonly int LOVER_THRESHOLD = 10000;
-    public string Name
-    { get; }
-    public int Age
-    { get; }
-    public string Description
-    { get; }
-    public RelationshipLevel CurrentRelationshipLevel
-    { get; private set; }
-    public int RelationshipPoints
-    { get; private set; }
-    public List<string> Likes
-    { get; }
-    public List<string> Dislikes
-    { get; }
-    public List<string> IdleDialogues
-    { get; }
-    public List<string> RentPayDialogues
-    { get; }
-    public List<string> DateInvitationDialogues
-    { get; }
-    public Dictionary<RelationshipLevel, List<string>> ChatDialoguesByRelation
-    { get; }
+    
+    public string Name;
+    public int Age;
+    public string Description;
+    public RelationshipLevel CurrentRelationshipLevel = RelationshipLevel.Stranger;
+    public int RelationshipPoints;
+    public List<string> Likes;
+    public List<string> Dislikes;
+    public List<string> IdleDialogues;
+    public List<string> RentPayDialogues;
+    public List<string> DateInvitationDialogues;
+    public Dictionary<RelationshipLevel, List<string>> ChatDialoguesByRelation;
 
     public void InviteToDate()
     {

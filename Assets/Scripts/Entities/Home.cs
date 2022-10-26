@@ -11,10 +11,7 @@ public class Home : Property
     public int[] RentValueByLevel
     { get; }
 
-    [SerializeField]
-    private Character tenant;
-    public Character Tenant
-    { get; }
+    public Character Tenant;
 
 
     [SerializeField]

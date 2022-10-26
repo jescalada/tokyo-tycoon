@@ -9,6 +9,8 @@ public class DateSpot : Property
     [SerializeField]
     private Dictionary<string, string[]> uniqueDialogues;
 
+    public DialogueTrigger trigger;
+
     [SerializeField]
     private GameObject detailsCanvas;
     [SerializeField]
