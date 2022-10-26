@@ -413,7 +413,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 673191f1d22104d4face451c598638ae, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -568,7 +567,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 2c2f5b4c2666b2b4293717ce029be8da, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -1039,7 +1037,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 7190e891d416cd24cafe893419c27a25, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -1525,7 +1522,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 527ea2aaacdde3b43bf2ebe3d59c5d20, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -1629,7 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScriptName: Natsume
-  Label: Intro001
+  Label: Intro1
 --- !u!1 &619758891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1927,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 7a4a41abb3b08af4dafc0ce2266ebcfc, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -2034,7 +2029,6 @@ GameObject:
   - component: {fileID: 745384990}
   - component: {fileID: 745384989}
   - component: {fileID: 745384992}
-  - component: {fileID: 745384993}
   m_Layer: 0
   m_Name: Park
   m_TagString: Untagged
@@ -2097,7 +2091,6 @@ MonoBehaviour:
   genericDialogues: []
   trigger: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -2188,20 +2181,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0000019073486}
   serializedVersion: 2
   m_Radius: 3.3333333
---- !u!114 &745384993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745384988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06da661194789194696499c4eee5a67f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScriptName: 001 Intro
-  Label: HelloWorld
 --- !u!1 &999835905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2257,6 @@ MonoBehaviour:
   collectedDailyRent: 0
   detailsCanvas: {fileID: 6685029884837214277, guid: e24e6eb22ad2ebc4e8bb79a949dafe28,
     type: 3}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -2715,7 +2693,6 @@ MonoBehaviour:
   Tenant: {fileID: 5391181795250736642, guid: 61415fb2939d6d3468d9c08b135a9541, type: 3}
   collectedDailyRent: 0
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -3092,7 +3069,6 @@ MonoBehaviour:
   genericDialogues: []
   trigger: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -4059,7 +4035,6 @@ MonoBehaviour:
   genericDialogues: []
   trigger: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -5023,7 +4998,6 @@ MonoBehaviour:
   genericDialogues: []
   trigger: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -5177,7 +5151,6 @@ MonoBehaviour:
   genericDialogues: []
   trigger: {fileID: 0}
   detailsCanvas: {fileID: 576710550}
-  chatCanvas: {fileID: 0}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}

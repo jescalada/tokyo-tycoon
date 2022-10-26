@@ -20,8 +20,6 @@ public class Home : Property
     [SerializeField]
     private GameObject detailsCanvas;
     [SerializeField]
-    private GameObject chatCanvas;
-    [SerializeField]
     private TextMeshProUGUI rentValueText;
     [SerializeField]
     private TextMeshProUGUI propertyNameText;
@@ -36,13 +34,14 @@ public class Home : Property
     [SerializeField]
     private TextMeshProUGUI upgradeButtonText;
 
+    public int UniqueDialogueCounter = 1;
 
     override
     public void Click()
     {
         detailsCanvas.SetActive(true);
         UpdateUI();
-        chatCanvas.SetActive(true);
+        UpdateDialogueLabel();
     }
     override
     public void UpdateUI()
@@ -63,6 +62,13 @@ public class Home : Property
         collectedDailyRent = true;
         return rentValueByLevel[GetLevel()];
     }
+
+    private void UpdateDialogueLabel()
+    {
+        UniqueDialogueCounter++;
+        GetComponent<DialogueTrigger>().Label = string.Format("Intro{0}", UniqueDialogueCounter); // Updates the next dialogue to show upon clicking this building
+    }
+
     override
     public void AdvanceDay()
     {

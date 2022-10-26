@@ -178,7 +178,7 @@ MonoBehaviour:
     Resources:
     - name: na/Default
       pathPrefix: CharacterAvatars
-      guid: 60cae438c703f8f4da14ae33cd80ad01
+      guid: 2d09894013a76ac41a2c59ced6a53494
     - name: ha/Default
       pathPrefix: CharacterAvatars
       guid: 2d09894013a76ac41a2c59ced6a53494
@@ -198,10 +198,7 @@ MonoBehaviour:
       pathPrefix: CharacterAvatars
       guid: c5a5d471d1e07b847b4ae5f8759fd27d
   - Id: Characters/60c94285-7091-4826-9a5e-25618df1a5de
-    Resources:
-    - name: Default
-      pathPrefix: Characters/m
-      guid: 8960572f1deaddd49aae40a294d93ed2
+    Resources: []
   - Id: TextPrinters/5ba3829c-fbdc-4010-ad47-e7796d213e40
     Resources:
     - name: Adventure
@@ -212,3 +209,15 @@ MonoBehaviour:
     - name: Novel
       pathPrefix: TextPrinters
       guid: c9282a583d10fb54c80424b465a60fa3
+  - Id: Characters/720fade1-7de4-4bc7-9566-a0e8bd03160d
+    Resources: []
+  - Id: Characters/f0d1e100-b2c2-44be-916b-d4d7ae4b941c
+    Resources: []
+  - Id: Characters/fe2c197f-c437-46e8-95c7-26395fd97ad7
+    Resources: []
+  - Id: Characters/9a3bb8cd-708c-4ae5-816b-2e7e31d0e8b2
+    Resources: []
+  - Id: Characters/86b7436d-010b-455f-ac73-5a9adaed3605
+    Resources: []
+  - Id: Characters/64bfc62b-04ab-418c-8898-52f02bf32be6
+    Resources: []

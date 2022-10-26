@@ -14,8 +14,6 @@ public class DateSpot : Property
     [SerializeField]
     private GameObject detailsCanvas;
     [SerializeField]
-    private GameObject chatCanvas;
-    [SerializeField]
     private TextMeshProUGUI rentValueText;
     [SerializeField]
     private TextMeshProUGUI propertyNameText;
@@ -46,7 +44,6 @@ public class DateSpot : Property
     public void Click()
     {
         detailsCanvas.SetActive(true);
-        chatCanvas.SetActive(false);
         UpdateUI();
     }
 
