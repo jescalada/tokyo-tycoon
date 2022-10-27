@@ -23,8 +23,6 @@ public class GameManager : MonoBehaviour
     private Button buyButton;
     [SerializeField]
     private Button advanceDayButton;
-    [SerializeField]
-    private Button collectRentButton;
 
     [SerializeField]
     private TextMeshProUGUI moneyTextTop;
@@ -42,7 +40,6 @@ public class GameManager : MonoBehaviour
         upgradeButton.onClick.AddListener(UpgradeActiveProperty);
         buyButton.onClick.AddListener(BuyActiveProperty);
         advanceDayButton.onClick.AddListener(AdvanceDay);
-        collectRentButton.onClick.AddListener(CollectRentActiveProperty);
     }
 
     // Update is called once per frame
@@ -97,7 +94,6 @@ public class GameManager : MonoBehaviour
     {
         // Prevent the rent collection from showing up when clicking a DateSpot
         int moneyObtained = ((Home)activeProperty).CollectRent();
-        DisableRentButton();
         // Todo: Add animation
         player.AddMoney(moneyObtained);
     }
@@ -105,13 +101,18 @@ public class GameManager : MonoBehaviour
     public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
     {
         // Todo: Add animation
-        ((Home)activeProperty).Tenant.GainRelationshipPoints(relationshipPoints);
+        var character = ((Home)activeProperty).Tenant;
+        character.GainRelationshipPoints(relationshipPoints);
+        character.SetRelationshipMeter();
+        Debug.Log(string.Format("Increasing relationship with {0} by {1}", character.Name, relationshipPoints));
     }
 
     public void DecreaseRelationshipActiveCharacter(int relationshipPoints)
     {
         // Todo: Add animation
-        ((Home)activeProperty).Tenant.LoseRelationshipPoints(relationshipPoints);
+        var character = ((Home)activeProperty).Tenant;
+        character.LoseRelationshipPoints(relationshipPoints);
+        character.SetRelationshipMeter();
     }
 
     public void AdvanceDay()
@@ -126,6 +127,11 @@ public class GameManager : MonoBehaviour
         {
             property.AdvanceDay();
         }
+    }
+
+    public void ResetActiveProperty()
+    {
+        activeProperty = null;
     }
 
     public void EnableBuyButton()
@@ -155,15 +161,6 @@ public class GameManager : MonoBehaviour
     public void ResetMaxedUpgradeButton()
     {
         upgradeButton.interactable = true;
-    }
-
-    public void EnableRentButton()
-    {
-        collectRentButton.interactable = true;
-    }
-    public void DisableRentButton()
-    {
-        collectRentButton.interactable = false;
     }
 
 }

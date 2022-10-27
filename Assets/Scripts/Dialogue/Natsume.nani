@@ -1,19 +1,21 @@
 # Intro1
 @set PlayerName="Maxwell"
 *knock knock*
+@showUI RelationshipBar wait:false
 na: Yeees, I'm coming![i] Hello?
 {PlayerName}: Nice to meet you. I'm {PlayerName}, your new landlord.
 na: Oh, the new landlord guy![i] Pleased to meet you, {PlayerName}![i] I'm Natsume! 
 {PlayerName}: Yeah, nice to meet you.
 na: Here's your rent for today.
-@showUI RelationshipBar wait:false
 @collectrent
+@gainrelationship points:20
 na: Don't forget to come by every day!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2
 *knock knock*
+@showUI RelationshipBar wait:false
 na: Just a mooooment![i] Oh, hi {PlayerName}![i] What brings you here today?[skipInput]
 @choice "Just passing by." goto:.Intro2a
 @choice "Tell me about yourself." goto:.Intro2b
@@ -25,7 +27,11 @@ p: No reason. Just passing by.
 na: Oh, I see! I was about to go to class. I have a big test today and I haven't studied at all!
 p: What's your major?
 na: Psychology! I've always loved knowing more about people's minds and helping them sort out their issues.
-na: Before I forget, here's your rent for today.[i] Have a nice day, {PlayerName}!
+na: Before I forget, here's your rent for today.
+@collectrent
+@gainrelationship points:20
+[i] Have a nice day, {PlayerName}!
+@hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2b

@@ -427,6 +427,10 @@
         &lt;Type&gt;UI&lt;/Type&gt;
       &lt;/Resource&gt;
       &lt;Resource&gt;
+        &lt;Path&gt;PauseUI&lt;/Path&gt;
+        &lt;Type&gt;UI&lt;/Type&gt;
+      &lt;/Resource&gt;
+      &lt;Resource&gt;
         &lt;Path&gt;001 Intro&lt;/Path&gt;
         &lt;Type&gt;Scripts&lt;/Type&gt;
       &lt;/Resource&gt;
