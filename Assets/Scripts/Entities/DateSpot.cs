@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DateSpot : Property
 {
@@ -41,8 +42,11 @@ public class DateSpot : Property
         return uniqueLines[random];
     }
     override
-    public void Click()
+    public void OnMouseDown()
     {
+        var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (gameManager.activeProperty != null) return;
+        gameManager.activeProperty = this;
         detailsCanvas.SetActive(true);
         UpdateUI();
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ClickManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ClickManager : MonoBehaviour
     [SerializeField]
     private GameManager gameManager;
 
-    private void Update()
+ /*   private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -27,14 +28,7 @@ public class ClickManager : MonoBehaviour
                 if (clickableType.Equals("Home"))
                 {
                     Home home = (Home) clickable;
-                    if (home.CollectedDailyRent())
-                    {
-                        gameManager.DisableRentButton();
-                    }
-                    else
-                    {
-                        gameManager.EnableRentButton();
-                    }
+                    home.Tenant.SetRelationshipMeter(); // Set the relationship meter UI to the current Tenant's relationship level
                 }
 
                 if (property.Owned())
@@ -55,5 +49,5 @@ public class ClickManager : MonoBehaviour
                 
             }
         }
-    }
+    }*/
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using XNodeEditor;
 
 public class Home : Property
 {
@@ -37,10 +39,14 @@ public class Home : Property
     public int UniqueDialogueCounter = 1;
 
     override
-    public void Click()
+    public void OnMouseDown()
     {
+        var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (gameManager.activeProperty != null) return;
+        gameManager.activeProperty = this;
         detailsCanvas.SetActive(true);
         UpdateUI();
+        GetComponent<DialogueTrigger>().Trigger();
         UpdateDialogueLabel();
     }
     override
@@ -51,7 +57,6 @@ public class Home : Property
         propertyLevelText.text = string.Format("Level {0}", GetLevel());
         // upgradeCostText.text = GetUpgradeCostByLevel();
         propertyDescriptionText.text = GetDescriptionByLevel();
-        // Todo set Tenant picture to UI
         buyButtonText.text = GetBuyCostString();
         upgradeButtonText.text = GetUpgradeCostString();
     }

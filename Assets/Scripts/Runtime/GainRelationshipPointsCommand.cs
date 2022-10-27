@@ -10,7 +10,11 @@ public class GainRelationshipPointsCommand : Command
 
     public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
     {
-        GameObject.Find("GameManager").GetComponent<GameManager>().IncreaseRelationshipActiveCharacter(relationshipPoints);
+        var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.IncreaseRelationshipActiveCharacter(relationshipPoints);
+        // TODO GET RID OF THIS AND MAKE IT A COMMAND
+        gameManager.ResetActiveProperty();
+
         return UniTask.CompletedTask;
     }
 }

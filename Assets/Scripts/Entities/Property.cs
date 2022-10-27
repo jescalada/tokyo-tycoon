@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public abstract class Property : MonoBehaviour, IClickable
+public abstract class Property : MonoBehaviour
 {
     public static readonly int MAX_LEVEL = 10;
     
@@ -45,7 +46,7 @@ public abstract class Property : MonoBehaviour, IClickable
         }
     }
 
-    public abstract void Click();
+    public abstract void OnMouseDown();
 
     public abstract void AdvanceDay();
 
