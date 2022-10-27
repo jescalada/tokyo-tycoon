@@ -65,3 +65,5 @@ MonoBehaviour:
   IdleDialogues: []
   RentPayDialogues: []
   DateInvitationDialogues: []
+  fullHeart: {fileID: 21300000, guid: 470ab83aa5e8fa146895f730036a03de, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 3c5167ae5ef2f4346bcd41ea55d3eec5, type: 3}
