@@ -23,24 +23,210 @@ na: Just a mooooment![i] Oh, hi {PlayerName}![i] What brings you here today?[ski
 @stop
 
 # Intro2a
-p: No reason. Just passing by.
+{PlayerName}: No reason. Just passing by.
 na: Oh, I see! I was about to go to class. I have a big test today and I haven't studied at all!
-p: What's your major?
+{PlayerName}: What's your major?
 na: Psychology! I've always loved knowing more about people's minds and helping them sort out their issues.
 na: Before I forget, here's your rent for today.
 @collectrent
 @gainrelationship points:20
-[i] Have a nice day, {PlayerName}!
+na: Have a nice day, {PlayerName}!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2b
-p: Why don't you tell me more about yourself?
-na: Sure! Ummm... So, I'm a Psychology student at Tokyo University, I like to play basketball and hang out with my friends.[i]Oh! And I love kittens more than anything in this world!
-na: And before I forget, here's your rent for today.[i] Have a nice day, {PlayerName}!
+{PlayerName}: Why don't you tell me more about yourself?
+na: Sure! Ummm... So, I'm a Psychology student at Tokyo University, I like to play basketball and hang out with my friends.[i] Oh! And I love kittens more than anything in this world!
+na: And before I forget, here's your rent for today.
+@collectrent
+@gainrelationship points:20
+na: Have a nice day, {PlayerName}!
+@hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2c
-p: Don't be silly, I just came here to get my rent!
-na: Oh... Well, here's your rent for the day, sir.[i] Have a nice day!
+{PlayerName}: Don't be silly, I just came here to get my rent!
+na: Oh... Well, here's your rent for the day, sir.
+@collectrent
+@gainrelationship points:5
+na: Have a nice day!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro3
+*knock knock*
+@showUI RelationshipBar wait:false
+na: I'm coming![i] Ah, hi there, {PlayerName}.[i] I'm going out with a friend to an animal shelter today.
+na: Did I mention how much I looooove kittens?[i] Anyways, here's your rent for today, {PlayerName}.
+@collectrent
+@gainrelationship points:20
+na: Have a good day!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro4
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Comiiing...[i] Oh, hi there, {PlayerName}. [i]I'm busy doing laundry today. [i]Ughhh... So much to do...[skipInput]
+@choice "..." goto:.Intro4a
+@choice "Got my rent?" goto:.Intro4b
+@choice "I'll lend you a hand." goto:.Intro4c
+@stop
+
+# Intro4a
+{PlayerName}: *stare*[i] ...
+na: Hmm?[i] Whatcha looking at?
+na: Ah-[i] The rent![i] I'll get it right away! Wait right here, {PlayerName}.
+; todo insert wait
+na: Sorry for being such a ditz.
+@collectrent
+@gainrelationship points:20
+na: Anyways, see you tomorrow {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro4b
+{PlayerName}: Got my rent, Natsume? I'm in a hurry here.
+na: Oh, ummmm, sure! Just wait here please...
+na: I'm so, so sorry. It won't happen again, hehe.[i]
+na: (I hope...)
+@collectrent
+@gainrelationship points:0
+na: Please have a nice day, {PlayerName}.
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro4c
+{PlayerName}: I'll lend you a hand.
+na: Ummm,[i] really?[i] No strings attached?
+{PlayerName}: Yeah. Just for a while though, I have other stuff to do today.
+na: Ah, then please come in![i] Sorry for the mess!
+; todo wait for a while and walking sound effect
+; change background to bedroom background
+{PlayerName}: Wow, looks like you haven't cleaned this place in...[i] a while.
+na: Yeah...[i] I've been so busy with class lately, I haven't had time to tidy up...
+{PlayerName}: Well, I can help you cleaning up your room.[i] Why don't you go take care of the laundry?
+na: Sure! Be back in a sec!
+; add time going by animation
+; add cleaning up sounds and blank scene
+na: Ahh![i] It's all done!
+{PlayerName}: Finished over here as well.
+na: Thanks, soooo much {PlayerName}![i] I really owe you one!
+na: If you ever need anything, please tell me!
+na: Anyways, here's your rent for today.
+@collectrent
+@gainrelationship points:50
+na: Have a super nice day {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro5
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Good morning {PlayerName}![i] I was just getting ready to go to school.
+{PlayerName}: How's your day so far?
+na: Great,[i] cause it's so sunny today!
+na: I love sunshine.[i] And I love spending long sunny days at the beach with my friends.
+na: By the way, here's your rent for the day!
+@collectrent
+@gainrelationship points:20
+na: Have a nice day, {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro6
+*knock knock*
+@showUI RelationshipBar wait:false
+na: *yaaaaaaawwwn*[i]
+na: Goooood morning...
+{PlayerName}: What's wrong?[i] Stayed up until late last night?
+na: H-huh?[i] How did you know?
+na: I stayed up watching the latest season of The Talking Dead![i]
+{PlayerName}: That's weird, you don't look like the sort to enjoy horror.
+na: What do you mean?![i] I just loooove watching people's terrified faces while they're being chased by bloody monsters...
+; todo add wait with yandere emote
+na: Hahaha, just kidding!
+{PlayerName}: U-uh... Sure.
+na: Here's your rent for today {PlayerName}!
+@collectrent
+@gainrelationship points:20
+na: Have a wonderful day!
+na: And watch your back![i] Hehehe.
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro7
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Good morning, {PLayerName}!
+{PlayerName}: Good morning, Natsume.[i] Any news today?
+na: Ummm, nothing much. I'm going to the nearby park later today.[skipInput]
+@choice "That's nice, what are you gonna do there?" goto:.Intro7b
+@choice "That's nice, can I join?" goto:.Intro7b
+@choice "That's nice. Got my rent for today?" goto:.Intro7c
+@stop
+
+# Intro7a
+{PlayerName}: That's nice. What are you gonna do at the park?[i]
+na: Ohh, just felt like going for a little walk, and enjoying the nice weather!
+na: Also, I heard that during this time of the year, there's sakura trees blooming.[i] So romantic!
+{PlayerName}: That's right. They only bloom for a couple days, so you gotta go watch them before they disappear.
+na: Yeah![i] Say, {PlayerName}...[i] I know this is sudden, but...[i] Would you like to go for a walk with me?
+na: This isn't a date or anything![i] Just a walk![i] Ok?!
+{PlayerName}: I dunno about that,[i] I got lots of landlord stuff to do.[i] Y'know, paperwork and stu-
+na: I said...[i] Let's go for a walk...!
+{PlayerName}: *Sigh* ...Alright, alright.
+; todo switch to novel mode and tag the first park date
+@collectrent
+@gainrelationship points:100
+na: Anyways, see you tomorrow {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro7b
+{PlayerName}: That's pretty cool. Mind if I join you?
+na: Oh... ummmm, okay![i] Just remember it isn't a date though.[i] I just wanna go see the sakura trees blooming at this time of year.
+; todo switch to novel mode and tag the first park date
+@collectrent
+@gainrelationship points:30
+na: Please have a nice day, {PlayerName}.
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro7c
+{PlayerName}: That's nice. Got my rent for today?
+na: Sure, sure![i] I got it right here and ready for you![i] I swear I won't forget about it ever again!
+{PlayerName}: You promise?
+na: Ummmm...[i] I don't make any promises.[i] Hehe!
+@collectrent
+@gainrelationship points:10
+na: See you later, {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro8
+*knock knock*
+@showUI RelationshipBar wait:false
+@collectrent
+@gainrelationship points:20
+na: Have a good day!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro9
+*knock knock*
+@showUI RelationshipBar wait:false
+@collectrent
+@gainrelationship points:20
+na: Have a good day!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro10
+*knock knock*
+@showUI RelationshipBar wait:false
+@collectrent
+@gainrelationship points:20
+na: Have a good day!
+@hideUI RelationshipBar wait:false
 @adventure reset:false
