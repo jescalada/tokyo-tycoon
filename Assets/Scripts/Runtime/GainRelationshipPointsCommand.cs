@@ -13,7 +13,7 @@ public class GainRelationshipPointsCommand : Command
         var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.IncreaseRelationshipActiveCharacter(relationshipPoints);
         // TODO GET RID OF THIS AND MAKE IT A COMMAND
-        gameManager.ResetActiveProperty();
+        // gameManager.ResetActiveProperty();
 
         return UniTask.CompletedTask;
     }

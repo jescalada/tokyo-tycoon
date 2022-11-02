@@ -427,7 +427,7 @@
         &lt;Type&gt;UI&lt;/Type&gt;
       &lt;/Resource&gt;
       &lt;Resource&gt;
-        &lt;Path&gt;PauseUI&lt;/Path&gt;
+        &lt;Path&gt;RelationshipBar&lt;/Path&gt;
         &lt;Type&gt;UI&lt;/Type&gt;
       &lt;/Resource&gt;
       &lt;Resource&gt;
@@ -484,6 +484,8 @@
           &lt;string&gt;Intro2a&lt;/string&gt;
           &lt;string&gt;Intro2b&lt;/string&gt;
           &lt;string&gt;Intro2c&lt;/string&gt;
+          &lt;string&gt;Intro3&lt;/string&gt;
+          &lt;string&gt;Intro4&lt;/string&gt;
         &lt;/Values&gt;
       &lt;/Constant&gt;
     &lt;/Constants&gt;

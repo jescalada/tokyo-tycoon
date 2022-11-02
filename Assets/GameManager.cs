@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
     public void ResetActiveProperty()
     {
         activeProperty = null;
+        detailsPanel.SetActive(false);
     }
 
     public void EnableBuyButton()

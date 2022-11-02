@@ -38,5 +38,8 @@ public class SwitchToAdventureMode : Command
         // 6. Enable character control.
         // var controller = Object.FindObjectOfType<CharacterController3D>();
         // controller.IsInputBlocked = false;
+
+        var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.ResetActiveProperty();
     }
 }
