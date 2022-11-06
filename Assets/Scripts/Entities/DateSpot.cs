@@ -49,6 +49,7 @@ public class DateSpot : Property
         gameManager.activeProperty = this;
         detailsCanvas.SetActive(true);
         UpdateUI();
+        GetComponent<DialogueTrigger>().Trigger();
     }
 
     override
