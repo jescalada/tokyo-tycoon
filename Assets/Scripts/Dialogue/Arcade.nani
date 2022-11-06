@@ -1,0 +1,5 @@
+# Level0
+@set PlayerName="Maxwell"
+{PlayerName}: I used to play here all the time as a kid.[i] The place has been closed for about a year now.
+{PlayerName}: Wonder if I could do something about it...
+@adventure reset:false
