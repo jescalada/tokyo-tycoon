@@ -1,0 +1,47 @@
+# Intro
+; todo insert sidewalk/city background
+nar: Natsume and I depart together towards the park.[i]
+nar: She hums sweetly while pacing along.[i] Her gait is light and bouncy, almost like a cat.
+na: It's such a nice day![i] Wanna know something I like to do during days like these?
+nar: You stop to think about what Natsume would normally do in such a pleasant spring afternoon.
+{PlayerName}: Hang out with friends, maybe?
+na: Haha, nope![i]
+na: Birdwatching!
+na: That's why I wanted to come to the park.
+{PlayerName}: You sure have lots of different interests, huh...
+na: You know what they say...[i] variety is the spice of life!
+na: Plus, birds are so cute.[i] Almost as cute as cats.
+{PlayerName}: They don't really get along, though.
+na: Heh, true.[i]
+; todo check wording
+nar: As we chat, the park keep getting closer.[i] The park and the residential area are divided by a hectic street full of shops.
+nar: We arrive at the busy road and stop for a while at a nearby crossing.[i]
+nar: People can be seen coming in and out of the shops, carrying bags full of who-knows-what.[i] Their hasty walks contrast with our peaceful strolling.
+nar: I spot a bakery, a bookstore and a mechanic shop across the road.[i] I try to think about how these shops could possibly relate to each other, but nothing comes to mind.
+{PlayerName}: Quite the variety they've got here.
+na: Definitely![i] You can find anything you need around these parts.[i] I come here every couple of days to do my groceries, buy ingredients, and ummmm...[i] buying sport supplies too! 
+{PLayerName}: Oh, you cook your own meals?
+na: Ah,[i] I do, but I'm still a terrible cook![i] I wish someone could do it for me...
+{PlayerName}: Wha-?[i] What are you looking at?
+{PlayerName}: I'm just a simple landlord.[i] I don't have time to cook for you every day.
+na: Well then, Mr. Landlord,[i] why don't you use all your money to hire a chef for me?!
+{PlayerName}: Yeah, sure thing.
+{PlayerName}: (If I had that kind of money, I'd hire a chef just for myself...)
+nar: The traffic light on the crossing finally turns green, and a river of people starts flowing out the sidewalk and crossing the road.
+nar: We wait for a while to let the hurried people through.[i] Suddenly, I feel Natsume tugging my arm.
+na: Let's go![i] We're almost there.
+nar: We keep walking until reaching the park.[i] It's hard to believe there's a place like this so close to the hubbub of the shopping district.[i]
+nar: There's a brick path leading to a fountain in the middle of the park.[i] Thousands of petals lie scattered along the path.[i] On the sides, I see a line of sakura trees blooming nobly.[i]
+nar: Natsume stops walking and takes a deep breath.[i] 
+na: It's.[i].[i].[i] So beautiful!!![i] What do you think, {PlayerName}?
+{PlayerName}: I totally agree.[i] The blossoms look more beautiful than ever this year.
+nar: As our walk slows down, we reach the fountain in the center of the park.[i] Around the fountain there are four benches, all of them surprisingly empty.
+{PlayerName}: Come to think of it, there are very few people here today.[i]
+{PLayerName}: (No matter how you look at it, we're on a date...)
+na: Huh, what do you mea-?
+na: O-oh![i] I-it's just the two of us?![i] This isn't a date... right?![skipInput]
+@choice "It's a date." goto:.ParkA
+@choice "All in a day's work as a landlord." goto:.ParkB
+@choice "It's not a date." goto:.ParkC
+@stop
+

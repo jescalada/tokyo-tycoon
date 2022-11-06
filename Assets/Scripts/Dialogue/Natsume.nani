@@ -56,11 +56,12 @@ na: Have a nice day!
 # Intro3
 *knock knock*
 @showUI RelationshipBar wait:false
-na: I'm coming![i] Ah, hi there, {PlayerName}.[i] I'm going out with a friend to an animal shelter today.
-na: Did I mention how much I looooove kittens?[i] Anyways, here's your rent for today, {PlayerName}.
+na: I'm coming![i] Ah, hi there, {PlayerName}.[i] I'm going out with a friend to the animal shelter today.
+na: I do volunteering during the weekends.[i] The local shelter needs lots of help with taking care of the pets there, so I like to lend them a hand.
+na: Did I mention how much I looooove kittens?[i] Their cute eyes and sassy attitude just make me want to bring them home and keep them by my side...[i] forever![i] Heheh.
+na: Anyways, here's your rent for today, {PlayerName}.[i] Don't spend it all at once!
 @collectrent
 @gainrelationship points:20
-na: Have a good day!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -76,9 +77,12 @@ na: Comiiing...[i] Oh, hi there, {PlayerName}. [i]I'm busy doing laundry today. 
 # Intro4a
 {PlayerName}: *stare*[i] ...
 na: Hmm?[i] Whatcha looking at?
-na: Ah-[i] The rent![i] I'll get it right away! Wait right here, {PlayerName}.
+na: Ah-[i] The rent![i] Ohmigod, I totally forgot!![i]
+na: I'll get it right away! Wait right here, {PlayerName}.
 ; todo insert wait
 na: Sorry for being such a ditz.
+{PlayerName}: Oh, don't worry.[i] I'm not that busy anyways.
+na: Oh, I'm glad then![i] Thanks for being so patient![i]
 @collectrent
 @gainrelationship points:20
 na: Anyways, see you tomorrow {PlayerName}!
@@ -160,7 +164,7 @@ na: And watch your back![i] Hehehe.
 @showUI RelationshipBar wait:false
 na: Good morning, {PLayerName}!
 {PlayerName}: Good morning, Natsume.[i] Any news today?
-na: Ummm, nothing much. I'm going to the nearby park later today.[skipInput]
+na: Ummm, nothing much.[i] I'm going to the nearby park in a while.[skipInput]
 @choice "That's nice, what are you gonna do there?" goto:.Intro7b
 @choice "That's nice, can I join?" goto:.Intro7b
 @choice "That's nice. Got my rent for today?" goto:.Intro7c
@@ -176,6 +180,15 @@ na: This isn't a date or anything![i] Just a walk![i] Ok?!
 {PlayerName}: I dunno about that,[i] I got lots of landlord stuff to do.[i] Y'know, paperwork and stu-
 na: I said...[i] Let's go for a walk...!
 {PlayerName}: *Sigh* ...Alright, alright.
+na: Yay!
+na: Just wait for me here![i] I'll go get changed.
+{PlayerName}: I kinda thought you were gonna go there with a tracksuit and all.
+na: Hehe,[i] I'm not THAT sloppy.
+nar: You fiddle with your phone, waiting patiently for Natsume to return.
+nar: It's a nice and sunny spring day.[i] You feel a gentle breeze blowing, shaking the leaves on the neatly lined up trees on the sidewalk.
+nar: Every now and then, a car passes by.[i] Other than that, the neighborhood is as quiet as usual.
+; todo switch Natsume's outfit to date
+na: I'm baaaack![i] Let's go, {PlayerName}!
 ; todo switch to novel mode and tag the first park date
 @collectrent
 @gainrelationship points:100
@@ -186,9 +199,16 @@ na: Anyways, see you tomorrow {PlayerName}!
 # Intro7b
 {PlayerName}: That's pretty cool. Mind if I join you?
 na: Oh... ummmm, okay![i] Just remember it isn't a date though.[i] I just wanna go see the sakura trees blooming at this time of year.
+na: Just wait for me here![i] I'll go get changed.
+{PlayerName}: I kinda thought you were gonna go there with a tracksuit and all.
+na: Hehe,[i] I'm not THAT sloppy.
+nar: You fiddle with your phone, waiting patiently for Natsume to return.
+nar: It's a nice and sunny spring day.[i] You feel a gentle breeze blowing, shaking the leaves on the neatly lined up trees on the sidewalk.
+nar: Every now and then, a car passes by.[i] Other than that, the neighborhood is as quiet as usual.
+; todo switch Natsume's outfit to date
+na: I'm baaaack![i] Let's go, {PlayerName}!
 ; todo switch to novel mode and tag the first park date
-@collectrent
-@gainrelationship points:30
+@gainrelationship points:70
 na: Please have a nice day, {PlayerName}.
 @hideUI RelationshipBar wait:false
 @adventure reset:false
@@ -207,17 +227,38 @@ na: See you later, {PlayerName}!
 # Intro8
 *knock knock*
 @showUI RelationshipBar wait:false
+; todo add wait
+*knock knock*
+{PLayerName}: Anybody home?
+{PLayerName}: .[i].[i].
+{PlayerName}: "Weird...[i] Looks like Natsume isn't home today."
+nar: You look around to find any clues about her whereabouts.[i] As your gaze drifts near your feet, you notice a small envelope with its edges popping out of the doormat.
+{PlayerName}: Wait, is that...?
+; todo implement narrator
+nar: You crouch to pick up the envelope. Something is written on the back:
+na: "Sorry {PLayerName}, I left for basketball practice![i] Here's your rent for the day![i]Sorry!"
 @collectrent
-@gainrelationship points:20
-na: Have a good day!
+@gainrelationship points:10
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro9
 *knock knock*
 @showUI RelationshipBar wait:false
+na: Ah![i] Hi there, {PlayerName}![i] I'm soooo sorry about yesterday.[i] I had basketball practice since 6 AM.
+{PlayerName}: Oh, you play basketball?
+na: Yeah, I'm in the basketball team in university![i] We have a big match next week, so we've been training like crazy lately.
+{PlayerName}: I see.[i] What does your schedule usually look like?
+na: Mmmmm,[i] let's see.[i].[i].[i] I get up at 5 or so and have breakfast while watching TV shows.[i] Then I go to school, and we train for a few hours until class starts.[i] After that, I go to class and study with my friends 'til lunchtime. [i] Then we have lunch together, and I head off for basketball practice once again.[i] Practice is over at 6, and then I go home to relax and have dinner.
+na: And that's it![i]
+{PlayerName}: You're a busy girl, huh?
+na: Heh...[i] I love what I do.[i] All the effort I put every day during practice,[i] I know that it makes a big difference to those around me.
+na: My teammates smiles,[i] celebrating together after winning a match...[i] It makes me really happy.[i] And I wouldn't trade that for anything in this world!
+{PlayerName}: Oh...
+na: I said something embarassing, huh?[i] Heheh,[i] thanks for listening, {PlayerName}.
+na: Anyways, here's today's rent.[i] Have a great day!
 @collectrent
-@gainrelationship points:20
+@gainrelationship points:50
 na: Have a good day!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
@@ -225,8 +266,271 @@ na: Have a good day!
 # Intro10
 *knock knock*
 @showUI RelationshipBar wait:false
+na: Good morning {PlayerName}![i] Are you here to get your rent?
+na: I have it nice and ready for you.[i] Here you go!
+@collectrent
+{PlayerName}: Well, that was fast.
+na: Heh,[i] I want to prove I'm not a ditz by getting on top of things.
+{PlayerName}: Really... I'm still not very convinced.
+; insert wait
+na: By the way, I have a question for you, Mr. Landlord.[i]
+{PlayerName}: What is it?
+; todo change with the appropriate arcade location
+na: You know the Arcade close to the park?[i] I used to go there all the time when I was a kid.
+{PlayerName}: Ohhh, the popular one with the big red sign?[i] With all the fighting games?
+na: Exactly! The one that is always SUUUUPER crowded.[i] I've been wanting to go there but it's been closed for renovations...
+na: So I was wondering, um...[i] since you're a landlord and all...[i] Can you do anything about it?
+na: I would love to go there together and play games sometime.
+nar: You ponder the situation for a bit while sighing deeply. 
+{PlayerName}: Fine, I'll see what I can do.
+@gainrelationship points:30
+na: Have a good day!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Idle1
+*knock knock*
+@showUI RelationshipBar wait:false
+na: I'm comiiiing![i] Oh, hi again, {PlayerName}.[i] Did you forget something?
+{PlayerName}: Uh,[i] not really.[i] Just came by to... check the building.
+na: Oh, really?[i] Well, I just wanna let you know that I'm taking good care of my room![i] Nice and tidy!
+nar: She stands in front of the door as if trying to hide whatever is inside.
+na: Weeeell...[i] I try.
+nar: Peeping through the half-open door, you notice a bunch of magazines and textbooks scattered around the room.[i] There are also track suits and gym shirts piled up in one of the corners.
+nar: Although it's quite clear that she isn't taking good care of the room, you decide not to pry any further.
+na: Anyways, I'm busy studying, so... [i]See you later, {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Idle2
+*knock knock*
+nar: You wait for a few seconds for a response, and decide to knock once more.
+*knock knock*
+{PlayerName}: Looks like she's not home...
+@adventure reset:false
+
+# Idle3
+*knock knock*
+nar: While waiting for the door to open, you notice some music coming from inside.
+{PlayerName}: Is that... metal?
+nar: You stop to ponder how out of character it is for a seemingly gentle girl to be listening to heavy metal.
+*knock knock*
+{PlayerName}: Guess the music is loud, she can't hear me knocking.[i] Oh well...
+@adventure reset:false
+
+# Idle4
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Nice to see you again {PlayerName}![i]
+{PlayerName}: Hey, Natsume.[i]
+na: Is there anything you need?
+{PlayerName}: Ahh, no.[i] Just wanted to say hi.
+na: Well,[i] hi![i] You know, there's this new horror movie that I'm DYING to watch.
+na: But the movie theatre is still under renovation...[i] I wish *someone* could do something about it... 
+{PlayerName}: (Can you make it any more obvious...?)
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Idle5
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Hihi, {PlayerName}!
+{PlayerName}: You're in a good mood today, huh?
+na: Yeah![i] Tomorrow I'm going to the beach with my friends... I'm SUPER excited.
+na: We're gonna go swimming and have some cocktails by the sea!
+{PlayerName}: Wait,[i] is that even legal?!
+na: Huh? Of course it is! I'm a grown up, silly!
+{PlayerName}: (She acts so childish sometimes, I totally forgot about that...)
+{PlayerName} Well, have fun tomorrow.
+na: Yes![i] Thanks, {PlayerName}![i] See you around!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Rent1
+*knock knock*
+nar: After knocking the door, you stop and listen carefully to check if Natsume's home.
+*knock knock*
+{PLayerName}: .[i].[i].
+{PLayerName}: Nobody home, huh.
+nar: You instinctively check the doormat, where she left the rent last time.[i] Once again, you notice a small envelope with its edges popping out of the doormat.
+{PlayerName}: Seriously...
+nar: You crouch to pick it up. Natsume's sloppy handwriting can be read on the back:
+na: "Sorry {PLayerName}, I'm out with my friends today![i] Here's today's rent![i] Sorry!"
+nar: A childish drawing of a rabbit is attached to the note.[i] It has pleading eyes, and reads "SOWWY!".
+{PlayerName}: Well,[i] I appreciate the thought.
+@showUI RelationshipBar wait:false
+@collectrent
+@gainrelationship points:10
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Rent2
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Comiiing...[i] Oh, hi there, {PlayerName}. [i]I'm busy doing homework today.
+na: Ahhh,[i] I wish I could have a little break, but there's so much to do...[skipInput]
+@choice "I didn't come here to chat." goto:.Rent2a
+@choice "What's your homework about?" goto:.Rent2b
+@choice "I can help you." goto:.Rent2c
+@stop
+
+# Rent2a
+{PlayerName}: I didn't come here to chat.[i] I got important stuff to do.
+na: Oh,[i] well, look at you Mr. Busybody!
+na: Here I thought maybe we could be friends...
+{PlayerName}: Yeah, right.
+nar: Natsume let out a disappointed sigh before stretching her left hand out to you.
+na: Here's your rent...[i]
+@collectrent
+@loserelationship points:10
+na: I got important stuff to do too, you know.[i]
+na: Goodbye.
+@hideUI RelationshipBar wait:false
+{PlayerName}: Yeah, see you around.
+@adventure reset:false
+
+# Rent2b
+{PlayerName}: What's your homework about?[i] I'm actually kind of interested.
+na: It's a Psychology assignment![i] Basically, we're supposed to interview people to find out about what scares people the most.
+{PlayerName}: Huh, that sounds pretty interesting, actually.
+na: You wanna know what scares the most?[i] There's one thing in this world that is very, very terrifying.[i] Can you guess what it is?!
+{PlayerName}: Uhhhh.[i].[i].[i] I don't know...[i] Ghosts?[i] Spiders?[i] Being buried alive?
+na: Hahaha![i] Nope![i] But you were close.
+na: Snakes![i] There's something soooo creepy about how they slither around stalking their prey.[i] When I see one, I can't help but freeze up and cry like a little kid.
+{PlayerName}: Oh, so a night walk at the park is a no-go?[i] I heard there's snakes lurking in the dark.
+na: Ahhh![i] Don't even joke about it, {PlayerName}!
+na: But...[i] I wouldn't mind going there together.[i] You'll protect me if you see any snakes, right?
+{PlayerName}: (Man, what a helpless girl...)
+{PlayerName}: What would you do if I just ran away instead?
+na: I would never, [i] ever, [i] EVER, forgive you!
+; todo add small pause
+{PlayerName}: (Why do you look so happy about it?)
+na: Here's your rent for today, {PlayerName}.
+@collectrent
+@gainrelationship points:60
+na: I'm looking forward to that walk!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Rent2c
+{PlayerName}: I can give you a hand.
+na: Oh,[i] really?[i]
+{PlayerName}: Yeah.[i] As long as it doesn't take too long.
+na: Okay![i] Then, I'll tell you a bit about it!
+na: We're interviewing people to find out about what scares them the most.
+{PlayerName}: Oh, that's quite interesting![i] So you want to know about what scares me the most?
+na: Yes, please![i] What scares you the most, {PlayerName}?[skipInput]
+@choice "Snakes." goto:.Rent2ca
+@choice "Heights." goto:.Rent2cb
+@choice "Nothing at all. " goto:.Rent2cc
+@stop
+
+# Rent2ca
+{PlayerName}: Snakes.[i] There's just something about those creepy eyes that gets me.
+na: Ohmigod![i] I totally get you![i] I haaate snakes too![i] They're so slithery and slimy and gross!
+na: If I find a snake in my room, you'll come to save me, right?
+{PlayerName}: Hahaha, I'm pretty sure there's no snakes in this city anyways.[i] They live in places like forests, right?
+na: Is that... so?[i] I was worried a snake might come in through the vent at night.[i]
+nar: Natsume lets out a sigh of relief.[i] You wonder if she actually thought a snake could come into her room.
+na: Anyways, here's your rent.[i]
+@collectrent
+@gainrelationship points:80
+na: See you tomorrow, {PlayerName}![i]
+@hideUI RelationshipBar wait:false
+{PlayerName}: See you, Natsume.
+@adventure reset:false
+
+# Rent2cb
+{PlayerName}: Heights.[i] If I look out of the balcony of a tall building, it makes me want to puke.
+na: Wow, really?![i] Fear of heights is actually pretty common![i] I think it's the most common fear, after the fear of death.
+na: Are you afraid of death?
+nar: Something about her serious expression feels off.[i] You try to keep your composure and answer her question. 
+{PlayerName}: What's with that all of a sudden?[i] Of course I don't want to die![i]
+na: Heheh![i] Of course not![i] Death is scary...
+na: But it's inevitable because we're living beings, right?[i] So we gotta make the most of our precious time on Earth.
+{PlayerName}: That's for sure.
+nar: Natsume smiles faintly while looking at you, completely forgetting the reason for your visit.
+{PlayerName}: Aren't you...[i] forgetting something?
+na: Hmmm?[i] Ah![i] Thanks for reminding me!
+@collectrent
+na: And thank you so, so much for helping me out with my homework!
+na: If you ever wanna go somewhere, I'm here for you!
+@gainrelationship points:100
+@hideUI RelationshipBar wait:false
+{PlayerName}: Yeah, see you around.
+@adventure reset:false
+
+# Rent2cc
+{PlayerName}: I didn't come here to chat.[i] I got important stuff to do.
+na: Oh,[i] well, look at you Mr. Busybody!
+na: Here I thought maybe we could be friends...
+{PlayerName}: Yeah, right.
+nar: Natsume let out a disappointed sigh before stretching her left hand out to you.
+na: Here's your rent...[i]
+@collectrent
+@loserelationship points:10
+na: I got important stuff to do too, you know.[i]
+na: Goodbye.
+@hideUI RelationshipBar wait:false
+{PlayerName}: Yeah, see you around.
+@adventure reset:false
+
+# Rent3
+*knock knock*
+nar: You hear some music coming from inside.[i] It's a heavy metal tune that was popular about two decades ago.
+{PlayerName}: Hmmm, guess I'll just knock harder?
+*knock knock*
+na: Oh![i] Soooorry!!
+; todo stop bg music and return to Natsume theme
+na: I almost forgot about today's rent, hahaha...
+@collectrent
+{PlayerName}: You sure like old-fashioned music, huh?
+na: Hehe, you noticed?[i] It's Metallico, my favourite band![i] Dad and I used to listen to this all the time when I was a kid.
+na: So I've been a fan of them since then.
+{PlayerName}: Somehow, I find it weird that a girl like you enjoys that kind of stuff.
+na: I get that often![i] Anyways, {PlayerName}, I got work to do...
+na: See you later![i] And tell me about your favourite music the next time we meet, ok?
+@gainrelationship points:30
+@hideUI RelationshipBar wait:false
+{PlayerName}: See you.
+@adventure reset:false
+
+# Rent4
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Good morning {PlayerName}![i] I was just about to go to class.
+{PlayerName}: Enjoying the weather?
+na: Heh,[i] of course!
+na: If I wasn't so busy, I'd go spend the day at the beach.[i] Actually, I think I'll go there for a bit after school!
+{PlayerName}: Well, that sounds nice.[i] I wouldn't mind joining you.
+na: Heheh, thanks for telling me![i] But a girl needs some alone time too, you know.
+na: If I change my mind, I'll give you a call, okay?
+{PlayerName}: Gotcha.
 @collectrent
 @gainrelationship points:20
-na: Have a good day!
+na: Enjoy the sunny day, {PlayerName}!
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+; todo, trigger this ONLY if cat room upgrade hasn't been bought 
+# Rent5
+*knock knock*
+@showUI RelationshipBar wait:false
+na: Just a seeec![i]
+na: Ah, hi there, {PlayerName}.[i] Hope you're doing well today!
+na: I'm going to the animal shelter later.[i] There's a tabby cat that I reeeeally like![i] I go and visit him every week.
+na: Sometimes we play together.[i] He's quite shy, but playful and cuddly when you get to know him better.
+{PlayerName}: What's his name?
+na: His name is Dusty.[i] I wanna take him home, but pets aren't allowed here, right?
+{PlayerName}: That's right.
+;todo add screen shake
+na: Ummmmm...[i] Do something about it!!![i] You own the place, right?[i] Add a room so I can adopt Dusty!
+{PlayerName}: Sheesh.[i] Are you a kid or something?[i] I can't just-
+na: Pretty pleeeease...?
+nar: Natsume gets close, and suddenly clings on to your shirt, very much like a child.
+{PlayerName}: Fine, fine.[i] I'll see what I can do about it.
+na: Thank youuuuu...![i] And before I forget, your rent.[i] Spend it wisely!
+@collectrent
+@gainrelationship points:30
 @hideUI RelationshipBar wait:false
 @adventure reset:false
