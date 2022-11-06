@@ -1,3 +1,9 @@
+# NotOwned
+@char m avatar:m/Default
+m: Hello World!
+m: It's one small step for Maxwell, one giant leap for dogkind.
+@adventure reset:false
+
 # Intro1
 @set PlayerName="Maxwell"
 *knock knock*
