@@ -1,5 +1,26 @@
 # Level0
-; @set PlayerName="Maxwell"
-{PlayerName}: I used to play here all the time as a kid.[i] The place has been closed for about a year now.
-{PlayerName}: Wonder if I could do something about it...
+nar: A peaceful little park near the busy shopping district.[i] The entrance is closed, apparently it's under renovation.
+{PlayerName}: A little park like this could be the perfect long-term investment.[i] Just imagine all the interesting stuff I could build here!
+@adventure reset:false
+
+# Level1
+nar: A peaceful little park near the busy shopping district.[i] Other than a vast expanse of lawn and a few paths, there's not much to see.
+{PlayerName}: This place could use a few upgrades.[i] Maybe I could place some benches for people to sit and enjoy the scenery?
+@adventure reset:false
+
+# Level2
+nar: A peaceful little park near the busy shopping district.[i] There are a few paths to walk on, as well as some rustic benches to take a break.
+{PlayerName}: It's still looking pretty empty.[i] I should plant a few sakura trees to add a little color to the landscape.
+@adventure reset:false
+
+# Level3
+nar: A peaceful little park near the busy shopping district.[i] There are a few paths to walk on, as well as some rustic benches to take a break.
+nar: Along the paths, there are beautifully lined up sakura trees casting their shade on the benches.
+{PlayerName}: Now it's starting to look like actual park![i] Perhaps I can build a small fountain in the middle.[i] Hopefully, this will make the place look a bit more romantic.
+@adventure reset:false
+
+# Level4;
+nar: A peaceful little park near the busy shopping district.[i] There are a few paths to walk on, as well as some rustic benches to take a break.
+nar: Along the paths, there are beautifully lined up sakura trees casting their shade on the benches.
+{PlayerName}: Now it's starting to look like actual park![i] Perhaps I can build a small fountain in the middle.[i] Hopefully, this will make the place look a bit more romantic.
 @adventure reset:false

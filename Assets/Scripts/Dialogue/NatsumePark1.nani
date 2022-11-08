@@ -45,3 +45,5 @@ na: O-oh![i] I-it's just the two of us?![i] This isn't a date... right?![skipInp
 @choice "It's not a date." goto:.ParkC
 @stop
 
+# ParkA
+{PlayerName}: 
