@@ -18,10 +18,6 @@ public class Character : MonoBehaviour
     public int RelationshipPoints;
     public List<string> Likes;
     public List<string> Dislikes;
-    public List<string> IdleDialogues;
-    public List<string> RentPayDialogues;
-    public List<string> DateInvitationDialogues;
-    public Dictionary<RelationshipLevel, List<string>> ChatDialoguesByRelation;
 
     public Sprite fullHeart;
     public Sprite emptyHeart;

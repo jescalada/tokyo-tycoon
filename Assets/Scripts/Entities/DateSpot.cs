@@ -23,24 +23,10 @@ public class DateSpot : Property
     [SerializeField]
     private TextMeshProUGUI propertyLevelText;
     [SerializeField]
-    private TextMeshProUGUI propertyDescriptionText;
-    [SerializeField]
     private TextMeshProUGUI buyButtonText;
     [SerializeField]
     private TextMeshProUGUI upgradeButtonText;
 
-
-    public string GetRandomDialogue()
-    {
-        int random = Random.Range(0, genericDialogues.Length - 1);
-        return genericDialogues[random];
-    }
-    public string GetUniqueDialogue(string characterName)
-    {
-        string[] uniqueLines = uniqueDialogues[characterName];
-        int random = Random.Range(0, uniqueLines.Length - 1);
-        return uniqueLines[random];
-    }
     override
     public void OnMouseDown()
     {
@@ -49,7 +35,9 @@ public class DateSpot : Property
         gameManager.activeProperty = this;
         detailsCanvas.SetActive(true);
         UpdateUI();
-        GetComponent<DialogueTrigger>().Trigger();
+        DialogueTrigger trigger = GetComponent<DialogueTrigger>();
+        trigger.Label = string.Format("Level{0}", GetLevel());
+        trigger.Trigger();
     }
 
     override
@@ -59,7 +47,7 @@ public class DateSpot : Property
         propertyNameText.text = PropertyName;
         propertyLevelText.text = string.Format("Level {0}", GetLevel());
         // upgradeCostText.text = GetUpgradeCostByLevel();
-        propertyDescriptionText.text = GetDescriptionByLevel();
+        // propertyDescriptionText.text = GetDescriptionByLevel();
         // Todo: Add date button for locations
         buyButtonText.text = GetBuyCostString();
         upgradeButtonText.text = GetUpgradeCostString();
