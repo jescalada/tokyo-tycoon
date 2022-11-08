@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject detailsPanel;
-    [SerializeField]
-    private GameObject dialoguePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -120,7 +118,6 @@ public class GameManager : MonoBehaviour
         // Todo add before advancing day
         timeController.AdvanceDay();
         detailsPanel.SetActive(false);
-        dialoguePanel.SetActive(false);
         // Upon advancing a day, should be able to collect rent from homes once again (rent can be collected once a day)
         // Iterate through the player's properties, and advance the day on all of them
         foreach (Property property in player.GetOwnedProperties())
