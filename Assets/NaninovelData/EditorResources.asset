@@ -171,12 +171,36 @@ MonoBehaviour:
       guid: 0207fc7c4c8ebe6488d26b8cc12ed21d
   - Id: Scripts
     Resources:
-    - name: 001 Intro
-      pathPrefix: Scripts
-      guid: d2c039ef9151aec448014b20fefc7ace
     - name: Natsume
       pathPrefix: Scripts
       guid: 1ac9cf63fc8ba8d4eb89bad4d7aabe1d
+    - name: NatsumePark1
+      pathPrefix: Scripts
+      guid: cfb74d53b0ed70d42867e994b6f6579e
+    - name: Hana
+      pathPrefix: Scripts
+      guid: 37f0b28b7de25e2439e062b3b9f06ac8
+    - name: Kotone
+      pathPrefix: Scripts
+      guid: eeed86cd534501148a8b0d9181623812
+    - name: Ai
+      pathPrefix: Scripts
+      guid: 91420fc4c555c26498c6f1be8808b616
+    - name: Park
+      pathPrefix: Scripts
+      guid: 9fc22a626577d0642ba35c9b3f69a17f
+    - name: Arcade
+      pathPrefix: Scripts
+      guid: e0eeda3ba4f015e458bb93f5091a67fe
+    - name: Beach
+      pathPrefix: Scripts
+      guid: eaff934344f981b468479b3b87a68eb5
+    - name: Library
+      pathPrefix: Scripts
+      guid: 48e36f7a9a46a8542b2cfd5103b60b72
+    - name: Mall
+      pathPrefix: Scripts
+      guid: f34752f357da0dd4bac8d833fee9c380
   - Id: CharacterAvatars
     Resources:
     - name: na/Default
