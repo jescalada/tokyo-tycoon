@@ -230,7 +230,7 @@ MonoBehaviour:
     Resources:
     - name: Adventure
       pathPrefix: TextPrinters
-      guid: c623f3be8af01da4081bb28c9c4b7648
+      guid: c8b5849b51c450143a61f7df9ea2a20a
   - Id: TextPrinters/97f52224-b5d1-4ef3-825d-4de820dadd31
     Resources:
     - name: Novel
