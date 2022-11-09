@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     {
         // Todo add before advancing day
         timeController.AdvanceDay();
-        detailsPanel.SetActive(false);
+        HideDetailsPanel();
         // Upon advancing a day, should be able to collect rent from homes once again (rent can be collected once a day)
         // Iterate through the player's properties, and advance the day on all of them
         foreach (Property property in player.GetOwnedProperties())
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
     public void ResetActiveProperty()
     {
         activeProperty = null;
-        detailsPanel.SetActive(false);
+        HideDetailsPanel();
     }
 
     public void EnableBuyButton()
@@ -152,6 +152,18 @@ public class GameManager : MonoBehaviour
         // upgradeButton.interactable = false;
         upgradeButton.gameObject.SetActive(false);
     }
+
+    public void HideDetailsPanel()
+    {
+        LeanTween.scale(detailsPanel, new Vector3(0, 0, 0), 0.5f).setOnComplete(delegate () { detailsPanel.SetActive(false); });
+    }
+
+    public void ShowDetailsPanel()
+    {
+        detailsPanel.SetActive(true);
+        LeanTween.scale(detailsPanel, new Vector3(1, 1, 1), 0.5f);
+    }
+
     public void SetMaxedUpgradeButton()
     {
         upgradeButton.interactable = false;

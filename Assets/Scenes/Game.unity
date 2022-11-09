@@ -1448,7 +1448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -180}
+  m_AnchoredPosition: {x: -24, y: -120}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &576710552
@@ -2098,9 +2098,9 @@ MonoBehaviour:
   level: 0
   owned: 0
   upgradeNameByLevel:
+  - 
   - Add more benches.
   - Plant some gardenias.
-  - Add a small fountain.
   - Add a small fountain.
   - Add a small fountain.
   - Add a small fountain.
@@ -2314,8 +2314,7 @@ MonoBehaviour:
   rentValueByLevel: 000000008a020000ca03000078050000440700001e0a00007a0d00006211000094160000ac1c0000b824000070300000
   Tenant: {fileID: 5391181795250736642, guid: e24e6eb22ad2ebc4e8bb79a949dafe28, type: 3}
   collectedDailyRent: 0
-  detailsCanvas: {fileID: 6685029884837214277, guid: e24e6eb22ad2ebc4e8bb79a949dafe28,
-    type: 3}
+  detailsCanvas: {fileID: 576710550}
   rentValueText: {fileID: 1052533892}
   propertyNameText: {fileID: 216262414}
   upgradeCostText: {fileID: 0}
@@ -2971,10 +2970,10 @@ MonoBehaviour:
   level: 0
   owned: 0
   upgradeNameByLevel:
+  - 
   - Add fighting games
   - Add rhythm games
   - Add snack shop
-  - Add new prizes
   - Add new prizes
   - Add new prizes
   - Add new prizes
@@ -3529,12 +3528,12 @@ MonoBehaviour:
   level: 0
   owned: 0
   upgradeNameByLevel:
+  - 
   - Clean up seashore
   - Add new beach umbrellas
   - Add small beach bar
   - Add volleyball net
   - Add changing rooms
-  - Expand beach bar menu
   - Expand beach bar menu
   - Expand beach bar menu
   - Expand beach bar menu
@@ -3733,8 +3732,7 @@ MonoBehaviour:
     $500'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 015573da50ed04390be9f20287a541d6, type: 2}
-  m_sharedMaterial: {fileID: -2237749729835323621, guid: 015573da50ed04390be9f20287a541d6,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e11c6e60fcc5f684b9ddb1875203fc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3992,8 +3990,7 @@ MonoBehaviour:
   m_text: $12345
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 015573da50ed04390be9f20287a541d6, type: 2}
-  m_sharedMaterial: {fileID: -2237749729835323621, guid: 015573da50ed04390be9f20287a541d6,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e11c6e60fcc5f684b9ddb1875203fc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4371,7 +4368,7 @@ MonoBehaviour:
   level: 0
   owned: 0
   upgradeNameByLevel:
-  - Polish floors
+  - 
   - Add food court
   - Expand department stores
   - Improve maintenance service
@@ -4549,10 +4546,10 @@ MonoBehaviour:
   level: 0
   owned: 0
   upgradeNameByLevel:
+  - 
   - Add Fantasy section
   - Add comfy beanbag chairs
   - Improve bookkeeping system
-  - Add study rooms
   - Add study rooms
   - Add study rooms
   - Add study rooms

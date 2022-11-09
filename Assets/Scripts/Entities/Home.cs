@@ -20,8 +20,6 @@ public class Home : Property
     private bool collectedDailyRent;
     
     [SerializeField]
-    private GameObject detailsCanvas;
-    [SerializeField]
     private TextMeshProUGUI rentValueText;
     [SerializeField]
     private TextMeshProUGUI propertyNameText;
@@ -66,7 +64,7 @@ public class Home : Property
         var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (gameManager.activeProperty != null) return;
         gameManager.activeProperty = this;
-        detailsCanvas.SetActive(true);
+        gameManager.ShowDetailsPanel();
         UpdateUI();
 
         DialogueTrigger trigger = GetComponent<DialogueTrigger>();

@@ -32,10 +32,12 @@ public class Character : MonoBehaviour
     }
     public void SetRelationshipMeter()
     {
-        var relationshipBar = GameObject.Find("RelationshipBarContainer");
+        var relationshipBar = GameObject.Find("RelationshipBarFillable");
         float ratio = CalculateRelationshipBarFillRatio();
-        var slider = relationshipBar.GetComponentInChildren<Slider>();
-        slider.value = CalculateRelationshipBarFillRatio();
+        int barSize = -360;
+
+        RectTransform rt = relationshipBar.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(barSize * (1 - ratio), rt.sizeDelta.y);
 
         var heartsContainer = GameObject.Find("Hearts");
         Image[] heartIcons = heartsContainer.GetComponentsInChildren<Image>();
@@ -52,9 +54,8 @@ public class Character : MonoBehaviour
             }
             heartCounter++;
         }
-
-        Debug.Log(string.Format("The relationship ratio is {0}, the bar is {1}, the slider is {2} with a value of {3}",
-            ratio, relationshipBar, slider, slider.value));
+        Debug.Log(string.Format("The relationship ratio is {0}, the bar is {1}",
+            ratio, relationshipBar));
     }
 
     public int CalculateRelationshipHeartsLevel()

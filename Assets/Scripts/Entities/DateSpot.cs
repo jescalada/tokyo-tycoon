@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,8 +13,6 @@ public class DateSpot : Property
 
     public DialogueTrigger trigger;
 
-    [SerializeField]
-    private GameObject detailsCanvas;
     [SerializeField]
     private TextMeshProUGUI rentValueText;
     [SerializeField]
@@ -33,8 +32,18 @@ public class DateSpot : Property
         var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (gameManager.activeProperty != null) return;
         gameManager.activeProperty = this;
-        detailsCanvas.SetActive(true);
+        gameManager.ShowDetailsPanel();
         UpdateUI();
+        if (Owned())
+        {
+            gameManager.DisableBuyButton();
+            gameManager.EnableUpgradeButton();
+        }
+        else
+        {
+            gameManager.EnableBuyButton();
+            gameManager.DisableUpgradeButton();
+        }
         DialogueTrigger trigger = GetComponent<DialogueTrigger>();
         trigger.Label = string.Format("Level{0}", GetLevel());
         trigger.Trigger();
