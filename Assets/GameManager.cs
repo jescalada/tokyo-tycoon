@@ -1,3 +1,4 @@
+using Naninovel;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -31,6 +32,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject detailsPanel;
+
+    public LeanTweenType panelOpenEaseType;
+    public LeanTweenType panelCloseEaseType;
+    public float panelAnimationDuration;
+
+    public GameObject billAnimationPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +100,14 @@ public class GameManager : MonoBehaviour
         // Prevent the rent collection from showing up when clicking a DateSpot
         int moneyObtained = ((Home)activeProperty).CollectRent();
         // Todo: Add animation
+        var parent = GameObject.Find("AdventurePrinter");
+        var animation = Instantiate(billAnimationPrefab);
+        animation.transform.SetPosX(-3.75f);
+        animation.transform.SetPosY(-2.5f);
+        animation.transform.SetPosZ(60f);
+        animation.transform.localScale = new Vector3(0.5f, 0.5f, -3);
+        // Destroy(animation, 2f);
+
         player.AddMoney(moneyObtained);
     }
 
@@ -155,13 +170,16 @@ public class GameManager : MonoBehaviour
 
     public void HideDetailsPanel()
     {
-        LeanTween.scale(detailsPanel, new Vector3(0, 0, 0), 0.5f).setOnComplete(delegate () { detailsPanel.SetActive(false); });
+        LeanTween.scale(detailsPanel, new Vector3(0, 0, 0), panelAnimationDuration)
+            .setEase(panelCloseEaseType)
+            .setOnComplete(delegate () { detailsPanel.SetActive(false); });
     }
 
     public void ShowDetailsPanel()
     {
         detailsPanel.SetActive(true);
-        LeanTween.scale(detailsPanel, new Vector3(1, 1, 1), 0.5f);
+        LeanTween.scale(detailsPanel, new Vector3(1, 1, 1), panelAnimationDuration)
+            .setEase(panelOpenEaseType);
     }
 
     public void SetMaxedUpgradeButton()
