@@ -905,7 +905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270460507
 GameObject:
@@ -1258,8 +1258,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 482373335}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayMoneyAnimation
-        m_Mode: 3
+        m_MethodName: PlayHeartAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1405,6 +1405,8 @@ MonoBehaviour:
   - {x: 60, y: 96, z: 0}
   - {x: 64, y: 144, z: 0}
   billAnimationPrefab: {fileID: 8341822989570412402, guid: a32c1ece908219846aea1bc859a94673,
+    type: 3}
+  heartAnimationPrefab: {fileID: 2950149644976293725, guid: a5ab43550316d0e4f84fbae3a3fac131,
     type: 3}
   moneyIncreaseAnimationPrefab: {fileID: 2068503834937588697, guid: aff40e4be6f22bb46ae3edfc7ce0169d,
     type: 3}
@@ -1937,7 +1939,7 @@ RectTransform:
   - {fileID: 98174788}
   - {fileID: 576710551}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3180,6 +3182,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1494095739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494095741}
+  - component: {fileID: 1494095740}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1494095740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494095739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf5482c1f5002f4a8b268e8f80050ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: 4d157b8ef3ca559458caa629e583b3ba, type: 3}
+    name: Everyday Routine
+    volume: 1
+    pitch: 1
+    loop: 1
+    audioSource: {fileID: 0}
+--- !u!4 &1494095741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494095739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547978470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,7 +3572,7 @@ Transform:
   - {fileID: 1806059183}
   - {fileID: 2027620571}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693129047
 GameObject:

@@ -48,8 +48,8 @@ MonoBehaviour:
   Age: 19
   Description: A psychology student at UoT. Mischievous and friendly, easily gets
     along with others and isn't afraid to make a strong impression.
-  CurrentRelationshipLevel: 0
-  RelationshipPoints: 60
+  CurrentRelationshipLevel: 1
+  RelationshipPoints: 200
   Likes:
   - Basketball
   - Horror Movies

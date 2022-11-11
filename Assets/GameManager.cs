@@ -45,12 +45,17 @@ public class GameManager : MonoBehaviour
     public GameObject heartAnimationPrefab;
     public GameObject moneyIncreaseAnimationPrefab;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         upgradeButton.onClick.AddListener(UpgradeActiveProperty);
         buyButton.onClick.AddListener(BuyActiveProperty);
         advanceDayButton.onClick.AddListener(AdvanceDay);
+
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("Everyday Routine");
     }
 
     // Update is called once per frame
