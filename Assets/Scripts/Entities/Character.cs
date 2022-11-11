@@ -15,12 +15,18 @@ public class Character : MonoBehaviour
     public int Age;
     public string Description;
     public RelationshipLevel CurrentRelationshipLevel = RelationshipLevel.Stranger;
-    public int RelationshipPoints;
+    public int RelationshipPoints = 0;
     public List<string> Likes;
     public List<string> Dislikes;
 
     public Sprite fullHeart;
     public Sprite emptyHeart;
+
+    public void Start()
+    {
+        RelationshipPoints = 0;
+        CurrentRelationshipLevel = RelationshipLevel.Stranger;
+    }
 
     public void InviteToDate()
     {
@@ -37,7 +43,9 @@ public class Character : MonoBehaviour
         int barSize = -360;
 
         RectTransform rt = relationshipBar.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(barSize * (1 - ratio), rt.sizeDelta.y);
+        var targetVector = new Vector2(barSize * (1 - ratio), rt.sizeDelta.y);
+
+        LeanTween.size(rt, targetVector, 0.5f).setEaseInOutCirc();
 
         var heartsContainer = GameObject.Find("Hearts");
         Image[] heartIcons = heartsContainer.GetComponentsInChildren<Image>();
@@ -54,8 +62,6 @@ public class Character : MonoBehaviour
             }
             heartCounter++;
         }
-        Debug.Log(string.Format("The relationship ratio is {0}, the bar is {1}",
-            ratio, relationshipBar));
     }
 
     public int CalculateRelationshipHeartsLevel()
@@ -108,7 +114,6 @@ public class Character : MonoBehaviour
     public void GainRelationshipPoints(int relationshipPoints)
     {
         RelationshipPoints += relationshipPoints;
-        // Todo: Add animation in case relationship level changes
         if (RelationshipPoints >= LOVER_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.Lover;
         else if (RelationshipPoints >= CLOSE_FRIEND_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.CloseFriend;
         else if (RelationshipPoints >= FRIEND_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.Friend;
@@ -118,7 +123,6 @@ public class Character : MonoBehaviour
     public void LoseRelationshipPoints(int relationshipPoints)
     {
         RelationshipPoints -= relationshipPoints;
-        // Todo: Add animation in case relationship level changes
         if (RelationshipPoints >= LOVER_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.Lover;
         else if (RelationshipPoints >= CLOSE_FRIEND_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.CloseFriend;
         else if (RelationshipPoints >= FRIEND_THRESHOLD) CurrentRelationshipLevel = RelationshipLevel.Friend;

@@ -15,6 +15,7 @@ na: Oh, the new landlord guy![i] Pleased to meet you, {PlayerName}![i] I'm Natsu
 na: Here's your rent for today.
 @collectrent
 @gainrelationship points:20
+@wait 0.5
 na: Don't forget to come by every day!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
@@ -35,8 +36,10 @@ na: Oh, I see! I was about to go to class. I have a big test today and I haven't
 na: Psychology! I've always loved knowing more about people's minds and helping them sort out their issues.
 na: Before I forget, here's your rent for today.
 @collectrent
-@gainrelationship points:20
+@wait 0.5
 na: Have a nice day, {PlayerName}!
+@gainrelationship points:20
+@wait 0.5
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -46,6 +49,7 @@ na: Sure! Ummm... So, I'm a Psychology student at Tokyo University, I like to pl
 na: And before I forget, here's your rent for today.
 @collectrent
 @gainrelationship points:20
+@wait 0.5
 na: Have a nice day, {PlayerName}!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
@@ -54,8 +58,10 @@ na: Have a nice day, {PlayerName}!
 {PlayerName}: Don't be silly, I just came here to get my rent!
 na: Oh... Well, here's your rent for the day, sir.
 @collectrent
-@gainrelationship points:5
+@wait 0.5
 na: Have a nice day!
+@gainrelationship points:5
+@wait 0.5
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -68,6 +74,7 @@ na: Did I mention how much I looooove kittens?[i] Their cute eyes and sassy atti
 na: Anyways, here's your rent for today, {PlayerName}.[i] Don't spend it all at once!
 @collectrent
 @gainrelationship points:20
+@wait 0.5
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 

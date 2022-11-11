@@ -1392,16 +1392,18 @@ MonoBehaviour:
   moneyTextTop: {fileID: 1904372599}
   dateTextTop: {fileID: 619758893}
   detailsPanel: {fileID: 576710550}
-  panelOpenEaseType: 27
+  panelOpenEaseType: 24
   panelCloseEaseType: 26
   panelAnimationDuration: 0.35
-  moneyAnimationEaseType: 0
-  moneyAnimationDuration: 0
+  moneyAnimationEaseType: 8
+  moneyAnimationDuration: 1
   moneyAnimationPath:
   - {x: 0, y: 0, z: 0}
-  - {x: 24, y: 8, z: 0}
-  - {x: 32, y: 40, z: 0}
-  - {x: 32, y: 64, z: 0}
+  - {x: 8, y: -16, z: 0}
+  - {x: 32, y: 16, z: 0}
+  - {x: 48, y: 48, z: 0}
+  - {x: 60, y: 96, z: 0}
+  - {x: 64, y: 144, z: 0}
   billAnimationPrefab: {fileID: 8341822989570412402, guid: a32c1ece908219846aea1bc859a94673,
     type: 3}
   moneyIncreaseAnimationPrefab: {fileID: 2068503834937588697, guid: aff40e4be6f22bb46ae3edfc7ce0169d,
@@ -2648,8 +2650,7 @@ MonoBehaviour:
   m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 015573da50ed04390be9f20287a541d6, type: 2}
-  m_sharedMaterial: {fileID: -2237749729835323621, guid: 015573da50ed04390be9f20287a541d6,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e11c6e60fcc5f684b9ddb1875203fc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3236,7 +3237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1560399085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3583,8 +3584,7 @@ MonoBehaviour:
     $1000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 015573da50ed04390be9f20287a541d6, type: 2}
-  m_sharedMaterial: {fileID: -2237749729835323621, guid: 015573da50ed04390be9f20287a541d6,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e11c6e60fcc5f684b9ddb1875203fc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

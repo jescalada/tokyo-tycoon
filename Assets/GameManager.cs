@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public Vector3[] moneyAnimationPath;
 
     public GameObject billAnimationPrefab;
+    public GameObject heartAnimationPrefab;
     public GameObject moneyIncreaseAnimationPrefab;
 
     // Start is called before the first frame update
@@ -135,13 +136,24 @@ public class GameManager : MonoBehaviour
         Destroy(billAnimation, 2f);
     }
 
+    public void PlayHeartAnimation()
+    {
+        var heartAnimation = Instantiate(heartAnimationPrefab);
+        heartAnimation.transform.SetPosX(-3.75f);
+        heartAnimation.transform.SetPosY(-2.5f);
+        heartAnimation.transform.SetPosZ(60f);
+        heartAnimation.transform.localScale = new Vector3(0.25f, 0.25f, -5);
+        Destroy(heartAnimation, 2f);
+    }
+
     public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
     {
-        // Todo: Add animation
         var character = ((Home)activeProperty).Tenant;
         character.GainRelationshipPoints(relationshipPoints);
+        PlayHeartAnimation();
+
+        // Todo: Add meter change animation
         character.SetRelationshipMeter();
-        Debug.Log(string.Format("Increasing relationship with {0} by {1}", character.Name, relationshipPoints));
     }
 
     public void DecreaseRelationshipActiveCharacter(int relationshipPoints)
