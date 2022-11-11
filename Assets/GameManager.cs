@@ -37,7 +37,12 @@ public class GameManager : MonoBehaviour
     public LeanTweenType panelCloseEaseType;
     public float panelAnimationDuration;
 
+    public LeanTweenType moneyAnimationEaseType;
+    public float moneyAnimationDuration;
+    public Vector3[] moneyAnimationPath;
+
     public GameObject billAnimationPrefab;
+    public GameObject moneyIncreaseAnimationPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -97,18 +102,37 @@ public class GameManager : MonoBehaviour
 
     public void CollectRentActiveProperty()
     {
-        // Prevent the rent collection from showing up when clicking a DateSpot
         int moneyObtained = ((Home)activeProperty).CollectRent();
         // Todo: Add animation
-        var parent = GameObject.Find("AdventurePrinter");
-        var animation = Instantiate(billAnimationPrefab);
-        animation.transform.SetPosX(-3.75f);
-        animation.transform.SetPosY(-2.5f);
-        animation.transform.SetPosZ(60f);
-        animation.transform.localScale = new Vector3(0.5f, 0.5f, -3);
-        // Destroy(animation, 2f);
+
+        PlayMoneyAnimation(moneyObtained);
+
+        PlayBillAnimation();
 
         player.AddMoney(moneyObtained);
+    }
+
+    public void PlayMoneyAnimation(int moneyObtained)
+    {
+        var moneyUIAnimation = Instantiate(moneyIncreaseAnimationPrefab, GameObject.Find("TotalMoneyText").transform);
+        moneyUIAnimation.GetComponent<TextMeshProUGUI>().text = string.Format("${0}", moneyObtained);
+
+        LeanTween.scale(moneyUIAnimation, new Vector3(1, 1, 1), 0.35f)
+            .setEase(panelOpenEaseType);
+
+        LeanTween.moveSplineLocal(moneyUIAnimation, moneyAnimationPath, moneyAnimationDuration)
+            .setEase(moneyAnimationEaseType)
+            .setOnComplete(delegate () { Destroy(moneyUIAnimation); });
+    }
+
+    private void PlayBillAnimation()
+    {
+        var billAnimation = Instantiate(billAnimationPrefab);
+        billAnimation.transform.SetPosX(-3.75f);
+        billAnimation.transform.SetPosY(-2.5f);
+        billAnimation.transform.SetPosZ(60f);
+        billAnimation.transform.localScale = new Vector3(0.5f, 0.5f, -3);
+        Destroy(billAnimation, 2f);
     }
 
     public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
