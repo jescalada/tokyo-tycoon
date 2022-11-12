@@ -3217,7 +3217,10 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    isBGM: 1
     audioSource: {fileID: 0}
+  BGMFadeInTime: 1
+  BGMFadeOutTime: 1
 --- !u!4 &1494095741
 Transform:
   m_ObjectHideFlags: 0
