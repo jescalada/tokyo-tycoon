@@ -65,6 +65,7 @@ public class Home : Property
         if (gameManager.activeProperty != null) return;
         gameManager.activeProperty = this;
         gameManager.ShowDetailsPanel();
+        gameManager.StopBGM();
         UpdateUI();
 
         DialogueTrigger trigger = GetComponent<DialogueTrigger>();

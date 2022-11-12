@@ -41,5 +41,6 @@ public class SwitchToAdventureMode : Command
 
         var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.ResetActiveProperty();
+        gameManager.ResumeBGM();
     }
 }

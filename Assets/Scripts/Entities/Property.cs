@@ -82,11 +82,11 @@ public abstract class Property : MonoBehaviour
 
     public string GetBuyCostString()
     {
-        return string.Format("Buy\n${0}", cost);
+        return string.Format("Buy\n$ {0}", cost);
     }
 
     public string GetUpgradeCostString()
     {
-        return string.Format("{0}\n${1}", GetUpgradeNameByLevel(), GetUpgradeCostByLevel());
+        return string.Format("{0}\n$ {1}", GetUpgradeNameByLevel(), GetUpgradeCostByLevel());
     }
 }

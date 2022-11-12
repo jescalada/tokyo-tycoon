@@ -8,21 +8,23 @@ m: It's one small step for Maxwell, one giant leap for dogkind.
 @set PlayerName="Maxwell"
 *knock knock*
 @showUI RelationshipBar wait:false
+@bgm NatsumeTheme fade:1
 na: Yeees, I'm coming![i] Hello?
 {PlayerName}: Nice to meet you. I'm {PlayerName}, your new landlord.
-na: Oh, the new landlord guy![i] Pleased to meet you, {PlayerName}![i] I'm Natsume! 
+na: Oh, the new landlord![i] Pleased to meet you, {PlayerName}![i] I'm Natsume!
 {PlayerName}: Yeah, nice to meet you.
 na: Here's your rent for today.
 @collectrent
 @gainrelationship points:20
-@wait 0.5
 na: Don't forget to come by every day!
+@stopBgm NatsumeTheme fade:0.5
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
 # Intro2
 *knock knock*
 @showUI RelationshipBar wait:false
+@bgm NatsumeTheme
 na: Just a mooooment![i] Oh, hi {PlayerName}![i] What brings you here today?[skipInput]
 @choice "Just passing by." goto:.Intro2a
 @choice "Tell me about yourself." goto:.Intro2b
@@ -40,6 +42,7 @@ na: Before I forget, here's your rent for today.
 na: Have a nice day, {PlayerName}!
 @gainrelationship points:20
 @wait 0.5
+@stopBgm NatsumeTheme
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -51,6 +54,7 @@ na: And before I forget, here's your rent for today.
 @gainrelationship points:20
 @wait 0.5
 na: Have a nice day, {PlayerName}!
+@stopBgm NatsumeTheme
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -62,6 +66,7 @@ na: Oh... Well, here's your rent for the day, sir.
 na: Have a nice day!
 @gainrelationship points:5
 @wait 0.5
+@stopBgm NatsumeTheme
 @hideUI RelationshipBar wait:false
 @adventure reset:false
 
@@ -175,7 +180,7 @@ na: And watch your back![i] Hehehe.
 # Intro7
 *knock knock*
 @showUI RelationshipBar wait:false
-na: Good morning, {PLayerName}!
+na: Good morning, {PlayerName}!
 {PlayerName}: Good morning, Natsume.[i] Any news today?
 na: Ummm, nothing much.[i] I'm going to the nearby park in a while.[skipInput]
 @choice "That's nice, what are you gonna do there?" goto:.Intro7b
@@ -242,14 +247,14 @@ na: See you later, {PlayerName}!
 @showUI RelationshipBar wait:false
 ; todo add wait
 *knock knock*
-{PLayerName}: Anybody home?
-{PLayerName}: .[i].[i].
+{PlayerName}: Anybody home?
+{PlayerName}: .[i].[i].
 {PlayerName}: "Weird...[i] Looks like Natsume isn't home today."
 nar: You look around to find any clues about her whereabouts.[i] As your gaze drifts near your feet, you notice a small envelope with its edges popping out of the doormat.
 {PlayerName}: Wait, is that...?
 ; todo implement narrator
 nar: You crouch to pick up the envelope. Something is written on the back:
-na: "Sorry {PLayerName}, I left for basketball practice![i] Here's your rent for the day![i]Sorry!"
+na: "Sorry {PlayerName}, I left for basketball practice![i] Here's your rent for the day![i]Sorry!"
 @collectrent
 @gainrelationship points:10
 @hideUI RelationshipBar wait:false
@@ -354,7 +359,7 @@ na: We're gonna go swimming and have some cocktails by the sea!
 {PlayerName}: Wait,[i] is that even legal?!
 na: Huh? Of course it is! I'm a grown up, silly!
 {PlayerName}: (She acts so childish sometimes, I totally forgot about that...)
-{PlayerName} Well, have fun tomorrow.
+{PlayerName}: Well, have fun tomorrow.
 na: Yes![i] Thanks, {PlayerName}![i] See you around!
 @hideUI RelationshipBar wait:false
 @adventure reset:false
@@ -363,12 +368,12 @@ na: Yes![i] Thanks, {PlayerName}![i] See you around!
 *knock knock*
 nar: After knocking the door, you stop and listen carefully to check if Natsume's home.
 *knock knock*
-{PLayerName}: .[i].[i].
-{PLayerName}: Nobody home, huh.
+{PlayerName}: .[i].[i].
+{PlayerName}: Nobody home, huh.
 nar: You instinctively check the doormat, where she left the rent last time.[i] Once again, you notice a small envelope with its edges popping out of the doormat.
 {PlayerName}: Seriously...
 nar: You crouch to pick it up. Natsume's sloppy handwriting can be read on the back:
-na: "Sorry {PLayerName}, I'm out with my friends today![i] Here's today's rent![i] Sorry!"
+na: "Sorry {PlayerName}, I'm out with my friends today![i] Here's today's rent![i] Sorry!"
 nar: A childish drawing of a rabbit is attached to the note.[i] It has pleading eyes, and reads "SOWWY!".
 {PlayerName}: Well,[i] I appreciate the thought.
 @showUI RelationshipBar wait:false

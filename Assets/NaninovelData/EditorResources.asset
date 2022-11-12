@@ -248,3 +248,8 @@ MonoBehaviour:
     Resources: []
   - Id: Characters/64bfc62b-04ab-418c-8898-52f02bf32be6
     Resources: []
+  - Id: Audio
+    Resources:
+    - name: NatsumeTheme
+      pathPrefix: Audio
+      guid: 1f3b6dfe88581294fbfae31e1a89f883

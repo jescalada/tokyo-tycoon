@@ -26,6 +26,12 @@ public class DateSpot : Property
     [SerializeField]
     private TextMeshProUGUI upgradeButtonText;
 
+    public Color redTextColour;
+    public Color greenTextColour;
+
+    public TMP_ColorGradient redGradient;
+    public TMP_ColorGradient greenGradient;
+
     override
     public void OnMouseDown()
     {
@@ -33,6 +39,7 @@ public class DateSpot : Property
         if (gameManager.activeProperty != null) return;
         gameManager.activeProperty = this;
         gameManager.ShowDetailsPanel();
+        gameManager.StopBGM();
         UpdateUI();
         if (Owned())
         {
@@ -52,9 +59,20 @@ public class DateSpot : Property
     override
     public void UpdateUI()
     {
+        rentValueText.color = redTextColour;
+        rentValueText.colorGradientPreset = redGradient;
+
         rentValueText.text = "";
         propertyNameText.text = PropertyName;
         propertyLevelText.text = string.Format("Level {0}", GetLevel());
+        if (!owned)
+        {
+            if (FindObjectOfType<GameManager>().GetComponent<Player>().CheckMoney(GetCost()))
+            {
+                rentValueText.color = greenTextColour;
+                rentValueText.colorGradientPreset = greenGradient;
+            }
+        }
         // upgradeCostText.text = GetUpgradeCostByLevel();
         // propertyDescriptionText.text = GetDescriptionByLevel();
         // Todo: Add date button for locations

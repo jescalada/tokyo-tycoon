@@ -55,12 +55,13 @@ public class GameManager : MonoBehaviour
         advanceDayButton.onClick.AddListener(AdvanceDay);
 
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("Everyday Routine");
+        //audioManager.Play("Everyday Routine");
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Todo, make efficient
         moneyTextTop.text = string.Format("${0}", player.GetMoney());
         dateTextTop.text = timeController.ToString();
     }
@@ -230,6 +231,19 @@ public class GameManager : MonoBehaviour
     public void ResetMaxedUpgradeButton()
     {
         upgradeButton.interactable = true;
+    }
+
+    public void StopBGM()
+    {
+        StopAllCoroutines();
+        // todo, smoothen stop transition
+        StartCoroutine(audioManager.StopBGM());
+    }
+
+    public void ResumeBGM()
+    {
+        StopAllCoroutines();
+        StartCoroutine(audioManager.PlayBGM("Everyday Routine"));
     }
 
 }
