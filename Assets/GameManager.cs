@@ -80,11 +80,7 @@ public class GameManager : MonoBehaviour
             // Todo: give visual feedback that money isn't enough
             Debug.Log("You don't have enough money to upgrade this property!");
         }
-        if (activeProperty.GetLevel() == Property.MAX_LEVEL)
-        {
-            SetMaxedUpgradeButton();
-            upgradeButton.GetComponentInChildren<TextMeshProUGUI>().text = "MAX";
-        }
+        CheckIfMaxLevel();
     }
 
     public void BuyActiveProperty()
@@ -98,6 +94,7 @@ public class GameManager : MonoBehaviour
             player.BuyProperty(activeProperty);
             DisableBuyButton();
             EnableUpgradeButton();
+
         }
         else
         {
@@ -201,7 +198,7 @@ public class GameManager : MonoBehaviour
     }
     public void EnableUpgradeButton()
     {
-        // upgradeButton.interactable = true;
+        upgradeButton.interactable = true;
         upgradeButton.gameObject.SetActive(true);
     }
     public void DisableUpgradeButton()
@@ -224,10 +221,18 @@ public class GameManager : MonoBehaviour
             .setEase(panelOpenEaseType);
     }
 
-    public void SetMaxedUpgradeButton()
+    public void CheckIfMaxLevel()
     {
-        upgradeButton.interactable = false;
+        if (activeProperty.GetLevel() == Property.MAX_LEVEL)
+        {
+            upgradeButton.interactable = false;
+            upgradeButton.GetComponentInChildren<TextMeshProUGUI>().text = "MAX";
+        } else
+        {
+            upgradeButton.interactable = true;
+        }
     }
+
     public void ResetMaxedUpgradeButton()
     {
         upgradeButton.interactable = true;
@@ -236,7 +241,6 @@ public class GameManager : MonoBehaviour
     public void StopBGM()
     {
         StopAllCoroutines();
-        // todo, smoothen stop transition
         StartCoroutine(audioManager.StopBGM());
     }
 

@@ -42,6 +42,15 @@ public class Home : Property
     public static Dictionary<Character.RelationshipLevel, int> IDLE_DIALOGUES_BY_RELATIONSHIP;
     public static Dictionary<Character.RelationshipLevel, int> RENT_COLLECTION_DIALOGUES_BY_RELATIONSHIP;
 
+    public Color redTextColour;
+    public Color greenTextColour;
+
+    public TMP_ColorGradient redGradient;
+    public TMP_ColorGradient greenGradient;
+
+    public Material redGlowyUI;
+    public Material greenGlowyUI;
+
     public void Start()
     {
         IDLE_DIALOGUES_BY_RELATIONSHIP = new Dictionary<Character.RelationshipLevel, int>();
@@ -72,9 +81,15 @@ public class Home : Property
         
         if (!Owned())
         {
+            gameManager.EnableBuyButton();
+            gameManager.DisableUpgradeButton();
             TriggerNotOwnedDialogue(trigger);
             return;
         }
+
+        gameManager.DisableBuyButton();
+        gameManager.EnableUpgradeButton();
+        gameManager.CheckIfMaxLevel();
 
         if (!collectedDailyRent && UniqueDialogueCounter < UNIQUE_DIALOGUES)
         {
@@ -126,8 +141,7 @@ public class Home : Property
         rentValueText.text = string.Format("${0} per day", rentValueByLevel[GetLevel()]);
         propertyNameText.text = PropertyName;
         propertyLevelText.text = string.Format("Level {0}", GetLevel());
-        // upgradeCostText.text = GetUpgradeCostByLevel();
-        // propertyDescriptionText.text = GetDescriptionByLevel();
+        SetButtonTextColors();
         buyButtonText.text = GetBuyCostString();
         upgradeButtonText.text = GetUpgradeCostString();
     }
@@ -149,5 +163,39 @@ public class Home : Property
     public bool CollectedDailyRent()
     {
         return collectedDailyRent;
+    }
+
+    public void SetButtonTextColors()
+    {
+        buyButtonText.color = redTextColour;
+        buyButtonText.colorGradientPreset = redGradient;
+        buyButtonText.fontMaterial = redGlowyUI;
+
+        upgradeButtonText.color = redTextColour;
+        upgradeButtonText.colorGradientPreset = redGradient;
+        upgradeButtonText.fontMaterial = redGlowyUI;
+
+        if (!Owned())
+        {
+            if (FindObjectOfType<GameManager>().GetComponent<Player>().CheckMoney(GetCost()))
+            {
+                buyButtonText.color = greenTextColour;
+                buyButtonText.colorGradientPreset = greenGradient;
+                buyButtonText.fontMaterial = greenGlowyUI;
+            }
+        }
+        else
+        {
+            if (FindObjectOfType<GameManager>().GetComponent<Player>().CheckMoney(GetUpgradeCostByLevel()))
+            {
+                upgradeButtonText.color = greenTextColour;
+                upgradeButtonText.colorGradientPreset = greenGradient;
+                upgradeButtonText.fontMaterial = greenGlowyUI;
+            }
+            if (GetLevel() < MAX_LEVEL)
+            {
+
+            }
+        }
     }
 }

@@ -32,6 +32,9 @@ public class DateSpot : Property
     public TMP_ColorGradient redGradient;
     public TMP_ColorGradient greenGradient;
 
+    public Material redGlowyUI;
+    public Material greenGlowyUI;
+
     override
     public void OnMouseDown()
     {
@@ -45,6 +48,7 @@ public class DateSpot : Property
         {
             gameManager.DisableBuyButton();
             gameManager.EnableUpgradeButton();
+            gameManager.CheckIfMaxLevel();
         }
         else
         {
@@ -59,25 +63,46 @@ public class DateSpot : Property
     override
     public void UpdateUI()
     {
-        rentValueText.color = redTextColour;
-        rentValueText.colorGradientPreset = redGradient;
-
         rentValueText.text = "";
         propertyNameText.text = PropertyName;
         propertyLevelText.text = string.Format("Level {0}", GetLevel());
-        if (!owned)
+        SetButtonTextColors();
+        buyButtonText.text = GetBuyCostString();
+        upgradeButtonText.text = GetUpgradeCostString();
+    }
+
+    public void SetButtonTextColors()
+    {
+        buyButtonText.color = redTextColour;
+        buyButtonText.colorGradientPreset = redGradient;
+        buyButtonText.fontMaterial = redGlowyUI;
+
+        upgradeButtonText.color = redTextColour;
+        upgradeButtonText.colorGradientPreset = redGradient;
+        upgradeButtonText.fontMaterial = redGlowyUI;
+
+        if (!Owned())
         {
             if (FindObjectOfType<GameManager>().GetComponent<Player>().CheckMoney(GetCost()))
             {
-                rentValueText.color = greenTextColour;
-                rentValueText.colorGradientPreset = greenGradient;
+                buyButtonText.color = greenTextColour;
+                buyButtonText.colorGradientPreset = greenGradient;
+                buyButtonText.fontMaterial = greenGlowyUI;
             }
         }
-        // upgradeCostText.text = GetUpgradeCostByLevel();
-        // propertyDescriptionText.text = GetDescriptionByLevel();
-        // Todo: Add date button for locations
-        buyButtonText.text = GetBuyCostString();
-        upgradeButtonText.text = GetUpgradeCostString();
+        else
+        {
+            if (FindObjectOfType<GameManager>().GetComponent<Player>().CheckMoney(GetUpgradeCostByLevel()))
+            {
+                upgradeButtonText.color = greenTextColour;
+                upgradeButtonText.colorGradientPreset = greenGradient;
+                upgradeButtonText.fontMaterial = greenGlowyUI;
+            }
+            if (GetLevel() < MAX_LEVEL)
+            {
+
+            }
+        }
     }
 
     override

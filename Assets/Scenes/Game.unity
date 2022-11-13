@@ -420,6 +420,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &181885639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -588,6 +594,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &195640775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1089,6 +1101,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &412484466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1611,6 +1629,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &596390469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2016,6 +2040,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &719981194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2179,6 +2209,12 @@ MonoBehaviour:
   propertyLevelText: {fileID: 39196527}
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &745384990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2358,6 +2394,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &999835907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2808,6 +2850,12 @@ MonoBehaviour:
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
   UniqueDialogueCounter: 1
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &1096594922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3047,6 +3095,12 @@ MonoBehaviour:
   propertyLevelText: {fileID: 39196527}
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &1393048438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3795,6 +3849,12 @@ MonoBehaviour:
   propertyLevelText: {fileID: 39196527}
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &1806059182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3952,17 +4012,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Buy
 
-    $500'
+    $ 500'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 015573da50ed04390be9f20287a541d6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e11c6e60fcc5f684b9ddb1875203fc1b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286346751
+  m_fontColor: {r: 1, g: 0.4575472, b: 0.4853652, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -3970,7 +4030,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d,
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643,
     type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -4489,6 +4549,12 @@ MonoBehaviour:
   propertyLevelText: {fileID: 39196527}
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &2027620570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4655,6 +4721,12 @@ MonoBehaviour:
   propertyLevelText: {fileID: 39196527}
   buyButtonText: {fileID: 1831239006}
   upgradeButtonText: {fileID: 1693129049}
+  redTextColour: {r: 1, g: 0.45882353, b: 0.4862745, a: 1}
+  greenTextColour: {r: 1, g: 1, b: 1, a: 1}
+  redGradient: {fileID: 11400000, guid: 423d5ed46473fae40b3222c9775b9643, type: 2}
+  greenGradient: {fileID: 11400000, guid: 020b30e6a6625a9448465e94d17e475d, type: 2}
+  redGlowyUI: {fileID: 2100000, guid: 1d59d15047683f24e9ebfc13729f432d, type: 2}
+  greenGlowyUI: {fileID: 2100000, guid: b8433b15722912d4387a5a201e8ea361, type: 2}
 --- !u!212 &2040017354
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -506,6 +506,10 @@
         &lt;Path&gt;Novel&lt;/Path&gt;
         &lt;Type&gt;TextPrinters&lt;/Type&gt;
       &lt;/Resource&gt;
+      &lt;Resource&gt;
+        &lt;Path&gt;NatsumeTheme&lt;/Path&gt;
+        &lt;Type&gt;Audio&lt;/Type&gt;
+      &lt;/Resource&gt;
     &lt;/Resources&gt;
     &lt;Constants&gt;
       &lt;Constant&gt;
