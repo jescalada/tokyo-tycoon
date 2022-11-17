@@ -182,8 +182,13 @@ public class GameManager : MonoBehaviour
 
     public void ResetActiveProperty()
     {
-        activeProperty = null;
+        Invoke("NullifyActiveProperty", 0.5f);
         HideDetailsPanel();
+    }
+
+    private void NullifyActiveProperty()
+    {
+        activeProperty = null;
     }
 
     public void EnableBuyButton()
