@@ -3,7 +3,6 @@
 nar: Natsume and I depart together towards the park.[i]
 nar: She hums sweetly while pacing along.[i] Her gait is light and bouncy, almost like a cat.
 na: It's such a nice day![i] Wanna know something I like to do during days like these?
-nar: You stop to think about what Natsume would normally do in such a pleasant spring afternoon.
 {PlayerName}: Hang out with friends, maybe?
 na: Haha, nope![i]
 na: Birdwatching!
@@ -14,13 +13,13 @@ na: Plus, birds are so cute.[i] Almost as cute as cats.
 {PlayerName}: They don't really get along, though.
 na: Heh, true.[i]
 ; todo check wording
-nar: As we chat, the park keep getting closer.[i] The park and the residential area are divided by a hectic street full of shops.
+nar: As we chat, the park keeps getting closer.[i] Ueno park and the residential area are divided by a hectic street full of shops.
 nar: We arrive at the busy road and stop for a while at a nearby crossing.[i]
 nar: People can be seen coming in and out of the shops, carrying bags full of who-knows-what.[i] Their hasty walks contrast with our peaceful strolling.
 nar: I spot a bakery, a bookstore and a mechanic shop across the road.[i] I try to think about how these shops could possibly relate to each other, but nothing comes to mind.
 {PlayerName}: Quite the variety they've got here.
 na: Definitely![i] You can find anything you need around these parts.[i] I come here every couple of days to do my groceries, buy ingredients, and ummmm...[i] buying sport supplies too! 
-{PLayerName}: Oh, you cook your own meals?
+{PlayerName}: Oh, you cook your own meals?
 na: Ah,[i] I do, but I'm still a terrible cook![i] I wish someone could do it for me...
 {PlayerName}: Wha-?[i] What are you looking at?
 {PlayerName}: I'm just a simple landlord.[i] I don't have time to cook for you every day.
@@ -31,13 +30,17 @@ nar: The traffic light on the crossing finally turns green, and a river of peopl
 nar: We wait for a while to let the hurried people through.[i] Suddenly, I feel Natsume tugging my arm.
 na: Let's go![i] We're almost there.
 nar: We keep walking until reaching the park.[i] It's hard to believe there's a place like this so close to the hubbub of the shopping district.[i]
-nar: There's a brick path leading to a fountain in the middle of the park.[i] Thousands of petals lie scattered along the path.[i] On the sides, I see a line of sakura trees blooming nobly.[i]
-nar: Natsume stops walking and takes a deep breath.[i] 
-na: It's.[i].[i].[i] So beautiful!!![i] What do you think, {PlayerName}?
+nar: There's a path leading to a large fountain in the middle of the park.[i] Thousands of petals lie scattered along the path.[i] On the sides, I see a line of sakura trees blooming nobly.[i]
+nar: Behind the fountain, a wide building stands overlooking the scenery.
+na: That's the Tokyo National Museum![i] It's an art museum, and the oldest in Japan.[i] You can find lots of ancient Japanese relics and famous artwork in there.
+{PlayerName}: Wow, really?[i] I'm surprised you even know about that.
+nar: She gives me a prideful smile as we make our way to the fountain.
+na: The park is beautiful as always![i] What do you think, {PlayerName}?
 {PlayerName}: I totally agree.[i] The blossoms look more beautiful than ever this year.
-nar: As our walk slows down, we reach the fountain in the center of the park.[i] Around the fountain there are four benches, all of them surprisingly empty.
+; insert wait with no text
+nar: At last, we reach the fountain.[i] It looks rather like a swimming pool, with many small spouts of water shooting upwards.[i] There are three benches on each side, all of them surprisingly empty.
 {PlayerName}: Come to think of it, there are very few people here today.[i]
-{PLayerName}: (No matter how you look at it, we're on a date...)
+{PlayerName}: (No matter how you look at it, we're on a date...)
 na: Huh, what do you mea-?
 na: O-oh![i] I-it's just the two of us?![i] This isn't a date... right?![skipInput]
 @choice "It's a date." goto:.ParkA
@@ -46,4 +49,90 @@ na: O-oh![i] I-it's just the two of us?![i] This isn't a date... right?![skipInp
 @stop
 
 # ParkA
-{PlayerName}: 
+{PlayerName}: It's a date, Natsume.
+na: I see...
+nar: Natsume gets a bit fidgety, but doesn't seem to mind my previous remark.
+na: Are you sure it's okay to go on a date with your tenant? [i]Heheh.
+{PlayerName}: Hey, you were the one who asked me out![i] My job as a landlord is to listen to my tenants' requests, no matter how silly.
+na: Oh, really?[i] Then, I'll make lots of silly requests from now on!
+{PlayerName}: (Sigh...)
+na: I'm counting on you, Mr. Landlord!
+@goto .ParkFinal
+
+# ParkB
+{PlayerName}: All in a day's work.[i] It's my job to listen to my tenant's every request.
+na: So if I ask you anything, you'll come and help me?
+{PlayerName}: Pretty much.[i] As long as it isn't something TOO silly.[i] Or dangerous.
+na: Oh...[i] So asking you to murder someone is out of the question.
+nar: I wonder for a second if she's being serious.[i]
+{PlayerName}: Got a grudge against someone?
+na: It's just a girl in my class.[i] She's been bothering me lately and I don't know what to do.
+{PlayerName}: What do you mean?[i] Is she bullying you or something?
+na: So...[i] Earlier this year, we were working together on a school assignment.[i] Long story short, we argued a lot and she hates me ever since.
+na: A few weeks ago she started spreading weird rumors about me.[i] My friends know it's fake, but I'm still worried that my professors might hear them and get the wrong idea.
+{PlayerName}: Well, have you tried talking to the girl?[i] Just be firm and say you won't let her spread baseless rumors about you.
+na: Ah, well...[i] Confronting people is a bit scary.[i] But I'll try.
+na: Thanks for the advice, {PlayerName}.
+nar: I get a feeling that Natsume will manage to sort things out.[i] She does seem quite socially skilled, after all.
+@goto .ParkFinal
+
+# ParkC
+{PlayerName}: This isn't a date.[i] We're just hanging out, right?[i] Like friends.
+na: Oh...[i] So we're just friends...
+nar: She seems disappointed after I turned her down.[i] I decide to lighten up the mood by asking about her birdwatching hobby.
+{PlayerName}: You mentioned you're into birdwatching, right?
+na: Yeah![i] It's a pastime I've enjoyed since I was a kid.[i] Ever since coming to the big city, I love to come here to Ueno Park to watch the birds!
+na: It's the only place in Tokyo where you can see so many birds from up close.
+{PlayerName}: Well, Tokyo isn't exactly known for it's nature.
+na: Oh, and there's a zoo close to the park as well![i] Maybe we should go there next time.
+nar: Natsume returns to her usual, upbeat self more quickly than I expected.[i]
+@goto .ParkFinal 
+
+# ParkFinal
+; Add small pause
+na: By the way, there's a place here in Ueno Park called Shinobazu Pond.[i] It's a popular spot for birdwatching.[i] I was hoping we could go and watch some birds together this afternoon.
+{PlayerName}: Sounds good.[i] Why don't we have some lunch, first?
+na: Okay!
+nar: We sit down at one of the benches by the fountain.[i] The place seems to be rather quiet for this time of the year.[i] Usually, there'd be crowds of people enjoying the cherry blossoms and drinking together.
+nar: I reach into my bag to get some rice balls I bought earlier at the convenience store.[i] They're big, nutritious and great for eating on the go.[i] A staple food for busy landlords with no time to cook.
+nar: Suddenly, Natsume brings a small box out of her purse.[i] It's wrapped in a red-and-pink cloth with a flower pattern.
+{PlayerName}: Is that your bento?
+na: Ummm...[i] You can have this, {PlayerName}.[i] I know you're so busy, so I brought an extra lunch in case you didn't have time to get yours.
+nar: I unfasten the wrapping cloth and carefully open up the bento box.[i] An assortment of fish and vegetables lay on top of a thick layer of rice.[i] It looks much more appetizing than my cheap rice balls.
+{PlayerName}: This looks so tasty.[i] Did you make it yourself?
+na: Yes![i] My mum used to make it all the time when I was in school.[i] I hope you like it!
+na: Come on now, let's eat!
+nar: I pick up some fish with my chopsticks and take a bite.[i] My mouth is filled with a rich, somewhat nostalgic flavor.
+{PlayerName}: W-woah, it's delicious![i] It kind of reminds me of mum's cooking.
+na: Hehe, I'm glad you like it, {PlayerName}!
+; Add small pause
+nar: I try my best to savor each bite, but I end up gobbling up the whole bento in just a few minutes.
+{PlayerName}: Oh man, that was absolutely delicious.
+na: Thanks. 
+; Add pause
+{PlayerName}: Well then, shall we go visit the pond?
+na: Yeah, let's go!
+nar: We get up and begin strolling once again down the dirt path.[i] It's around midday and the sun shines brighter than ever.
+nar: Eventually, I notice a gigantic body of water ahead of us.[i] It looks like a lake, and it's full of ducks and small birds swimming around.
+na: Ah, we're getting close now!
+{PlayerName}: You call this a pond?
+na: Did you imagine something smaller?
+{PlayerName}: Yeah, this is a surprise.[i] I was thinking it'd be something like a backyard pond.[i] This is enormous.
+nar: After a while, we reach the edge of the so-called pond.[i] The sunshine is reflected on the surface.[i] Many birds are enjoying their afternoon much like ourselves.
+nar: Beneath the surface, colorful Koi fish swim around in circles.[i] The water is very shallow, which is why they call it a "pond".
+na: Do you see that duck with the red head?[i] It's a Pochard.[i] They're super common in Japan.
+nar: A flock of red-headed ducks slowly floats towards the center of the pond.[i] Close by, a large white bird resembling a flamingo stands proudly.
+na: That's an Egret.[i] It's related to flamingoes and cranes.[i] They nest in large groups near shallow waters, so this pond is the perfect spot!
+nar: The white bird notices our presence and abruptly takes flight, splashing water and startling some nearby birds.
+{PlayerName}: You really know your stuff.
+na: Heh, thanks![i] Birdwatching has been a hobby of mine since I was young.[i] I used to live in the countryside by a big lake, so my parents and I would go and watch birds often.
+{PlayerName}: I see.
+nar: We spend the rest of the afternoon walking around the park and enjoying nature.[i] Finally, we make our way out of the park.
+na: {PlayerName}, [i]I had a great time today![i] I hope we can go on a date soon again!
+{PlayerName}: Yeah, that was fun.[i] We should go somewhere else next time.
+; todo decide place based on available spots (get next by cost)
+na: Maybe ... ?
+{PlayerName}: Sounds good![i] Anyways, I gotta go now.[i] See you, Natsume.
+na: Bye bye, {PlayerName}!
+nar: She struts away with her usual bouncy gait.[i] I decide to call it a day and go back home.
+; todo -> Skip to night home

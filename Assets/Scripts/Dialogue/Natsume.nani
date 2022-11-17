@@ -7,8 +7,8 @@ m: It's one small step for Maxwell, one giant leap for dogkind.
 # Intro1
 @set PlayerName="Maxwell"
 *knock knock*
-@showUI RelationshipBar wait:false
 @bgm NatsumeTheme fade:1
+@showUI RelationshipBar wait:false
 na: Yeees, I'm coming![i] Hello?
 {PlayerName}: Nice to meet you. I'm {PlayerName}, your new landlord.
 na: Oh, the new landlord![i] Pleased to meet you, {PlayerName}![i] I'm Natsume!
@@ -542,7 +542,7 @@ na: Sometimes we play together.[i] He's quite shy, but playful and cuddly when y
 na: His name is Dusty.[i] I wanna take him home, but pets aren't allowed here, right?
 {PlayerName}: That's right.
 ;todo add screen shake
-na: Ummmmm...[i] Do something about it!!![i] You own the place, right?[i] Add a room so I can adopt Dusty!
+na: Ummmmm...[i] Do something about it![i] You own the place, right?[i] Add a room so I can adopt Dusty!
 {PlayerName}: Sheesh.[i] Are you a kid or something?[i] I can't just-
 na: Pretty pleeeease...?
 nar: Natsume gets close, and suddenly clings on to your shirt, very much like a child.
