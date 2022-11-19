@@ -3,3 +3,99 @@
 m: Hello World!
 m: It's one small step for Maxwell, one giant leap for dogkind.
 @adventure reset:false
+
+# Intro1
+; todo, expound on background including what the area looks like
+nar: After walking around the peaceful neighborhood, I arrive at a cozy-looking house.[i] It's a two-storey building with brick walls.[i]
+nar: There's a garden in the front yard, full of colorful flowers.[i] The garden is surrounded by a round shrub fence.[i] The shrubs have been recently trimmed.
+{PlayerName}: (Whoever lives here seems to really love their plants...)
+nar: A carefully crafted path of stone slabs leads to the main entrance, in front of which a welcome mat is neatly placed.
+nar: I tread up the stones and approach the front door.
+*knock knock*
+; todo insert wait
+@bgm HanaTheme fade:1
+@showUI RelationshipBar wait:false
+ha: Hello?[i]
+{PlayerName}: Hi there, I'm {PlayerName}, the new landlord.[i] Nice to meet you.
+ha: Oh, hello, {PlayerName}![i] I'm Hana.[i] Nice to meet you too!
+nar: I reach for my wallet and take out one of my business cards. 
+{PlayerName}: Here's my number so you can contact me.[i] If you need anything, just give me a call.
+ha: Got it!
+ha: Here's your rent for today.
+@collectrent
+@gainrelationship points:20
+ha: Have a nice day, {PlayerName}.
+{PlayerName}: Yeah, see you tomorrow.
+nar: She looks back at me with a good-natured smile and goes back inside.
+@stopBgm HanaTheme fade:0.5
+@hideUI RelationshipBar wait:false
+{PlayerName}: (Doesn't seem like a troublesome tenant at all.)
+@adventure reset:false
+
+# Intro2
+nar: I arrive at Hana's house.[i] I decide to take a short look at her garden before knocking on the door.
+nar: Glancing around, I see a myriad of flowers including red roses, gentle pink lilies, and some small white flowers whose name I can't quite remember.
+nar: I make my way to the entrance through the stone path, and finally knock on her door.
+*knock knock*
+; todo insert wait
+@bgm HanaTheme fade:1
+@showUI RelationshipBar wait:false
+ha: Ah, hello again, {PlayerName}.[i] I was just about to go to work.
+{PlayerName}: Oh, really?[i] What's your job?
+ha: Heh, it might be obvious by looking at my garden.
+nar: Well, there's one very straightforward answer I can think of.
+{PlayerName}: So...[i] You're a florist?
+ha: You guessed it![i] I work at a flower store in Ameyoko market.
+{PlayerName}: Oh, the one near Ueno Park?
+ha: Yup, over there.[i] It's a bit far away, but...[i] I really enjoy my job!
+nar: She gives me a pleasant smile.[i] Although she said she was about to leave, she doesn't seem in much of a hurry.
+@choice "..." goto:.Intro2a
+@choice "I gotta go soon." goto:.Intro2b
+; todo insert flower name based on hanas pin flower?
+@choice "Are those... " goto:.Intro2c
+@stop
+
+# Intro2a
+nar: An awkward silence fills the air.[i] I stare at her silently, and notice her gentle face really fits her line of work.
+{PlayerName}: It suits you.
+ha: H-huh?
+{PlayerName}: Gardening.[i]
+ha: Oh, thank you, {PlayerName}.[i]
+{PlayerName}: Isn't it a lot of work to tend to your plants every day?
+ha: Of course![i] I have to water them, get rid of weeds, add fertilizer and give them lots of love every day.
+ha: But after enough time, they grow into beautiful flowers.[i] All the work I put day after day...[i] it's really worth it.
+; add short pause
+ha: Anyways, sorry for rambling...[i] Here's your rent for today, {PlayerName}.
+@collectrent
+{PlayerName}: Thanks.[i] Have a nice day at work.
+ha: Thank you![i] You too!
+@gainrelationship points:40
+@stopBgm HanaTheme fade:0.5
+@hideUI RelationshipBar wait:false
+@adventure reset:false
+
+# Intro2b
+{PlayerName}: I gotta go soon.[i] I have more tenants to visit today.
+ha: Oh, that's fine.[i] I have to hurry as well.
+ha: Here's your rent for today.
+@collectrent
+ha: Have a nice day, {PlayerName}.
+@gainrelationship points:10
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+nar: She flashes her usual pleasant smile and walks away.
+@adventure reset:false
+
+# Intro2c
+;todo add flowername
+{PlayerName}: Those small white flowers in your garden...[i] Are they (insert flower name)? 
+ha: Ah, that's right![i] How did you know?
+{PlayerName}: As a landlord, I have to make sure the houses look good enough to rent.[i] That includes doing a little bit of gardening.[i] I'm far from an expert, though.
+ha: I'm so glad to hear that![i] Let's talk a lot 
+@collectrent
+ha: Have a nice day, {PlayerName}.
+@gainrelationship points:10
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+nar: She flashes her usual pleasant smile and walks away.
+@adventure reset:false
