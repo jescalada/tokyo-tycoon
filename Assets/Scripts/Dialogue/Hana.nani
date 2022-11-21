@@ -1,7 +1,7 @@
 # NotOwned
-@char m avatar:m/Default
-m: Hello World!
-m: It's one small step for Maxwell, one giant leap for dogkind.
+nar: A two-storey building with brick walls, located in the outskirts of Chiyoda City.
+nar: The neighborhood is mostly tranquil, with the occasional bus zooming by.[i] Children can be heard playing at a park on the other side of the street.
+{PlayerName}: Looks like a safe investment.[i] The neighborhood is nice, there are lots of businesses in the area, and the house doesn't seem in need of repairs.
 @adventure reset:false
 
 # Intro1
@@ -48,7 +48,7 @@ nar: Well, there's one very straightforward answer I can think of.
 ha: You guessed it![i] I work at a flower store in Ameyoko market.
 {PlayerName}: Oh, the one near Ueno Park?
 ha: Yup, over there.[i] It's a bit far away, but...[i] I really enjoy my job!
-nar: She gives me a pleasant smile.[i] Although she said she was about to leave, she doesn't seem in much of a hurry.
+nar: She gives me a pleasant smile.[i] Although she said she was about to leave, she doesn't seem in much of a hurry.[skipInput]
 @choice "..." goto:.Intro2a
 @choice "I gotta go soon." goto:.Intro2b
 ; todo insert flower name based on hanas pin flower?
@@ -91,11 +91,125 @@ nar: She flashes her usual pleasant smile and walks away.
 {PlayerName}: Those small white flowers in your garden...[i] Are they (insert flower name)? 
 ha: Ah, that's right![i] How did you know?
 {PlayerName}: As a landlord, I have to make sure the houses look good enough to rent.[i] That includes doing a little bit of gardening.[i] I'm far from an expert, though.
-ha: I'm so glad to hear that![i] Let's talk a lot 
+ha: I'm so glad to hear that![i] Say, why don't we talk more about it the next time we meet?[i] Right now I'm in a hurry...
+{PlayerName}: Sure, sounds good.
+ha: Alright then...![i] Here's your rent for today.
 @collectrent
 ha: Have a nice day, {PlayerName}.
-@gainrelationship points:10
+@gainrelationship points:30
 @hideUI RelationshipBar wait:false
 @stopBgm HanaTheme fade:0.5
-nar: She flashes her usual pleasant smile and walks away.
 @adventure reset:false
+
+# Intro3
+nar: I arrive once again at Hana's house.[i] It's a very sunny day.[i] The sun shines brightly on the house's brick walls, and bathes the nearby plants with light.
+{PlayerName}: So bright...
+*knock knock*
+nar: I knock on the door and wait for her to come.
+ha: Good morning, {PlayerName}.[i] How are you?
+{PlayerName}: Pretty good, how about yourself?
+ha: Quite good![i] I finished tending to my garden some time ago.[i] Today's my day off, so I'm going to spend some time relaxing at home.
+{PlayerName}: That's nice, I'm just doing my rounds as usual.[i] I'm lucky to have tenants like you who always pay on time.
+ha: Heh.[i] Paying rent on time is common sense, right?
+{PlayerName}: Well, let's just say that "common sense" is less common than you think.
+ha: Do you have any stories about tenants who didn't pay on time?
+nar: Her question caught me off-guard.[i] I've just recently become a landlord, so I haven't had any trouble yet.
+nar: I think about lying and making up a story to sound cool, but it feels like she could read right through me...
+{PlayerName}: Actually, I've only been doing this for a few months.[i] I don't have any horror stories yet, but I'll tell you anything interesting that comes up.
+ha: Sure![i] You can tell me all about it, {PlayerName}.
+nar: She pulls out a neat little envelope from the small desk by the front door.
+@collectrent
+{PlayerName}: Thanks again, Hana.
+ha: Enjoy your day, {PlayerName}!
+@gainrelationship points:30
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+@adventure reset:false
+
+# Intro4
+nar: I walk through the busy streets of Chiyoda, making my way to Hana's place.[i] Salarymen and office ladies can be seen commuting to work.[i] Vehicles swiftly pass by with a roar.[i] The clamor is just what you'd expect of Tokyo.
+{PlayerName}: It's hard to believe her neighborhood is so peaceful even though it's right around the corner.
+nar: About three blocks into the neighborhood, the noise has calmed down.[i] The familiar sound of kids playing in the park echoes throughout the quiet streets.
+nar: At last, I approach Hana's home.[i] I recognize her dainty figure from afar.[i] Looks like she's working in the garden.
+nar: She seems really concentrated in her work.[i] I get close to greet her, but she doesn't seem to notice me.
+{PlayerName}: Good morning!
+ha: A-ah![i] Hello, {PlayerName}![i] You surprised me.
+{PlayerName}: Ahaha, sorry for sneaking up like that.[i] Doing some gardening today?
+ha: Yes, just the usual.[i] If you don't do this every day, the plants might wither.[skipInput]
+@choice "So it's like being a landlord." goto:.Intro4a
+@choice "Don't you get bored of it?" goto:.Intro4b
+@choice "Do you have any other hobbies?" goto:.Intro4c
+
+# Intro4a
+{PlayerName}: That kind of reminds me of being a landlord.
+{PlayerName}: Except that you're the plant and I'm the...[i] Actually, nevermind.
+; add awkward pause
+nar: She looks at me with a confused face.[i] I blush for a second for making such a stupid joke.[i]Suddenly, she bursts into laughter.
+ha: *p-pfft*...[i] Hahah...![i] That's...! the funniest thing I heard all week.
+{PlayerName}: Haha, seriously though.[i] Why do I even have to come by every day to pick up your rent?![i] Can't you just deposit in my bank account or something?
+ha: Well, isn't it better that way?[i] I don't mind having a nice chat with you each morning.
+ha: Or would you rather chat with your other tenants instead?
+{PlayerName}: Someone's jealous.[i] I'm just doing my job, you know?
+ha: Fine, fine.[i] Anyways, today's rent is near the desk by the entrance.[i] My hands are dirty so do you mind going in to pick it up?
+{PlayerName}: Uh, sure.[i] I'm coming in...
+nar: Her house, quite clean on the outside, is actually rather disorderly.[i] Various books are scattered around in the living room.
+nar: I notice a small envelope with my name on it, and decide to put it in my pocket.
+@collectrent
+{PlayerName}: Okay, I found it! Thanks Hana.
+ha: Have a nice day, {PlayerName}!
+@gainrelationship points:50
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+@adventure reset:false
+
+# Intro4b
+{PlayerName}: Don't you get bored of gardening all the time?[i] I mean, you also work as a florist so you're taking care of plants all day.
+ha: Heh, I don't mind it at all.[i] You know what they say, if do what you love, you'll never work a day in your life!
+{PlayerName}: Oh, I see where you're getting at.[i] I personally enjoy my line of work as well.
+ha: Is it really that fun?[i] Knocking on people's door every day, and sorting out their problems?
+{PlayerName}: It's not so bad.[i] I get to talk to all kinds of people, AND make lots of money.[i] Win-win, right?
+ha: Well, money is great and all...[i] But passion for your work is what matters the most.
+nar: She softly grabs my hands and looks straight at my eyes.[i] My heart just skipped a beat.
+ha: You have to put passion in your work![i] People can tell how passionate you are just by looking.
+nar: She lets go of my hands.[i] I wonder for a second if she was criticizing my attitude.
+{PlayerName}: S-sure thing.[i] So...[i] You got my rent for today?
+ha: Of course, just wait for me here while I go wash my hands!
+nar: I tilt my head downwards and notice her hands are covered in soil.[i] Her usual pristine clothes have a few dirt stains.
+nar: Waiting for a few seconds, I think about what she just said.[i] Since I started working as a landlord, I've put lots of effort.[i] So, I don't think she was criticizing me at all.
+{PlayerName}: (Passion, huh...)
+ha: I'm back![i] Here's your rent for the day.
+@collectrent
+{PlayerName}: Thanks.[i] Well then, I'll be going.[i] Enjoy your day, Hana.
+ha: Yes, you too, {PlayerName}!
+@gainrelationship points:40
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+@adventure reset:false
+
+# Intro4c
+{PlayerName}: Do you have any hobbies other than gardening?
+ha: I do![i] I enjoy baking.
+{PlayerName}: Baking, huh?[i] What kind of stuff do you like to make?
+ha: Sweets, mostly.[i] Things such as chocolate-chip cookies and muffins.
+{PlayerName}: What about Japanese sweets like dango?
+ha: Actually, I've been learning how to make Japanese sweets lately.[i] Did you know that dango is made by pounding rice flour using special tools?
+ha: It's so much work, though...[i] That's why I go to the traditional sweets shop 'round the corner instead.
+{PlayerName}: Wait, there's a store like that nearby?
+ha: Of course![i] Look over there.
+nar: She points to a small house about 50 meters away.[i] There's a small sign that says "Sweets", with a red arrow pointing towards the shop counter.
+{PlayerName}: Oh, wow.[i] I've always walked around the neighborhood in such a hurry that I didn't notice.
+ha: There's a granny there who makes the tastiest sweets ever![i] Check it out sometime!
+{PlayerName}: Gotcha.
+ha: If you don't mind, wait for me here while I go wash my hands!
+nar: I tilt my head downwards and notice her hands are covered in soil.[i] Her usual pristine clothes have a few dirt stains.
+nar: Glancing at the shop counter, I see an old woman chatting with a customer.[i] She seems quite energetic.[i] I wonder if I should stop by for a treat after my rounds through the city today.
+ha: I'm back![i] Here's your rent for the day.
+@collectrent
+{PlayerName}: Thanks.[i] Well then, I'll be going.[i] Enjoy your day, Hana.
+ha: Yes, you too, {PlayerName}!
+@gainrelationship points:30
+@hideUI RelationshipBar wait:false
+@stopBgm HanaTheme fade:0.5
+@adventure reset:false
+
+# Intro5
