@@ -208,7 +208,7 @@ MonoBehaviour:
       guid: 2d09894013a76ac41a2c59ced6a53494
     - name: ha/Default
       pathPrefix: CharacterAvatars
-      guid: 2d09894013a76ac41a2c59ced6a53494
+      guid: 02c08a496ec885a45b1dadbef84833b6
     - name: ky/Default
       pathPrefix: CharacterAvatars
       guid: 49cd1a1ed979c154c86f4f1e35ee085d
@@ -237,7 +237,10 @@ MonoBehaviour:
       pathPrefix: TextPrinters
       guid: c9282a583d10fb54c80424b465a60fa3
   - Id: Characters/720fade1-7de4-4bc7-9566-a0e8bd03160d
-    Resources: []
+    Resources:
+    - name: HanaDefault
+      pathPrefix: Characters/ha
+      guid: 02c08a496ec885a45b1dadbef84833b6
   - Id: Characters/f0d1e100-b2c2-44be-916b-d4d7ae4b941c
     Resources: []
   - Id: Characters/fe2c197f-c437-46e8-95c7-26395fd97ad7
@@ -253,3 +256,6 @@ MonoBehaviour:
     - name: NatsumeTheme
       pathPrefix: Audio
       guid: 1f3b6dfe88581294fbfae31e1a89f883
+    - name: HanaTheme
+      pathPrefix: Audio
+      guid: 4c0d94ae18fd49b47877c9b2aab93edf
