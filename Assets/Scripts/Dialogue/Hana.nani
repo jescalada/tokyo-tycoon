@@ -15,18 +15,25 @@ nar: I tread up the stones and approach the front door.
 ; todo insert wait
 @bgm HanaTheme fade:1
 @showUI RelationshipBar wait:false
-ha: Hello?[i]
+ha.c1_default_mo: Hello?[char ha.c1_default_mc]
 {PlayerName}: Hi there, I'm {PlayerName}, the new landlord.[i] Nice to meet you.
-ha: Oh, hello, {PlayerName}![i] I'm Hana.[i] Nice to meet you too!
+ha.c1_happy_mo: Oh, hello, {PlayerName}![char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] I'm Hana.[char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] Nice to meet you too! [char ha.c1_happy_mc]
 nar: I reach for my wallet and take out one of my business cards. 
 {PlayerName}: Here's my number so you can contact me.[i] If you need anything, just give me a call.
+@char ha.c1_default_mo
 ha: Got it!
+@char ha.c1_default_mc
+@char ha.c1_default_mo
 ha: Here's your rent for today.
+@char ha.c1_default_mc
 @collectrent
 @gainrelationship points:20
+@char ha.c1_happy_mo
 ha: Have a nice day, {PlayerName}.
+@char ha.c1_default_mc
 {PlayerName}: Yeah, see you tomorrow.
 nar: She looks back at me with a good-natured smile and goes back inside.
+@char ha visible:false
 @stopBgm HanaTheme fade:0.5
 @hideUI RelationshipBar wait:false
 {PlayerName}: (Doesn't seem like a troublesome tenant at all.)
