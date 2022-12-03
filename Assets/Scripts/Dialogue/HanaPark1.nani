@@ -1,2 +1,231 @@
 # Intro
-nar: 
+nar: I arrive at Hana's peaceful neighborhood.[i] The day is really sunny, great for a walk around the park.
+nar: Ueno Park is rather far away from Chiyoda City, so we're going to take the bus.
+; todo check if old lady/old man
+nar: I keep strolling through the quiet streets, making my way to her house.[i] I pass by the old lady's Japanese sweets shop.[i] Her shop is closed today, so I can't buy any treats for Hana.
+; todo white flowers
+nar: At last, I make it to her place.[i] The garden is as colorful as always: Red roses, orange lilies, and bunches of little white flowers decorate the whole place.[i] The little white flowers are the same as Hana's hairpin.
+nar: I fix my hair a bit before knocking the door.
+*knock knock*
+nar: Hana opens the door almost immediately.[i] Seems she was waiting for me.
+ha: Ah, hi, {PlayerName}![i] You're here early!
+{PlayerName}: Hey, Hana.
+ha: It's such a nice day today, huh!
+{PlayerName}: Yeah, not bad for a park date.
+ha: So it IS a date, after all.
+ha: Ah, anyways![i] Let's get going!
+nar: She carefully locks the door and we depart towards the bus stop.[i] There are no stops in the neighborhood, so we have to walk all the way to the outskirts of Hibiya Park.
+ha: By the way...
+ha: Why didn't we go on a date to Hibiya instead?[i] It's so close by.
+{PlayerName}: Well, there's not much to do here, right?
+{PlayerName}: Ueno Park has quite a few interesting places to see.[i] Plus, I wanna go to the Museum.
+ha: Oh![i] Tokyo National Museum, right?
+ha: I'm quite interested in History.[i] Let's go take a look!
+{PlayerName}: Sounds like a plan.
+nar: We arrive at the bus stop.[i] As we stand her, I can't help but notice how great Hana looks with those clothes.
+nar: She's wearing a tight shirt that emphasizes her...[i] assets.
+ha: ...
+nar: I never realized her waist and legs were so shapely.[i] Her thighhighs indent slightly into her pale and supple skin.
+ha: {PlayerName}.[i] What are you looking at?
+nar: She forces a smile on her face, but she's very obviously mad.
+{PlayerName}: Oh...[i] Nothing.
+{PlayerName}: You look different from usual.
+ha: A-ah...[i] Thanks.[i]
+ha: I only dress like this for special ocassions.
+{PlayerName}: Well, you look great.[i] Your usual clothes are loose and comfy-looking.[i] So I'm not used to seeing your figure.
+ha: H-hey![i] Just quit staring!
+{PlayerName}: Fine, fine.
+nar: The bus arrives at last.[i] We hop on and sit together at the back of the bus.
+ha: Did you bring anything for lunch, {PlayerName}?
+{PlayerName}: Uhh, not really.[i] Just some convenience store rice balls.[i] It's a staple food for landlords.
+ha: Heheh, you'll starve like that, you know?
+ha: I brought some snacks.
+nar: She opens her purse and reveals an assortment of cookies in a transparent bag.
+{PlayerName}: Cookies for lunch?[i] Doesn't sound too healthy to me.
+ha: Heh, it's just a snack.[i] We can have lunch somewhere near the park later!
+{PlayerName}: Good idea.
+nar: The bus comes to a halt near Ueno Park.[i] We hop off and make our way to the entrance.
+; todo conditional season appearance
+nar: A number of people can be seen coming in and out of the park.[i] It's busier than expected.
+{PlayerName}: Let's go in.
+ha: Yeah!
+nar: We cross the entrance gate and walk down one of the dirt paths by the pond.
+ha: Look at all those birds![i] This is Shimobazu Pond, right?
+{PlayerName}: Right.[i] Even though it's in the middle of Tokyo, birds from all over the country come here during the warm season.
+{PlayerName}: The pond is an ecosystem for fish and other creatures, too. 
+nar: I'm reminded of Natsume and her love of birds.[i] I wonder what she's up to, right now.
+nar: It'd be really awkward if she saw me on a date with another girl right now...
+ha: What are you thinking about, {PlayerName}?
+{PlayerName}: Ah, nothing.[i] Just some landlord stuff.[i] Don't worry about it.
+ha: Come on, we're here to relax![i] So, forget about your work and enjoy the moment!
+{PlayerName}: Hey, you're right.[i] Why don't we sit down at a bench by the pond?
+ha: Okay!
+nar: We both stray from the dirt path, and sit at a nearby bench under a sakura tree.[i] By this time of the year, the sakura have mostly finished blooming, and their leaves are lush and green.
+ha: So peaceful...[i] I really like this sort of place.
+{PlayerName}: Really?[i] You don't like noisy and crowded places?
+ha: I mean...[i] I'm already used to the big city.[i] But I prefer quiet places, and being close to nature.
+ha: But![i] There's one kind of crowded place that I love!
+{PlayerName}: Oh, really?
+ha: Yup.[i] Can you guess?
+{PlayerName}: Hmmm...
+nar: I think about what sort of place she would enjoy...[i] Somewhere crowded.[i] But maybe nature-related?
+nar: Oh, wait![i] Now that I think about it...[i]
+nar: She's quite a fashionable girl, and there's a place that girls like those couldn't live without.
+{PlayerName}: Uhhh...[i] Malls?
+ha: Wow, how did you guess?![i]
+{PlayerName}: Heh.[i] Just a hunch.[i] You look fashionable, so...
+ha: I see.[i] But, do you know which mall I like the most?
+{PlayerName}: I have no idea...[i] There's a ton of malls in Tokyo, right?
+ha: True.[i] But one of them is the most popular for young, fashionable girls!
+{PlayerName}: Seriously, I have no clue.[i] Which one is it?
+ha: Shibuya 109![i] Don't you know about it?
+{PlayerName}: Huh, I never heard about it.
+ha: It's a huge department store with all kinds of fashion brands.[i] It's very popular with young ladies.
+ha: I like to go there and buy myself some nice clothes every now and then.
+{PlayerName}: I see.
+ha: It's right next to Shibuya Crossing, the most crowded place in Japan.[i] I'm not a fan of crowds, but, I really enjoy going shopping there.
+; todo add wait
+nar: Suddenly, I feel my stomach growling.
+ha: Heh, someone's hungry.
+{PlayerName}: Uhh.[i] I better eat something.
+nar: I take out my convenience store rice ball and eat it in one big bite.[i] The plum filling is delicious and slightly tart.
+{PlayerName}: Mmmm...[i] That hits the spot.
+ha: Here's some dessert.
+nar: She hands over to me a scrumptious-looking chocolate chip cookie.
+ha: Hope you like it!
+nar: I take a small bite off the cookie.[i] It's not as crunchy as I thought.[i] It's slightly soft, and it melts in my mouth.
+{PlayerName}: Mmmm![i] Oh, wow.[i] This is really good![i] These are even better than your muffins.
+ha: Heh, thanks![i] Mum really likes these too.[i] I've been making them for years now, so I managed to perfect the recipe!
+{PlayerName}: Amazing.
+nar: I finish eating the cookie.[i] Hana gets up and waits expectantly.[i] Guess she wants to keep walking.
+{PlayerName}: Okay, let's get going.
+nar: We continue walking down the dirt path, until we finally reach the fountain in the middle of the park.[i] The museum is on the other side of the fountain.
+ha: Look, they have roses here too![i]
+nar: Hana points at the rectangular flowerpots by the edge of the fountain.[i] Various colorful flowers bloom, some of which are in Hana's garden as well.
+{PlayerName}: Pretty, isn't it?
+ha: Of course![i] Not as pretty as my garden, though.
+{PlayerName}: Haha.[i] You got that right.
+nar: We walk along the side of the fountain, until finally arriving at the museum entrance.
+nar: A large inscription reads: "Tokyo National Museum"[i] "Established in 1872"
+{PlayerName}: Woah, this place is really old.
+ha: Yup![i] But there's all sorts of exhibitions, and they change them all the time.
+nar: We both buy some tickets and get in.[i] We're greeted by a main hall which splits into various rooms.[i] Despite being such an old building, the insides look modern.[i] It must've been renovated recently.
+nar: There are some ancient artifacts in the middle of the main hall.[i] We get closer to take a look.
+{PlayerName}: What are these?[i] They look so well-made.
+ha: These are some pieces of pottery from the early Edo period.[i] Isn't it amazing how they managed to last so long?
+nar: There's two ornate vases, and a huge dish in the center.[i] The plaque close to the dish reads: "A ceremonial plate from the 1650s, rumored to have been owned by Tokugawa Ieyasu".
+{PlayerName}: Wait, this guy is famous, right?
+ha: Hehe, of course![i] We learnt about him in History class.[i] He was the first shogun in the Edo period.[i] In other words, he was the military leader who unified Japan in the early 17th century.
+ha: His shogunate lasted until 1867.[i] After that, the Meiji restoration happened, and a new era began.
+{PlayerName}: Wow, I see...
+{PlayerName}: You really know your stuff.
+ha: I'm proud of Japan![i] That's why I'm so interested in Japanese history.[i] It makes me happy to share these things with everyone.
+; todo add wait
+nar: We move on to another room.[i] There's a few interesting-looking sculptures, dating back from the 1850s.[i] Some are shaped like animals, and others have a human shape.
+nar: There's a set of sculptures that catches my eye: Three bronze sculptures of monkeys.[i] The first one is covering its eyes.[i] The second one covers its ears.[i] The last monkey is covering its mouth.
+{PlayerName}: So this is where it came from.[i] See no evil, hear no evil, speak no evil.
+ha: Yeah![i] The three wise monkeys originated from a Japanese legend.[i] They've become popular in the West in the last few decades because of various Japanese movies.
+{PlayerName}: Interesting...
+nar: We keep walking through the hallways and looking at the various exhibitions.[i] Not just ancient relics, but also modern pieces of art can be found on display.
+nar: After going through all of the rooms, we walk out of the museum.
+nar: I feel my stomach growling once again.
+{PlayerName}: I guess my "lunch" just wasn't enough...
+ha: Heh, don't worry about it![i] There's a nearby café I wanna show you.[i] They also have sandwiches and the like, if you're feeling extra hungry.
+nar: I look at my watch.[i] It's starting to get late, and I still have a few tenants to visit this afternoon.
+nar: However, I'm really enjoying my time with Hana...[skipInput]
+@choice "Let's go grab something to eat." goto:ParkA
+@choice "It's getting late." goto:ParkB
+@choice "Sorry, I gotta go now." goto:ParkC
+@stop
+
+# ParkA
+{PlayerName}: Sure, let's go grab something to eat.[i] I'm starving.
+ha: Yeah, let's go!
+nar: We depart towards the café that Hana mentioned.[i] I hope it's not too far away.
+ha: It's close by, so don't worry!
+nar: She winks at me as if knowing she just read my mind.[i]
+nar: We cross the street and reach the outskirts of Ameyoko market.[i] It's bustling as usual.[i] We walk along the sidewalk while dodging the incoming pedestrians.
+nar: Hana grabs my hand and leads me into an alley.
+{PlayerName}: Wait, where are we-
+ha: And, here we are!
+nar: In the alley, there's a small coffee shop with two tables outside.[i] There's a small sign that says "Neko's Café", written in chalk, with a red arrow pointing inside the shop.
+{PlayerName}: Looks kinda seedy to me...
+ha: Oh, don't mind that, just come on in!
+shopkeeper: Welcome!
+nar: We're greeted by a friendly shopkeeper standing behind the counter.[i] Her warm smile blends quite well with the cozy surroundings.
+nar: The whole shop gives a comfy vibe.[i] There's a few people chatting and enjoying their food in the corner.
+{PlayerName}: Hey, this place isn't too shabby.[i] Let's take a seat.
+nar: We both sit down on a sofa by the window.[i] A little bit of sunshine comes through the wooden frame and illuminates the coffee table in front of us.
+shopkeeper: Here's the menu![i] If you have any questions, please ask away!
+{PlayerName}: Sure.[i] Now let's see...
+nar: There's a plethora of hot drinks and snacks on the menu.[i] I'm hungry as heck, but I have no idea what to order.
+ha: I'll have a grilled sandwich and some orange juice, please!
+shopkeeper: Understood!
+nar: The shopkeeper looks at me, waiting for my order.[i] Suddenly, I notice something in the menu that catches my eye: "Cat's Paw"
+shopkeeper: How about you?
+{PlayerName}: Mind if I ask what this Cat's Paw is?
+shopkeeper: Cat's Paw is our signature dessert![i] It's a chocolate cake roll filled with cream and topped with shredded coconut.[i] You'll love it!
+{PlayerName}: Sounds delicious.[i] I'll take that and a regular coffee, please.
+shopkeeper: Understood![i] Your order will be coming right up!
+ha: I'm so glad we had a chance to come here together.[i] It's my favorite café in all of Tokyo!
+{PlayerName}: I gotta say, the place is pretty nice.
+ha: It's still a hole in the wall, so it feels like my own secret spot.[i] Very few people know about it.
+; add pause
+ha: And...[i] I'm also glad you can take a break.
+ha: You're always super busy with your work, right?[i] So I'm happy you have a chance to enjoy your time here in Tokyo.
+{PlayerName}: Well, you're right.[i] I've been working almost every day since I became a landlord.
+{PlayerName}: (Even though the doctor told me to take it easy...)
+; add pause
+shopkeeper: Here's your order![i] An orange juice and a grilled sandwich for you...
+shopkeeper: And one Cat's Paw and a black coffee for you.[i] Enjoy!
+nar: The shopkeeper leaves the dishes on our table and returns to the shop counter with a smile.
+{PlayerName}: Oh boy, where to start...
+nar: I cut a piece of the cake roll with my spoon.[i] Cream starts slowly oozing out.
+nar: Slowly, I eat some of the cake.[i] A mix of sweet flavors explodes in my mouth.[i] The chocolate on the outside mixes with the cream on the inside in the most unexpectedly delicious way.
+{PlayerName}: Ah-... This is...[i] Amazing!
+ha: Heh, it's one of my favourites too.[i] It's even better than my cookies.
+nar: I start eating the rest of the cake, and wash it down with some coffee.[i] It's one of the best deserts I've ever had.
+{PlayerName}: Incredibly good.[i] I'm probably gonna come back again for more.
+ha: Happy that you like it, {PlayerName}.
+nar: We both enjoy our food while chatting about various things.[i] Time goes by and eventually it starts getting dark.
+{PlayerName}: Oh, man.[i] Time really flew by.
+ha: Yeah...[i] I hope that's okay, {PlayerName}.[i] You said you had other things to do later today.
+{PlayerName}: Ah, don't worry about that.[i] I'll do it quickly after we go back home.
+ha: Oh, I see.
+nar: We exit the coffee shop and slowly walk towards the busy main street at Ameyoko.
+ha: Thanks for making time to meet me today.[i] It was really fun.
+{PlayerName}: No worries.[i] Thanks for coming today.[i] I had fun too.
+ha: Okay then, I'm taking the bus home now.
+ha: See you soon, {PlayerName}![i] Get home safely!
+{PlayerName}: See you Hana![i] Take care.
+nar: She walks away with her usual, steady gate.[i] I decide to call it a day and go back to the neighborhood to finish my tasks for the day.
+
+# ParkB
+{PlayerName}: It's starting to get late.[i] At this rate, I won't be able to finish all my work for the day.
+ha: Oh my...[i] Well, if you're gonna go now, at least I'd like to give you something so you don't feel hungry.
+{PlayerName}: Hm?[i] What's tha-
+nar: She pulls out of her bag the rest of the sweets she baked.[i] An assortment of cookies and muffins are inside a plastic zipper bag.
+{PlayerName}: Wait, seriously?[i] For me?
+ha: Of course![i] You're hungry, right?[i] You can have them all.
+{PlayerName}: Thanks, Hana.
+nar: Hana's attentiveness catches me off-guard.[i] Now that I think about it, she has been very kind to me since I first met her.
+nar: Despite that, I don't really know that much about her.[i]
+{PlayerName}: Hey, uh...[i] Thanks for everything.
+ha: Oh, no worries.
+{PlayerName}: Next time, I'd like to chat with you a bit more.
+ha: A-ah, sure![i] You can tell me more about how you became a landlord.
+{PlayerName}: Well...[i] That's a really long story.
+{PlayerName}: Anyways, see you tomorrow, Hana.
+ha: Yeah, see you, {PlayerName}.[i] Don't overwork yourself.
+nar: She waves at me as I walk towards the bus stop.[i] She has a slightly disappointed look.[i] Seems was looking forward to show me that café.
+
+# ParkC
+{PlayerName}: Sorry, Hana.[i] I really gotta go now.
+ha: Aww...
+{PlayerName}: There's a few tenants I have to see before it gets dark.[i] How about we go to that café next time?
+ha: Sure...[i] But it's a promise, okay?
+{PlayerName}: Fine, I got it.
+nar: She grabs my hand and we do a pinky swear.
+{PlayerName}: Alright, then.[i] Gotta go.[i] See you tomorrow, Hana.
+ha: Bye, {PlayerName}...
+nar: She waves at me with a disappointed look.[i] I feel bad about it but I had no choice.[i] My work is more important than just messing around with a girl.
