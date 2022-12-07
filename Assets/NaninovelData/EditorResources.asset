@@ -238,9 +238,654 @@ MonoBehaviour:
       guid: c9282a583d10fb54c80424b465a60fa3
   - Id: Characters/720fade1-7de4-4bc7-9566-a0e8bd03160d
     Resources:
-    - name: HanaDefault
+    - name: c1_angry_mc
       pathPrefix: Characters/ha
-      guid: 02c08a496ec885a45b1dadbef84833b6
+      guid: eb89074fda4c65140b84f544ca5dfb8a
+    - name: c1_angry_sc
+      pathPrefix: Characters/ha
+      guid: bf987594a876d2547b067fe73c3e7d0f
+    - name: c1_angry_mo
+      pathPrefix: Characters/ha
+      guid: c272816d0eb40954db52125ba55a005b
+    - name: c1_angry_so
+      pathPrefix: Characters/ha
+      guid: b9b9f6f0185d1d64da001f14754f9455
+    - name: c1_blush_m1c
+      pathPrefix: Characters/ha
+      guid: c48de2d19888b8d47a3872f719fe8991
+    - name: c1_blush_m1o
+      pathPrefix: Characters/ha
+      guid: 2869a6843658c684d9fb8236a65b59c2
+    - name: c1_blush_m2c
+      pathPrefix: Characters/ha
+      guid: 5e0c65346626dac44b9c984ad2aa4e5b
+    - name: c1_blush_m2o
+      pathPrefix: Characters/ha
+      guid: d21be510a5491ed459640a8fa6227b43
+    - name: c1_blush_sc
+      pathPrefix: Characters/ha
+      guid: 782b7e03a5020ef498aff0cd289f8464
+    - name: c1_blush_so
+      pathPrefix: Characters/ha
+      guid: 97836a72ac489ac428c098bc48f30cf3
+    - name: c1_crying_mo
+      pathPrefix: Characters/ha
+      guid: a04ec57f34f9c6e4eacca3384fe91c52
+    - name: c1_crying_mc
+      pathPrefix: Characters/ha
+      guid: 1fbfe1150240f0c4fb4cd4669ccd70b9
+    - name: c1_crying_sc
+      pathPrefix: Characters/ha
+      guid: b5f029723768764429b50578a1085613
+    - name: c1_crying_so
+      pathPrefix: Characters/ha
+      guid: a633ca422d1e5464f946565e89709a49
+    - name: c1_default_mc
+      pathPrefix: Characters/ha
+      guid: 326804eaa61d5ff43a7d7a697d872bbe
+    - name: c1_default_mo
+      pathPrefix: Characters/ha
+      guid: 1dde4ad4ba9719c40b5436d9f69d6469
+    - name: c1_default_sc
+      pathPrefix: Characters/ha
+      guid: 62020f8e8b9a86445ae8ac99cd63bb8d
+    - name: c1_default_so
+      pathPrefix: Characters/ha
+      guid: 383a0207d7c72ee4ab6794a016a22bb2
+    - name: c1_disappointed_m1c
+      pathPrefix: Characters/ha
+      guid: 493d183102634ce4a838499421ce8c4b
+    - name: c1_disappointed_m1o
+      pathPrefix: Characters/ha
+      guid: b910debe9d85f8e4a9b7e076a5472e18
+    - name: c1_disappointed_m2c
+      pathPrefix: Characters/ha
+      guid: fe53d681580be144092c680936339de1
+    - name: c1_disappointed_m2o
+      pathPrefix: Characters/ha
+      guid: 7053f2ba337f7484b85fc7f34a30fe59
+    - name: c1_disappointed_so
+      pathPrefix: Characters/ha
+      guid: e05139c0e3a2d7a46ac1abf9192b4c7f
+    - name: c1_disappointed_sc
+      pathPrefix: Characters/ha
+      guid: 8b6672ec1b59f6f4b91deae64a8e8913
+    - name: c1_ecstatic_c
+      pathPrefix: Characters/ha
+      guid: faf6c991ca8182b499f4063fbc448691
+    - name: c1_ecstatic_o
+      pathPrefix: Characters/ha
+      guid: 0511daef33494ed4c8266d4654229b2a
+    - name: c1_happy_mc
+      pathPrefix: Characters/ha
+      guid: 6ea0e96dbf3a8004abd4ee53a1cdc44f
+    - name: c1_happy_mo
+      pathPrefix: Characters/ha
+      guid: d98350acb834cb14595c252ad444f2d3
+    - name: c1_happy_sc
+      pathPrefix: Characters/ha
+      guid: bab9cf18d71ba9a4f94c9035db06f097
+    - name: c1_happy_so
+      pathPrefix: Characters/ha
+      guid: be94276808e1162469e24daf285f33e0
+    - name: c1_pout_mc
+      pathPrefix: Characters/ha
+      guid: c5f426be7d0423941b130818b3705afa
+    - name: c1_pout_mo
+      pathPrefix: Characters/ha
+      guid: 13336dd996baa494683b951af2084482
+    - name: c1_pout_sc
+      pathPrefix: Characters/ha
+      guid: 13c220d3fa1c81e47b9b140a71fecb53
+    - name: c1_pout_so
+      pathPrefix: Characters/ha
+      guid: efc51fd99e121aa42881212170fb7d0f
+    - name: c1_puzzled_mc
+      pathPrefix: Characters/ha
+      guid: 43dd791288a563944b1105d17524f352
+    - name: c1_puzzled_mo
+      pathPrefix: Characters/ha
+      guid: 56c6110b113969e4db222f9170448803
+    - name: c1_puzzled_sc
+      pathPrefix: Characters/ha
+      guid: 58ec340da7fb25d4b81886b44ecfc78b
+    - name: c1_puzzled_so
+      pathPrefix: Characters/ha
+      guid: 1d106afe0e0c49a49af768c190b06d83
+    - name: c1_sad_m1c
+      pathPrefix: Characters/ha
+      guid: fda6951d7bfd83e45a63d038c71c8e70
+    - name: c1_sad_m1o
+      pathPrefix: Characters/ha
+      guid: 883722be1f91fde4784748bc3844c4ce
+    - name: c1_sad_m2c
+      pathPrefix: Characters/ha
+      guid: 160c91d0a21e301409eb1bee7a76c4bd
+    - name: c1_sad_m2o
+      pathPrefix: Characters/ha
+      guid: 0fda2b9d9f3577c4aadd98e39c6bd19a
+    - name: c1_sad_sc
+      pathPrefix: Characters/ha
+      guid: ad8c7ca8dc065e44aaf1e8bea9e51823
+    - name: c1_sad_so
+      pathPrefix: Characters/ha
+      guid: dce02e8acc8c7de48a88028bfc2d303c
+    - name: c1_surprise_mc
+      pathPrefix: Characters/ha
+      guid: 4a8302e0c2db33345947227e8c4be2e7
+    - name: c1_surprise_sc
+      pathPrefix: Characters/ha
+      guid: 23c34d4dc01a15d47ae92d79f650f729
+    - name: c1_surprise_mo
+      pathPrefix: Characters/ha
+      guid: 9ba9b52e9076f1145a952fd7ef8144d9
+    - name: c1_surprise_so
+      pathPrefix: Characters/ha
+      guid: 7da12bc4f5378e046a8069b5777e3560
+    - name: c1_wink_mc
+      pathPrefix: Characters/ha
+      guid: 15d2c55603bfdc74296c1f62f63ae010
+    - name: c1_wink_mo
+      pathPrefix: Characters/ha
+      guid: 32b46d3aecc3de9448bfcfaca4f6b426
+    - name: c1_wink_sc
+      pathPrefix: Characters/ha
+      guid: 51cf479c1725d2241a47a473a6d8e4e3
+    - name: c1_wink_so
+      pathPrefix: Characters/ha
+      guid: 6aaa5edaa9f7da740b7e18719816b483
+    - name: c1_worried_mc
+      pathPrefix: Characters/ha
+      guid: 9311571743bda494587648fa5479dcdf
+    - name: c1_worried_mo
+      pathPrefix: Characters/ha
+      guid: afa17af311edf804083ac024c950b94c
+    - name: c2_angry_mc
+      pathPrefix: Characters/ha
+      guid: 89be0d5f78d565649a7318defda2dd20
+    - name: c2_angry_mo
+      pathPrefix: Characters/ha
+      guid: a6ac4f2b3fd137d418488892ea6d2e81
+    - name: c2_angry_sc
+      pathPrefix: Characters/ha
+      guid: a525878d387664b4fa9fdb479de9d66b
+    - name: c2_angry_so
+      pathPrefix: Characters/ha
+      guid: d45b4fa21c4dc3c468f097a6b9b97825
+    - name: c2_blush_m1c
+      pathPrefix: Characters/ha
+      guid: d45a10b535c0a474faa92ea002d1b1f6
+    - name: c2_blush_m1o
+      pathPrefix: Characters/ha
+      guid: ad3cb131ebfa43d419c9b94e61044b6d
+    - name: c2_blush_m2c
+      pathPrefix: Characters/ha
+      guid: d54b49d4ca3fefe4ba96383cc3870d04
+    - name: c2_blush_m2o
+      pathPrefix: Characters/ha
+      guid: ad75c5cff187da945aa4f65988a276f6
+    - name: c2_blush_sc
+      pathPrefix: Characters/ha
+      guid: e3d0cda58b2a5d64487d6c9e8f2950cb
+    - name: c2_blush_so
+      pathPrefix: Characters/ha
+      guid: a459999fbc49ec0429cf460297af091f
+    - name: c2_crying_mc
+      pathPrefix: Characters/ha
+      guid: 0e3c39697c738cb49afde886b6715d4f
+    - name: c2_crying_mo
+      pathPrefix: Characters/ha
+      guid: ac83d1f5fdca5b54dabfbff5b70d113c
+    - name: c2_crying_sc
+      pathPrefix: Characters/ha
+      guid: bee3df6e72d5f38468bae48ab595999f
+    - name: c2_crying_so
+      pathPrefix: Characters/ha
+      guid: acfcc9e3bf2aee244bb0b3167743e0d5
+    - name: c2_default_mc
+      pathPrefix: Characters/ha
+      guid: 39a367befe890b7448bfe228e225be80
+    - name: c2_default_mo
+      pathPrefix: Characters/ha
+      guid: a5f54d10b0544d943bf93eca7958edb4
+    - name: c2_default_sc
+      pathPrefix: Characters/ha
+      guid: 42fb7cbc170193f48a79817d093736b0
+    - name: c2_default_so
+      pathPrefix: Characters/ha
+      guid: afd15344f7f107a429579ff04e57b511
+    - name: c2_disappointed_m1c
+      pathPrefix: Characters/ha
+      guid: 7b808c8c00d5a5249a49892db63158bd
+    - name: c2_disappointed_m1o
+      pathPrefix: Characters/ha
+      guid: a8e0e0393896d46418256579a1b28b27
+    - name: c2_disappointed_m2c
+      pathPrefix: Characters/ha
+      guid: cb5c149c33d5da2488aca4cc162dd75b
+    - name: c2_disappointed_m2o
+      pathPrefix: Characters/ha
+      guid: f42dcf65f98cd1e49be9195459b39165
+    - name: c2_disappointed_sc
+      pathPrefix: Characters/ha
+      guid: 244be9891089867479cba70a7a5a945c
+    - name: c2_disappointed_so
+      pathPrefix: Characters/ha
+      guid: fd6c934d53a22c64faa782a99dd9b2a7
+    - name: c2_ecstatic_c
+      pathPrefix: Characters/ha
+      guid: 1c607f18d74ec7049a8ccf969fb43205
+    - name: c2_ecstatic_o
+      pathPrefix: Characters/ha
+      guid: 7f20de8c593ab574fae82027311725a5
+    - name: c2_happy_mc
+      pathPrefix: Characters/ha
+      guid: fb826b906bdfdf445a31059cc2f3d27d
+    - name: c2_happy_mo
+      pathPrefix: Characters/ha
+      guid: 068be70b34f822d41987601e56eaf088
+    - name: c2_happy_sc
+      pathPrefix: Characters/ha
+      guid: f7d479e90748c16408c0b22af1a6917c
+    - name: c2_happy_so
+      pathPrefix: Characters/ha
+      guid: d72eb203a917b8d438f0c58d998aba1a
+    - name: c2_pout_mc
+      pathPrefix: Characters/ha
+      guid: 574e43dbaf5becf4aa3afa84b744d223
+    - name: c2_pout_mo
+      pathPrefix: Characters/ha
+      guid: 854b209ded285a44997a0912a248f05a
+    - name: c2_pout_sc
+      pathPrefix: Characters/ha
+      guid: 05e2a46ab878a2e4595d57de470c314c
+    - name: c2_pout_so
+      pathPrefix: Characters/ha
+      guid: dedbedccf7b20234baf92a9f1738c9ed
+    - name: c2_puzzled_mc
+      pathPrefix: Characters/ha
+      guid: 43c5816ad473d07458554f6979b21938
+    - name: c2_puzzled_mo
+      pathPrefix: Characters/ha
+      guid: 035e11d8f2054a24997ec02aad8428a5
+    - name: c2_puzzled_sc
+      pathPrefix: Characters/ha
+      guid: 7d6a6805b764c4048ab08efc80a9089f
+    - name: c2_puzzled_so
+      pathPrefix: Characters/ha
+      guid: 2fe31c0b5cdb3dc41815050c3bd2ee2d
+    - name: c2_sad_m1c
+      pathPrefix: Characters/ha
+      guid: 2520f04b88c6f9f4a96004caf4ee8546
+    - name: c2_sad_m1o
+      pathPrefix: Characters/ha
+      guid: 572cc284139cf3947b3d325540b4a37c
+    - name: c2_sad_m2c
+      pathPrefix: Characters/ha
+      guid: 2474a10bd48e35c4594eea37c3b09998
+    - name: c2_sad_m2o
+      pathPrefix: Characters/ha
+      guid: f32d269282e857b4f82804894eb7693e
+    - name: c2_sad_sc
+      pathPrefix: Characters/ha
+      guid: 007d6e024a754a24faf6f48b7cdf65f5
+    - name: c2_sad_so
+      pathPrefix: Characters/ha
+      guid: 0aff1e627f7378b418be515a1f0d8afe
+    - name: c2_surprised_mc
+      pathPrefix: Characters/ha
+      guid: 3e3959ff72e628a4b97079eeba935c37
+    - name: c2_surprised_mo
+      pathPrefix: Characters/ha
+      guid: 8f36e6a7c9e4813438fbdea6a055aef2
+    - name: c2_surprised_sc
+      pathPrefix: Characters/ha
+      guid: 725f8710d5b98084d9b4adadc2bda9de
+    - name: c2_surprised_so
+      pathPrefix: Characters/ha
+      guid: fbd0f2bd7e450e1489c45f6788dbe8a9
+    - name: c2_wink_mc
+      pathPrefix: Characters/ha
+      guid: a788c2188f9a70340bcf3034fb2c710a
+    - name: c2_wink_mo
+      pathPrefix: Characters/ha
+      guid: 5027abf8eabf07a46a8868843f42462f
+    - name: c2_wink_sc
+      pathPrefix: Characters/ha
+      guid: 1c9e3399caea6234489b6405cd644e9d
+    - name: c2_wink_so
+      pathPrefix: Characters/ha
+      guid: cce4db26b8def1e4eaff5cef511ac1f5
+    - name: c2_worried_mc
+      pathPrefix: Characters/ha
+      guid: 6273565a35da61d42ab4746754912c7c
+    - name: c2_worried_mo
+      pathPrefix: Characters/ha
+      guid: 30af7cdac5a2eb54e9c3782158e05120
+    - name: f1_angry_mc
+      pathPrefix: Characters/ha
+      guid: 5af5fe8ab9d09f34aad128ec8994593c
+    - name: f1_angry_mo
+      pathPrefix: Characters/ha
+      guid: 989d62d9c07683842af5d2a01175f9e3
+    - name: f1_angry_sc
+      pathPrefix: Characters/ha
+      guid: caf780661d292d247b43baf0ea939043
+    - name: f1_angry_so
+      pathPrefix: Characters/ha
+      guid: c33a4aeeafc588e46b08d74dc06ebe29
+    - name: f1_blush_m1c
+      pathPrefix: Characters/ha
+      guid: 203bc6027617d3041b18d7a26ee0320d
+    - name: f1_blush_m1o
+      pathPrefix: Characters/ha
+      guid: 4709cd28cfb484d4d97b40183cc3db1d
+    - name: f1_blush_m2c
+      pathPrefix: Characters/ha
+      guid: 9aa9744155a84bc429407a715afc6e9e
+    - name: f1_blush_m2o
+      pathPrefix: Characters/ha
+      guid: f6eaf4077440fe84d95432667c62a220
+    - name: f1_blush_sc
+      pathPrefix: Characters/ha
+      guid: 6786db82436b3044baa2e86b0ba78d76
+    - name: f1_blush_so
+      pathPrefix: Characters/ha
+      guid: bff935379e4f9854f9cf6f64cd4f4ee5
+    - name: f1_crying_mc
+      pathPrefix: Characters/ha
+      guid: 364e91c0d565d384dbd0978c1cab1af7
+    - name: f1_crying_mo
+      pathPrefix: Characters/ha
+      guid: b86cf20ef4ad75446a127ea52379e608
+    - name: f1_crying_sc
+      pathPrefix: Characters/ha
+      guid: e11bb708c1c0b364a88ee798f37c6293
+    - name: f1_crying_so
+      pathPrefix: Characters/ha
+      guid: 41274353896f6e144911bce79e1b4620
+    - name: f1_default_mc
+      pathPrefix: Characters/ha
+      guid: 860cad73b1e6e11408e6c3a5c56c7fd2
+    - name: f1_default_mo
+      pathPrefix: Characters/ha
+      guid: b5a395c4f9ac7034a8fcfd22ecd0367c
+    - name: f1_default_sc
+      pathPrefix: Characters/ha
+      guid: 42b63973292b453478566be63d8568b9
+    - name: f1_default_so
+      pathPrefix: Characters/ha
+      guid: e3a5eee90fa7c604d9b9fb149fad2b44
+    - name: f1_disappointed_m1c
+      pathPrefix: Characters/ha
+      guid: b748ced747c2b834c8a669374e30d98d
+    - name: f1_disappointed_m1o
+      pathPrefix: Characters/ha
+      guid: a98f1412c991c374badf0a9bbfebe711
+    - name: f1_disappointed_m2c
+      pathPrefix: Characters/ha
+      guid: ad2d9d995f067c54ca488720e3104223
+    - name: f1_disappointed_m2o
+      pathPrefix: Characters/ha
+      guid: ba6a4c94b2d8ca345aad269ef117d02f
+    - name: f1_disappointed_sc
+      pathPrefix: Characters/ha
+      guid: e4ad6709c3f64cb44b919ba7f42a1128
+    - name: f1_disappointed_so
+      pathPrefix: Characters/ha
+      guid: af1e8cf71a786e645b5e1de375b14b5b
+    - name: f1_ecstatic_c
+      pathPrefix: Characters/ha
+      guid: 02495c3453650224e82417ac237c7b45
+    - name: f1_ecstatic_o
+      pathPrefix: Characters/ha
+      guid: 1d4dfd3071efac64e824bb359f410d1c
+    - name: f1_happy_mc
+      pathPrefix: Characters/ha
+      guid: 5695766107038714499a6c045272a288
+    - name: f1_happy_mo
+      pathPrefix: Characters/ha
+      guid: 7711dcbac5bf4114f877979418be69ff
+    - name: f1_happy_sc
+      pathPrefix: Characters/ha
+      guid: f468f0dfb4917a5458f47efb8b173d1f
+    - name: f1_happy_so
+      pathPrefix: Characters/ha
+      guid: 42d9e1ca47945754e9446d5041220559
+    - name: f1_pout_mc
+      pathPrefix: Characters/ha
+      guid: 51a62449e450a3043a083de2e8d582e1
+    - name: f1_pout_mo
+      pathPrefix: Characters/ha
+      guid: e96b907f860ad174a9d0b19086c681da
+    - name: f1_pout_sc
+      pathPrefix: Characters/ha
+      guid: f9119dc4ac515a747b4df888de6d3c41
+    - name: f1_pout_so
+      pathPrefix: Characters/ha
+      guid: d2dc4cd0141449644bb6ca92dc7cffea
+    - name: f1_puzzled_mc
+      pathPrefix: Characters/ha
+      guid: e92aa29913eee974b9e2d96289380edd
+    - name: f1_puzzled_mo
+      pathPrefix: Characters/ha
+      guid: 4f66016c4f5f83b4281f760912457231
+    - name: f1_puzzled_sc
+      pathPrefix: Characters/ha
+      guid: d2ee29f78af9ae041a877ea0e4ea2918
+    - name: f1_puzzled_so
+      pathPrefix: Characters/ha
+      guid: 996cece3de229724a97556253dc8060b
+    - name: f1_sad_m1c
+      pathPrefix: Characters/ha
+      guid: b20856295520f6f42b13e3283e1fc9ef
+    - name: f1_sad_m1o
+      pathPrefix: Characters/ha
+      guid: 9121534762e6d074a90822d483ee6414
+    - name: f1_sad_m2c
+      pathPrefix: Characters/ha
+      guid: c0afbcd82d420af4882feae418f3818f
+    - name: f1_sad_m2o
+      pathPrefix: Characters/ha
+      guid: ebaf3a3af4b6adb4da37e24b38949890
+    - name: f1_sad_sc
+      pathPrefix: Characters/ha
+      guid: 7d49157f0319258418582fe70fbd9597
+    - name: f1_sad_so
+      pathPrefix: Characters/ha
+      guid: c227c5f07e456be4883e2f6610cda969
+    - name: f1_surprise_m1c
+      pathPrefix: Characters/ha
+      guid: 1d69b1790ce78f846b091249267a3c36
+    - name: f1_surprise_m1o
+      pathPrefix: Characters/ha
+      guid: 9bb8e9d6c04cb4a49a6486779358a4ac
+    - name: f1_surprise_m2c
+      pathPrefix: Characters/ha
+      guid: deab3bbd1d74b88418fc713cd6296bb6
+    - name: f1_surprise_m2o
+      pathPrefix: Characters/ha
+      guid: 7183c610c24c076488bfb53cd6e2302c
+    - name: f1_surprise_sc
+      pathPrefix: Characters/ha
+      guid: f52ceffcda17d1d4ba52af209c874722
+    - name: f1_surprise_so
+      pathPrefix: Characters/ha
+      guid: fc09b8baad293164093ced9200373239
+    - name: f1_wink_mc
+      pathPrefix: Characters/ha
+      guid: c59f8c79c217744478b552c17d993f11
+    - name: f1_wink_mo
+      pathPrefix: Characters/ha
+      guid: f3526da30bb463247a293e364b8c608c
+    - name: f1_wink_sc
+      pathPrefix: Characters/ha
+      guid: a9c466d53eaf62f4b84c5b1d14165f4c
+    - name: f1_wink_so
+      pathPrefix: Characters/ha
+      guid: 0679ee50c5feacf4cb5bb82910742dc6
+    - name: f2_angry_mc
+      pathPrefix: Characters/ha
+      guid: 7bcc837e26424494e91985a0bc0616d9
+    - name: f2_angry_mo
+      pathPrefix: Characters/ha
+      guid: 7b325808e9dbad14f886898c16d4e845
+    - name: f2_angry_sc
+      pathPrefix: Characters/ha
+      guid: 992fde0181bf1264697cfa4755a494b4
+    - name: f2_angry_so
+      pathPrefix: Characters/ha
+      guid: 7e70c41eb8b7f7343810a4e1b828edc0
+    - name: f2_blush_m1c
+      pathPrefix: Characters/ha
+      guid: 7b0d9fde2b654a74da0e4bf351e79708
+    - name: f2_blush_m1o
+      pathPrefix: Characters/ha
+      guid: 92450a6c9051fb247b5ac17d37d9de41
+    - name: f2_blush_m2c
+      pathPrefix: Characters/ha
+      guid: 9eaa565ebf8db9345bdf7016e59b9860
+    - name: f2_blush_m2o
+      pathPrefix: Characters/ha
+      guid: 6e90010094fdc4e41ad09918da29a192
+    - name: f2_blush_sc
+      pathPrefix: Characters/ha
+      guid: 4661a4a000a5a94429a320dd9ce6ebed
+    - name: f2_blush_so
+      pathPrefix: Characters/ha
+      guid: 537beb1bcaceefb48b4edb7520c3f278
+    - name: f2_sad_mc
+      pathPrefix: Characters/ha
+      guid: 403253443c510034289cd8692a9d9233
+    - name: f2_sad_mo
+      pathPrefix: Characters/ha
+      guid: 63fabd1a1df4b8244ad6dd62b353bd94
+    - name: f2_sad_sc
+      pathPrefix: Characters/ha
+      guid: 8ffe0ad74d7b9dc4eb058b0069a1b71e
+    - name: f2_sad_so
+      pathPrefix: Characters/ha
+      guid: 7cad17fa9a3ce2f47895e483670c2729
+    - name: f2_default_mc
+      pathPrefix: Characters/ha
+      guid: ff6a222a97f152147b02b7b16d788703
+    - name: f2_default_mo
+      pathPrefix: Characters/ha
+      guid: 31ea966664a91e64baff32a2a5a2eef8
+    - name: f2_default_sc
+      pathPrefix: Characters/ha
+      guid: 87aa5e4d38414604a82943901269adae
+    - name: f2_default_so
+      pathPrefix: Characters/ha
+      guid: 5d57148c97d04794ea07ef486c71da3e
+    - name: f2_disappointed_m1c
+      pathPrefix: Characters/ha
+      guid: e8d1835884e9aa3438ed8811ee5978d0
+    - name: f2_disappointed_m1o
+      pathPrefix: Characters/ha
+      guid: 9db6231f262f6604f94a2b9d7c2994c3
+    - name: f2_disappointed_m2c
+      pathPrefix: Characters/ha
+      guid: d0dbef294d2b74444bd8eea63a8c9612
+    - name: f2_disappointed_m2o
+      pathPrefix: Characters/ha
+      guid: 432636699bdb7a0498f71047b6bc0f95
+    - name: f2_disappointed_sc
+      pathPrefix: Characters/ha
+      guid: 57092437281251d48a84e8ce4f54b4e3
+    - name: f2_disappointed_so
+      pathPrefix: Characters/ha
+      guid: da067dd12ec4be04192f23e12af3c344
+    - name: f2_ecstatic_c
+      pathPrefix: Characters/ha
+      guid: 4dd3b2b035c779e4eaed6e1100e60288
+    - name: f2_ecstatic_o
+      pathPrefix: Characters/ha
+      guid: 01fe6c8b80ce249479eedc1aa6b68366
+    - name: f2_happy_mc
+      pathPrefix: Characters/ha
+      guid: cfbe4dccb6148d2408ad2dc2525a1487
+    - name: f2_happy_mo
+      pathPrefix: Characters/ha
+      guid: c4c1d471a91daea4f87ffcf2d403f895
+    - name: f2_happy_sc
+      pathPrefix: Characters/ha
+      guid: 852b5015c9595a1418393944279f0f50
+    - name: f2_happy_so
+      pathPrefix: Characters/ha
+      guid: da86ca0cba59841449a3bd39e99bc6f5
+    - name: f2_pout_mc
+      pathPrefix: Characters/ha
+      guid: c53caf32534fbf14f977bb62e0441a98
+    - name: f2_pout_mo
+      pathPrefix: Characters/ha
+      guid: 6766a3e193342a64aabc1529de0a01bc
+    - name: f2_pout_sc
+      pathPrefix: Characters/ha
+      guid: 6d0ab3a6d8946e444b7ecd2aa4733b82
+    - name: f2_pout_so
+      pathPrefix: Characters/ha
+      guid: 80a42777feffb804297b35df6e405a48
+    - name: f2_puzzled_mc
+      pathPrefix: Characters/ha
+      guid: 6f2485a0e667bd14eb419b3ef4a9f97c
+    - name: f2_puzzled_mo
+      pathPrefix: Characters/ha
+      guid: ac9af092e7d7dab48b84735b6aa1232e
+    - name: f2_puzzled_sc
+      pathPrefix: Characters/ha
+      guid: 5c46c28df4988b94cb08dbd462390933
+    - name: f2_puzzled_so
+      pathPrefix: Characters/ha
+      guid: 608ee48458accfc45b52c50321916d23
+    - name: f2_sad_m1c
+      pathPrefix: Characters/ha
+      guid: bbd2186754040c64dbbbc78b72964d74
+    - name: f2_sad_m1o
+      pathPrefix: Characters/ha
+      guid: 3138520d0f4bd494197bc57b8dee6f80
+    - name: f2_sad_m2c
+      pathPrefix: Characters/ha
+      guid: 4f191cf0778dc384699d115ae47b26ec
+    - name: f2_sad_m2o
+      pathPrefix: Characters/ha
+      guid: 713a1993b795e8c4b97d8be83380bb91
+    - name: f2_sad_sc
+      pathPrefix: Characters/ha
+      guid: d1769d258616bef49ac7c2ca87a1ee6d
+    - name: f2_sad_so
+      pathPrefix: Characters/ha
+      guid: 9f5d2aca1c5fa914b8bd3005b0bbfc1a
+    - name: f2_surprised_mc
+      pathPrefix: Characters/ha
+      guid: 387f2e407aed08b4299d8e9c72990aaf
+    - name: f2_surprised_mo
+      pathPrefix: Characters/ha
+      guid: b66616de0ab20a3458201fc1f3ba2372
+    - name: f2_surprised_sc
+      pathPrefix: Characters/ha
+      guid: a6038fcfd2318f34e8d3271f32354430
+    - name: f2_surprised_so
+      pathPrefix: Characters/ha
+      guid: e305333e7d3da7a4f910777607f0c1bb
+    - name: f2_wink_mc
+      pathPrefix: Characters/ha
+      guid: 8d8599b98556a1a4bb506eb3e61c3d0f
+    - name: f2_wink_mo
+      pathPrefix: Characters/ha
+      guid: 950c396c2b1a5894abb86dcc42e9da71
+    - name: f2_wink_sc
+      pathPrefix: Characters/ha
+      guid: d22d46c24b4f2df4a9f018cdc2f5df47
+    - name: f2_wink_so
+      pathPrefix: Characters/ha
+      guid: de529d2d6eb6dbb4f96be415ee30d72b
+    - name: f2_worried_mc
+      pathPrefix: Characters/ha
+      guid: 7ba224ced1b895947aa681f90afa2d09
+    - name: f2_worried_mo
+      pathPrefix: Characters/ha
+      guid: 3bf8b93ef8686c048b72ef85a106760f
   - Id: Characters/f0d1e100-b2c2-44be-916b-d4d7ae4b941c
     Resources: []
   - Id: Characters/fe2c197f-c437-46e8-95c7-26395fd97ad7
@@ -259,3 +904,14 @@ MonoBehaviour:
     - name: HanaTheme
       pathPrefix: Audio
       guid: 4c0d94ae18fd49b47877c9b2aab93edf
+    - name: DoorBell
+      pathPrefix: Audio
+      guid: 5f778cf8d11da8b428ae4e9ed0ff4005
+    - name: DoorKnock
+      pathPrefix: Audio
+      guid: 13ad1636d0ec79346870abcc7fc7a0bd
+    - name: DoorKnock2
+      pathPrefix: Audio
+      guid: 1667e8a9de45a4743a72ba3906498dbe
+  - Id: Characters/68dd35ab-1e4e-485b-876b-547353c22608
+    Resources: []

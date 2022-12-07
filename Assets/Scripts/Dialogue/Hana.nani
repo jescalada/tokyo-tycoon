@@ -1,4 +1,5 @@
 # NotOwned
+@set PlayerName="Maxwell"
 nar: A two-storey building with brick walls, located in the outskirts of Chiyoda City.
 nar: The neighborhood is mostly tranquil, with the occasional bus zooming by.[i] Children can be heard playing at a park on the other side of the street.
 {PlayerName}: Looks like a safe investment.[i] The neighborhood is nice, there are lots of businesses in the area, and the house doesn't seem in need of repairs.
@@ -6,36 +7,30 @@ nar: The neighborhood is mostly tranquil, with the occasional bus zooming by.[i]
 
 # Intro1
 ; todo, expound on background including what the area looks like
-nar: After walking around the peaceful neighborhood, I arrive at a cozy-looking house.[i] It's a two-storey building with brick walls.[i]
-nar: There's a garden in the front yard, full of colorful flowers.[i] The garden is surrounded by a round shrub fence.[i] The shrubs have been recently trimmed.
+After walking around the peaceful neighborhood, I arrive at a cozy-looking house.[i] It's a two-storey building with brick walls.[i]
+There's a garden in the front yard, full of colorful flowers.[i] The garden is surrounded by a round shrub fence.[i] The shrubs have been recently trimmed.
 {PlayerName}: (Whoever lives here seems to really love their plants...)
-nar: A carefully crafted path of stone slabs leads to the main entrance, in front of which a welcome mat is neatly placed.
-nar: I tread up the stones and approach the front door.
-*knock knock*
+A carefully crafted path of stone slabs leads to the main entrance, in front of which a welcome mat is neatly placed.
+I tread up the stones and approach the front door.
+@sfx DoorBell
+@wait 2.0 do:"@bgm HanaTheme fade:1"
 ; todo insert wait
-@bgm HanaTheme fade:1
 @showUI RelationshipBar wait:false
-ha.c1_default_mo: Hello?[char ha.c1_default_mc]
-{PlayerName}: Hi there, I'm {PlayerName}, the new landlord.[i] Nice to meet you.
-ha.c1_happy_mo: Oh, hello, {PlayerName}![char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] I'm Hana.[char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] Nice to meet you too! [char ha.c1_happy_mc]
-nar: I reach for my wallet and take out one of my business cards. 
+ha.c1_default_mo: Hello?[wait 0.6][char ha.c1_default_mc]
+{PlayerName}: Hi there, I'm {PlayerName}, the new landlord.
+ha.c1_happy_mo: Oh, hello, {PlayerName}![char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] I'm Hana.[char ha.c1_happy_mc wait:false][i][char ha.c1_happy_mo] Nice to meet you! [char ha.c1_happy_mc]
+I reach for my wallet and take out one of my business cards. 
 {PlayerName}: Here's my number so you can contact me.[i] If you need anything, just give me a call.
-@char ha.c1_default_mo
-ha: Got it!
-@char ha.c1_default_mc
-@char ha.c1_default_mo
-ha: Here's your rent for today.
-@char ha.c1_default_mc
+ha.c1_happy_mo: Got it![wait 0.6][char ha.c1_default_mc]
+ha.c1_default_mo: Here's your rent for today.[char ha.c1_default_mc]
 @collectrent
+ha.c1_happy_mo: Have a nice day, {PlayerName}.[wait 0.4][char ha.c1_ecstatic_c]
 @gainrelationship points:20
-@char ha.c1_happy_mo
-ha: Have a nice day, {PlayerName}.
-@char ha.c1_default_mc
 {PlayerName}: Yeah, see you tomorrow.
-nar: She looks back at me with a good-natured smile and goes back inside.
-@char ha visible:false
+She looks back at me with a good-natured smile and goes back inside.
+@char ha visible:false wait:false
+@hideUI RelationshipBar wait:false time:0.5
 @stopBgm HanaTheme fade:0.5
-@hideUI RelationshipBar wait:false
 {PlayerName}: (Doesn't seem like a troublesome tenant at all.)
 @adventure reset:false
 

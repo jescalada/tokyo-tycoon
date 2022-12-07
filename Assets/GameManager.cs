@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
             activeProperty.Upgrade();
             activeProperty.UpdateUI();
             player.SpendMoney(upgradeCost);
+            PlayMoneySpentSound();
         }
         else
         {
@@ -91,10 +92,10 @@ public class GameManager : MonoBehaviour
             activeProperty.Buy();
             activeProperty.UpdateUI();
             player.SpendMoney(buyCost);
+            PlayMoneySpentSound();
             player.BuyProperty(activeProperty);
             DisableBuyButton();
             EnableUpgradeButton();
-
         }
         else
         {
@@ -107,11 +108,9 @@ public class GameManager : MonoBehaviour
     public void CollectRentActiveProperty()
     {
         int moneyObtained = ((Home)activeProperty).CollectRent();
-        // Todo: Add animation
-
         PlayMoneyAnimation(moneyObtained);
-
         PlayBillAnimation();
+        PlayMoneyReceivedSound();
 
         player.AddMoney(moneyObtained);
     }
@@ -139,6 +138,16 @@ public class GameManager : MonoBehaviour
         Destroy(billAnimation, 2f);
     }
 
+    private void PlayMoneyReceivedSound()
+    {
+        int moneyRecieveSFX = Random.Range(1, 2);
+        audioManager.Play(string.Format("MoneyGet{0}", moneyRecieveSFX));
+    }
+    private void PlayMoneySpentSound()
+    {
+        audioManager.Play("MoneySpend1");
+    }
+
     public void PlayHeartAnimation()
     {
         var heartAnimation = Instantiate(heartAnimationPrefab);
@@ -149,10 +158,16 @@ public class GameManager : MonoBehaviour
         Destroy(heartAnimation, 2f);
     }
 
+    private void PlayRelationshipUpSound()
+    {
+        audioManager.Play("RelationshipUp");
+    }
+
     public void IncreaseRelationshipActiveCharacter(int relationshipPoints)
     {
         var character = ((Home)activeProperty).Tenant;
         character.GainRelationshipPoints(relationshipPoints);
+        PlayRelationshipUpSound();
         PlayHeartAnimation();
 
         // Todo: Add meter change animation
@@ -214,6 +229,7 @@ public class GameManager : MonoBehaviour
 
     public void HideDetailsPanel()
     {
+        audioManager.Play("PopDown");
         LeanTween.scale(detailsPanel, new Vector3(0, 0, 0), panelAnimationDuration)
             .setEase(panelCloseEaseType)
             .setOnComplete(delegate () { detailsPanel.SetActive(false); });
@@ -222,7 +238,8 @@ public class GameManager : MonoBehaviour
     public void ShowDetailsPanel()
     {
         detailsPanel.SetActive(true);
-        LeanTween.scale(detailsPanel, new Vector3(1, 1, 1), panelAnimationDuration)
+        audioManager.Play("PopUp");
+        LeanTween.scale(detailsPanel, new Vector3(1, 1, 1), panelAnimationDuration * 2)
             .setEase(panelOpenEaseType);
     }
 
